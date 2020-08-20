@@ -1,6 +1,8 @@
 ---
 title: "Sesiones"
-output: html_document
+output:
+  bookdown::html_document2:
+    number_sections: false
 ---
 # [Sesión 00: Introducción a R](sesiones/00-intro-r/00-intro-r.html) 
 

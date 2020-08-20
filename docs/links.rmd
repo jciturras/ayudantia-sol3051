@@ -1,6 +1,8 @@
 ---
 title: Enlaces
-output: html_document
+output:
+  bookdown::html_document2:
+    number_sections: false
 ---
 
 

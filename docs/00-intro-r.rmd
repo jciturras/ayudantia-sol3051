@@ -1,0 +1,390 @@
+---
+title: "Introducción a R"
+date: "`r format(Sys.time(), '%A %d %B')`"
+output:
+  bookdown::html_document2:
+    number_sections: true
+    toc: true
+    toc_float:
+        collapsed: false
+    toc_depth: 2
+    code_folding: "show"
+editor_options:
+  chunk_output_type: console
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = TRUE, results = "hold")
+options(scipen=999, max.print = 50)
+rm(list=ls())
+options(knitr.kable.NA = '')
+```
+
+**Libraries**
+```{r include=FALSE}
+library(dplyr) 
+```
+
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+
+[Sesión 00: Introducción a R](slides/00-intro-r/intro-r.html)
+ 
+<iframe src=slides/00-intro-r/intro-r.html height="440" width="775">
+</iframe>
+
+<br/>
+
+
+# Contenidos ayudantía
+ 
+* ¿Qué es R?
+* Interfaz de R-studio 
+    - Consola
+    - Sintáxis
+    - Enviornment (objetos)
+* Funciones básicas en R
+    - Operadores lógicos
+    - Transformaciones básicas
+* Uso de Bases de Datos  
+    - Cargar una base de datos
+    - Tipos de datos 
+    - Descripción de datos
+
+## `R` es una gran calculadora
+
+* Una de las características principales de R es que nos permite emplearlo como una "base" para realizar cálculos matemáticos simples, como también emplear funciones complejas a través de paquetes especializados.
+
+* Al ser una plataforma abierta, es posible utilizar una infinidad de paquetes que otros usuarios han desarrollado. Los paquetes son grupos de funciones que usuarios han programado con algún objetivo, el cual queda abierto a la comunidad para su libre acceso. 
+
+Aquí hay algunos ejemplos:
+
+```{r}
+1+1
+```
+
+```{r}
+(100+100)/4
+```
+
+## Programación orientada a objetos
+
+* El hecho de R tenga una "orientación a objetos" tiene varias ventajas.
+
+1. Es posible "guardar" nuestros objetos, los cuales pueden ser números, palabras, resultados, funciones, etc.
+2. Al tenerlos "guardados" los podemos "llamar" cuando sea necesario. 
+3. El símbolo `<-` permite indicarle a R que queremos "guardar" un objeto
+
+```{r}
+a <- 100 #Guardamos 100 dentro del objeto a
+b <- 4   #Guardamos 4 dentro del objeto b
+c <- 1+1 #Guardamos el resultado de 1+1 en c
+```
+
+```{r}
+print(a)
+```
+
+```{r}
+print(a*b) #multiplicando a x b
+```
+
+```{r}
+d <- (a*a)/b #a x a dividido b
+print(d)
+#O su versión abreviada:
+d
+```
+
+```{r}
+d^2 #Estamos elevando al cuadrado al objeto e
+```
+
+## Operadores en R (I)
+
+
+| Operador | Descripción       |
+|----------|-------------------|
+| <        | Menos que         |
+| >        | Mayor que         |
+| <=       | Menor o igual que |
+| >=       | Mayor o igual que |
+| ==       | Igual que         |
+| !=       | Distinto de       |
+
+
+```{r}
+ x <- 5
+ y <- 16
+ x<y
+ x>y
+```
+
+```{r}
+ x<=5
+ y>=20
+ y == 16
+ x != 5
+```
+
+
+
+## Operadores en R (II)
+
+|  Operador |          Comparación         |    Ejemplo    | Resultado |
+|:---------:|:----------------------------:|:-------------:|:---------:|
+| x | y     | x Ó y es verdadero           | TRUE | FALSE  | TRUE      |
+| x & y     | x Y y son verdaderos         | TRUE & FALSE  | FALSE     |
+| !x        | x no es verdadero (negación) | !TRUE         | FALSE     |
+| isTRUE(x) | x es verdadero (afirmación)  | isTRUE(TRUE)  | TRUE      |
+
+
+```{r}
+TRUE|FALSE
+TRUE & FALSE
+!TRUE
+isTRUE(TRUE)
+```
+
+
+
+# Tipos de datos en R
+
+* Numérico (numeric; números con decimales)
+* Números enteros (integer)
+* Lógicos: Verdadero o Falso
+* Variables cadena o texto (string / character)
+* Factores (factor): para variables cualitativas (nominales)
+
+# Tipos de estructura de datos:
+
+* Vector (vector) columna o fila de datos numéricos (una variable individual)
+* Matrices (matrix): arreglo de dos dimenisones de datos numéricos (conjunto de variables)
+* Data.frame (base de datos): Matriz de datos en el que las columnas tienen adignado nombres, y que permite usar todo tipo de datos.
+
+> Todos estos pueden ser tratados como objetos.
+
+Ejemplo:
+
+Crear dos objetos:
+
+```{r}
+x <- 1:20
+x
+z <- NA
+z
+```
+
+- x es un vector numérico que incluye valores discretos de 1 a 20
+- z es un objeto sin valor/información (NA) 
+
+Manipulemos z en base a x:
+
+```{r}
+z[x>=8] <- 1
+z
+```
+
+```{r}
+z[x<15] <- 0
+z
+```
+
+```{r}
+z <- ifelse(test = x>5, yes = 1, no = 0)
+z
+```
+
+# Matrices y data frame
+
+Creamos un vector `x` con valores de 1 a 20:
+
+```{r}
+x <- 1:20
+x[2]
+x[2:3]
+```
+
+Creamos una matriz en base a los objetos `x` y `z`:
+
+```{r}
+w <- cbind(x, z)
+w
+```
+
+* La función `cbind()` nos permite unir dos elementos en forma de columnas (por eso la c).  
+
+Exploremos la matriz que creamos usando: `matrix[row, column]`
+
+```{r}
+w[1,] 
+w[,1]  
+```
+
+Creamos un data.frame `d` en base a la información de la matriz `w` usando la función `data.frame()`
+
+```{r}
+d <- data.frame(w)
+d$x
+d$z
+d$x + d$z
+```
+
+# Abrir una base de datos:
+
+* Para introducir datos en R es posible emplear distintas formas:
+
+1. A través de comando para leer texto (read.txt, read.csv)
+2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+install.packages("haven") #cargar .sav (SPSS)
+library(haven) #Cargar la librería
+```
+
+```{r include=FALSE}
+library(haven)
+```
+
+Cargar una base de datos en .csv
+
+```{r message=FALSE, warning=FALSE, include=FALSE, size="small"}
+tt <- read_sav("../input/data/titanic2.sav") 
+tt <- read.csv("../input/data/titanic.csv")
+```
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
+tt <- read_sav(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic2.sav")) 
+tt <- read.csv(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic.csv"))
+```
+
+
+# Exploración de datos
+
+>`datos$variable`
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, results='hold'}
+class(tt) #ver el tipo de datos 
+class(tt$sex) #¿qué tipo de variable es sex?
+class(tt$age) #¿qué tipo de variable es age?
+class(tt$pclass) #¿qué tipo de variable es pclass?
+str(tt) #Contenido y estructura de la base de datos
+```
+
+# Describamos nuestros datos
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+summary(tt$age) #Estadísticos descriptivos
+mean(tt$age) #Media de edad
+sd(tt$age) #desviación estándar de edad
+summary.factor(tt$sex) # ¿cuántos hombres y mujeres hay?
+```
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+summary.factor(tt$pclass) #Con summary también podemos ver un factor
+table(tt$pclass) #Otra alternativa
+prop.table(table(tt$pclass)) #Vemos las proporciones
+table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
+```
+
+## Ejemplo con regresión 
+
+1. __Tranformamos `survived` en una variable dummy: __
+
+```{r}
+table(tt$survived)
+tt$surv<- ifelse(tt$survived=="Sobrevive",yes = 1,no = 0)
+table(tt$surv)
+```
+
+2. __Estimamos un modelo usando `sex` y `pclass` como predictores de `surv`:__
+
+```{r}
+logit01<- glm(formula = surv~sex+pclass,data = tt,family = "binomial")
+```
+
+3. __Exploramos el objeto `logit01`__
+
+```{r}
+class(logit01)
+```
+
+
+### ¿Qué tipo de información contiene?
+
+```{r}
+logit01
+```
+
+### Revisemos los coeficientes:
+```{r}
+logit01$coefficients
+coef(logit01)
+```
+
+### Valores predichos y residuos:
+
+```{r include=FALSE}
+options(max.print = 20)
+```
+
+```{r,results='markup'}
+logit01$fitted.values
+logit01$residuals
+```
+
+### Resumen del modelo:
+
+```{r}
+summary(logit01)
+```
+
+
+## Actividad
+
+Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
+
+1. Observe el tipo de estructura de datos que está empleando.
+
+1. En base a la base señalada, observe su "estructura" 
+
+1. Observe qué tipo/clase de variable es: `sex`, `pclass`, `age` y `survived`
+ 
+1. Según esto, determine cuál comando va emplear para describir las variables.
+
+1. Construya una tabla de contingencia (filas x columnas): 
+
+<center> survived x pclass </center>
+
+1. Estime un modelo de regresión logística para `surv` con los predictores `sex`, `age` y `pclass`.
+
+1. Obtenga el resumen del modelo y responda:
+
+   - ¿Cuál es el valor del coeficiente de regresión de `age`?
+
+---
+# Base de datos 
+
+| Nombre   	| Descripción                        	| Valores 	| Categorías       	|
+|----------	|------------------------------------	|---------	|------------------	|
+| pclass   	| Clase del pasajero/a               	| 1       	| Clase Alta       	|
+|          	|                                    	| 2       	| Clase Intermedia 	|
+|          	|                                    	| 3       	| Clase Baja       	|
+| survived 	| Estatus sobrevivencia              	| 1       	| No sobrevive     	|
+|          	|                                    	| 2       	| Sobrevive        	|
+| name     	| Nombre                             	|         	|                  	|
+| sex      	| Sexo pasajero/a                    	| 1       	| Hombre           	|
+|          	|                                    	| 2       	| Mujer            	|
+| age      	| Edad pasajero/a                    	|         	| rango: 0.2-80.0  	|
+| sibsp    	| Número de parientes                	|         	| rango: 0-8       	|
+| parch    	| Número de padres / niños a bordo   	|         	| rango: 0-9       	|
+
+

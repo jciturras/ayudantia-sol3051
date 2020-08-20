@@ -22,7 +22,7 @@ layout: true
 class: animated, fadeIn
 
 ---
-class: slideInRight,
+class: slideInRight
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE) 
@@ -125,14 +125,56 @@ d
 ```{r}
 d^2 #Estamos elevando al cuadrado al objeto e
 ```
----
-
-## Operadores lógicos
 
 ---
-## Transformaciones básicas
+## Operadores en R (I)
 
 
+| Operador | Descripción       |
+|----------|-------------------|
+| <        | Menos que         |
+| >        | Mayor que         |
+| <=       | Menor o igual que |
+| >=       | Mayor o igual que |
+| ==       | Igual que         |
+| !=       | Distinto de       |
+
+
+```{r}
+x <- 5
+y <- 16
+x<y
+```
+
+---
+
+```{r}
+x>y
+x<=5
+y>=20
+y == 16
+x != 5
+```
+
+---
+
+## Operadores en R (II)
+
+|  Operador |          Comparación         |    Ejemplo    | Resultado |
+|:---------:|:----------------------------:|:-------------:|:---------:|
+| x $\mid$ y| x Ó y es verdadero           | TRUE $\mid$FALSE | TRUE      |
+| x & y     | x Y y son verdaderos         | TRUE & FALSE  | FALSE     |
+| !x        | x no es verdadero (negación) | !TRUE         | FALSE     |
+| isTRUE(x) | x es verdadero (afirmación)  | isTRUE(TRUE)  | TRUE      |
+
+---
+
+```{r}
+TRUE|FALSE
+TRUE & FALSE
+!TRUE
+isTRUE(TRUE)
+```
 
 ---
 class: inverse, middle, center
@@ -158,46 +200,6 @@ class: top
 .center[![:scale 74%](images/rstudio.png)] 
 
 ---
-#Abrir una Base de datos:
-
-* Para introducir datos en R es posible emplear distintas formas:
-
-1. A través de comando para leer texto (read.txt, read.csv)
-2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
-
-```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
-install.packages("haven") #cargar .sav (SPSS)
-library(haven) #Cargar la librería
-```
-
-```{r, include=FALSE}
-library(haven) #Cargar la librería
-```
-
-Cargar una base de datos en .csv
-
-```{r message=FALSE, warning=FALSE, include=FALSE, size="small"}
-tt <- read_sav("data/titanic2.sav") 
-tt <- read.csv("data/titanic.csv")
-```
-
-```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
-tt <- read_sav("titanic2.sav") 
-tt <- read.csv("titanic.csv")
-```
-
-
-```{r, eval=FALSE, include=FALSE}
-# tt <- read_sav("C:/Users/JC/Desktop/Ayudantía UDP/Intro a R/titatic3_2.sav")
-tt <- na.omit(tt)
-tt$pclass <- factor(tt$pclass, levels = c(1,2,3), labels = c("Clase Alta", "Clase Intermedia", "Clase Baja")) 
-tt$sex <- factor(tt$sex, levels = c(0,1), labels = c("Hombre", "Mujer"))
-tt$survived <- factor(tt$survived, levels = c(0,1), labels = c("No sobrevive", "Sobrevive"))
-# write_sav(tt,"titanic.sav")
-write.csv(tt,"titanic.csv", fileEncoding = "UTF-8")
-```
-
----
 #Tipos de datos en R
 
 * Numérico (numeric; números con decimales)
@@ -215,6 +217,136 @@ write.csv(tt,"titanic.csv", fileEncoding = "UTF-8")
 > Todos estos pueden ser tratados como objetos.
 
 ---
+
+Ejemplo:
+
+Crear dos objetos:
+
+```{r}
+x <- 1:20
+x
+z <- NA
+z
+```
+
+- x es un vector numérico que incluye valores discretos de 1 a 20
+- z es un objeto sin valor/información (NA) 
+
+Manipulemos z en base a x: 
+
+```{r}
+z[x>=8] <- 1
+z
+```
+
+---
+
+```{r}
+z[x<15] <- 0
+z
+```
+
+```{r}
+z <- ifelse(test = x>5, yes = 1, no = 0)
+z
+```
+
+---
+
+# Matrices y data frame
+
+Creamos un vector `x` con valores de 1 a 20:
+
+```{r}
+x <- 1:20
+x[2]
+x[2:3]
+x[c(2:3,10:15)]
+```
+
+
+---
+
+Creamos una matriz en base a los objetos `x` y `z`:
+
+```{r}
+w <- cbind(x, z)
+w
+```
+
+* La función `cbind()` nos permite unir dos elementos en forma de columnas (por eso la c).  
+
+---
+
+Exploremos la matriz que creamos usando: `matrix[row, column]`: 
+
+```{r}
+w[1,] 
+w[1:5,]
+
+w[,1]  
+```
+
+
+---
+
+Creamos un data.frame `d` en base a la información de la matriz `w` usando la función `data.frame()`: 
+
+```{r}
+d <- data.frame(w)
+d$x
+d$z
+d$x + d$z
+```
+
+```{r}
+head(d,n = 5) # vemos las primeras 5 observaciones
+```
+
+
+---
+
+# Abrir una Base de datos:
+
+* Para introducir datos en R es posible emplear distintas formas:
+
+1. A través de comando para leer texto (read.txt, read.csv)
+2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+install.packages("haven") #cargar .sav (SPSS)
+library(haven) #Cargar la librería
+```
+
+```{r, include=FALSE}
+library(haven) #Cargar la librería
+```
+
+Cargar una base de datos desde internet
+
+```{r message=FALSE, warning=FALSE, include=FALSE, size="small"}
+tt <- read_sav("data/titanic2.sav") 
+tt <- read.csv("data/titanic.csv")
+```
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
+tt <- read_sav(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic2.sav")) 
+tt <- read.csv(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic.csv"))
+```
+
+
+```{r, eval=FALSE, include=FALSE}
+# tt <- read_sav("C:/Users/JC/Desktop/Ayudantía UDP/Intro a R/titatic3_2.sav")
+tt <- na.omit(tt)
+tt$pclass <- factor(tt$pclass, levels = c(1,2,3), labels = c("Clase Alta", "Clase Intermedia", "Clase Baja")) 
+tt$sex <- factor(tt$sex, levels = c(0,1), labels = c("Hombre", "Mujer"))
+tt$survived <- factor(tt$survived, levels = c(0,1), labels = c("No sobrevive", "Sobrevive"))
+# write_sav(tt,"titanic.sav")
+write.csv(tt,"titanic.csv", fileEncoding = "UTF-8")
+```
+
+
+---
 # Exploración de datos
 
 > `datos$variable`
@@ -224,6 +356,9 @@ class(tt) #ver el tipo de datos
 class(tt$sex) #¿qué tipo de variable es sex?
 class(tt$age) #¿qué tipo de variable es age?
 class(tt$pclass) #¿qué tipo de variable es pclass?
+```
+
+```{r}
 str(tt) #Contenido y estructura de la base de datos
 ```
 
@@ -244,17 +379,80 @@ table(tt$pclass) #Otra alternativa
 prop.table(table(tt$pclass)) #Vemos las proporciones
 table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
 ```
+
+---
+
+## Ejemplo con regresión 
+
+**Tranformamos `survived` en una variable dummy: **
+
+```{r}
+table(tt$survived)
+tt$surv<- ifelse(tt$survived=="Sobrevive",yes = 1,no = 0)
+table(tt$surv)
+```
+
+**Estimamos un modelo usando `sex` y `pclass` como predictores de `surv`:**
+
+```{r}
+logit01<- glm(formula = surv~sex+pclass,data = tt,family = "binomial")
+```
+
+---
+
+**Exploramos el objeto `logit01`**
+
+```{r}
+class(logit01)
+```
+
+
+### ¿Qué tipo de información contiene?
+
+```{r}
+logit01
+```
+
+---
+
+### Revisemos los coeficientes:
+```{r}
+logit01$coefficients
+coef(logit01)
+```
+
+---
+
+### Valores predichos y residuos:
+
+```{r include=FALSE}
+options(max.print = 20)
+```
+
+```{r,results='markup'}
+logit01$fitted.values
+logit01$residuals
+```
+
+---
+
+### Resumen del modelo: 
+
+```{r}
+summary(logit01)
+```
+
 ---
 # Algunos tips
 
 * Para crear códigos es útil mantener buenas prácticas con el objetivo de que ustedes recuerden lo que han hecho, como también para que otras personas puedan comprender su trabajo.
-
+ 
 1. Comentar código. En R se utiliza el símbolo **`#`** para crear comentarios
 2. Utilizar secciones en el código, de modo que se sepa cuando comienza y termina un procedimiento.
 3. Cuando realicen algún procedimiento más complejo, describirlo en detalle. 
 
 ```{r, echo=TRUE}
-#Código de Julio Iturra -  jciturra@uc.cl
+#Codigo de Julio Iturra -  jciturra@uc.cl
 #Fecha: 17.10.2018
 
 # Mi primera sección -------------------------------------------
@@ -274,6 +472,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
  [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
  
 ---
+class: slideInRight
 ## Actividad
 
 Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
@@ -286,11 +485,13 @@ Empleando la base "titanic", realice algunos procedimientos de exploración y an
  
 1. Según esto, determine cuál comando va emplear para describir las variables.
 
-1. Explore gráficamente la variable `age` y `pclass`
+1. Construya una tabla de contingencia (filas x columnas): `survived` x `pclass` 
 
-1. Construya una tabla de contingencia (filas x columnas): 
+1. Estime un modelo de regresión logística para `surv` con los predictores `sex`, `age` y `pclass`.
 
-<center> survived x pclass </center>
+1. Obtenga el resumen del modelo y responda:
+
+   - ¿Cuál es el valor del coeficiente de regresión de `age`?
 
 
 ---

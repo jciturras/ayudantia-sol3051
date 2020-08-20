@@ -28,7 +28,7 @@ layout: true
 class: animated, fadeIn
 
 ---
-class: slideInRight,
+class: slideInRight
 
 
 
@@ -159,14 +159,120 @@ d^2 #Estamos elevando al cuadrado al objeto e
 ```
 ## [1] 6250000
 ```
----
-
-## Operadores lógicos
 
 ---
-## Transformaciones básicas
+## Operadores en R (I)
 
 
+| Operador | Descripción       |
+|----------|-------------------|
+| &lt;        | Menos que         |
+| &gt;        | Mayor que         |
+| &lt;=       | Menor o igual que |
+| &gt;=       | Mayor o igual que |
+| ==       | Igual que         |
+| !=       | Distinto de       |
+
+
+
+```r
+x &lt;- 5
+y &lt;- 16
+x&lt;y
+```
+
+```
+## [1] TRUE
+```
+
+---
+
+
+```r
+x&gt;y
+```
+
+```
+## [1] FALSE
+```
+
+```r
+x&lt;=5
+```
+
+```
+## [1] TRUE
+```
+
+```r
+y&gt;=20
+```
+
+```
+## [1] FALSE
+```
+
+```r
+y == 16
+```
+
+```
+## [1] TRUE
+```
+
+```r
+x != 5
+```
+
+```
+## [1] FALSE
+```
+
+---
+
+## Operadores en R (II)
+
+|  Operador |          Comparación         |    Ejemplo    | Resultado |
+|:---------:|:----------------------------:|:-------------:|:---------:|
+| x `\(\mid\)` y| x Ó y es verdadero           | TRUE `\(\mid\)`FALSE | TRUE      |
+| x &amp; y     | x Y y son verdaderos         | TRUE &amp; FALSE  | FALSE     |
+| !x        | x no es verdadero (negación) | !TRUE         | FALSE     |
+| isTRUE(x) | x es verdadero (afirmación)  | isTRUE(TRUE)  | TRUE      |
+
+---
+
+
+```r
+TRUE|FALSE
+```
+
+```
+## [1] TRUE
+```
+
+```r
+TRUE &amp; FALSE
+```
+
+```
+## [1] FALSE
+```
+
+```r
+!TRUE
+```
+
+```
+## [1] FALSE
+```
+
+```r
+isTRUE(TRUE)
+```
+
+```
+## [1] TRUE
+```
 
 ---
 class: inverse, middle, center
@@ -192,35 +298,6 @@ class: top
 .center[![:scale 74%](images/rstudio.png)] 
 
 ---
-#Abrir una Base de datos:
-
-* Para introducir datos en R es posible emplear distintas formas:
-
-1. A través de comando para leer texto (read.txt, read.csv)
-2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
-
-
-```r
-install.packages("haven") #cargar .sav (SPSS)
-library(haven) #Cargar la librería
-```
-
-
-
-Cargar una base de datos en .csv
-
-
-
-
-```r
-tt &lt;- read_sav("titanic2.sav") 
-tt &lt;- read.csv("titanic.csv")
-```
-
-
-
-
----
 #Tipos de datos en R
 
 * Numérico (numeric; números con decimales)
@@ -238,6 +315,240 @@ tt &lt;- read.csv("titanic.csv")
 &gt; Todos estos pueden ser tratados como objetos.
 
 ---
+
+Ejemplo:
+
+Crear dos objetos:
+
+
+```r
+x &lt;- 1:20
+x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+```r
+z &lt;- NA
+z
+```
+
+```
+## [1] NA
+```
+
+- x es un vector numérico que incluye valores discretos de 1 a 20
+- z es un objeto sin valor/información (NA) 
+
+Manipulemos z en base a x: 
+
+
+```r
+z[x&gt;=8] &lt;- 1
+z
+```
+
+```
+##  [1] NA NA NA NA NA NA NA  1  1  1  1  1  1  1  1  1  1  1  1  1
+```
+
+---
+
+
+```r
+z[x&lt;15] &lt;- 0
+z
+```
+
+```
+##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1
+```
+
+
+```r
+z &lt;- ifelse(test = x&gt;5, yes = 1, no = 0)
+z
+```
+
+```
+##  [1] 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+```
+
+---
+
+# Matrices y data frame
+
+Creamos un vector `x` con valores de 1 a 20:
+
+
+```r
+x &lt;- 1:20
+x[2]
+```
+
+```
+## [1] 2
+```
+
+```r
+x[2:3]
+```
+
+```
+## [1] 2 3
+```
+
+```r
+x[c(2:3,10:15)]
+```
+
+```
+## [1]  2  3 10 11 12 13 14 15
+```
+
+
+---
+
+Creamos una matriz en base a los objetos `x` y `z`:
+
+
+```r
+w &lt;- cbind(x, z)
+w
+```
+
+```
+##        x z
+##  [1,]  1 0
+##  [2,]  2 0
+##  [3,]  3 0
+##  [4,]  4 0
+##  [5,]  5 0
+##  [6,]  6 1
+##  [7,]  7 1
+##  [8,]  8 1
+##  [9,]  9 1
+## [10,] 10 1
+##  [ reached getOption("max.print") -- omitted 10 rows ]
+```
+
+* La función `cbind()` nos permite unir dos elementos en forma de columnas (por eso la c).  
+
+---
+
+Exploremos la matriz que creamos usando: `matrix[row, column]`: 
+
+
+```r
+w[1,] 
+```
+
+```
+## x z 
+## 1 0
+```
+
+```r
+w[1:5,]
+```
+
+```
+##      x z
+## [1,] 1 0
+## [2,] 2 0
+## [3,] 3 0
+## [4,] 4 0
+## [5,] 5 0
+```
+
+```r
+w[,1]  
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+
+---
+
+Creamos un data.frame `d` en base a la información de la matriz `w` usando la función `data.frame()`: 
+
+
+```r
+d &lt;- data.frame(w)
+d$x
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+```
+
+```r
+d$z
+```
+
+```
+##  [1] 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+```
+
+```r
+d$x + d$z
+```
+
+```
+##  [1]  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+```
+
+
+```r
+head(d,n = 5) # vemos las primeras 5 observaciones
+```
+
+```
+##   x z
+## 1 1 0
+## 2 2 0
+## 3 3 0
+## 4 4 0
+## 5 5 0
+```
+
+
+---
+
+# Abrir una Base de datos:
+
+* Para introducir datos en R es posible emplear distintas formas:
+
+1. A través de comando para leer texto (read.txt, read.csv)
+2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
+
+
+```r
+install.packages("haven") #cargar .sav (SPSS)
+library(haven) #Cargar la librería
+```
+
+
+
+Cargar una base de datos desde internet
+
+
+
+
+```r
+tt &lt;- read_sav(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic2.sav")) 
+tt &lt;- read.csv(url("https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic.csv"))
+```
+
+
+
+
+
+---
 # Exploración de datos
 
 &gt; `datos$variable`
@@ -248,7 +559,6 @@ class(tt) #ver el tipo de datos
 class(tt$sex) #¿qué tipo de variable es sex?
 class(tt$age) #¿qué tipo de variable es age?
 class(tt$pclass) #¿qué tipo de variable es pclass?
-str(tt) #Contenido y estructura de la base de datos
 ```
 
 ```
@@ -256,6 +566,14 @@ str(tt) #Contenido y estructura de la base de datos
 ## [1] "character"
 ## [1] "numeric"
 ## [1] "character"
+```
+
+
+```r
+str(tt) #Contenido y estructura de la base de datos
+```
+
+```
 ## 'data.frame':	1046 obs. of  8 variables:
 ##  $ X       : int  1 2 3 4 5 6 7 8 9 10 ...
 ##  $ pclass  : chr  "Clase Alta" "Clase Alta" "Clase Alta" "Clase Alta" ...
@@ -347,18 +665,177 @@ table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
 ##   Clase Baja          349   152
 ##   Clase Intermedia    158   103
 ```
+
+---
+
+## Ejemplo con regresión 
+
+**Tranformamos `survived` en una variable dummy: **
+
+
+```r
+table(tt$survived)
+```
+
+```
+## 
+## No sobrevive    Sobrevive 
+##          619          427
+```
+
+```r
+tt$surv&lt;- ifelse(tt$survived=="Sobrevive",yes = 1,no = 0)
+table(tt$surv)
+```
+
+```
+## 
+##   0   1 
+## 619 427
+```
+
+**Estimamos un modelo usando `sex` y `pclass` como predictores de `surv`:**
+
+
+```r
+logit01&lt;- glm(formula = surv~sex+pclass,data = tt,family = "binomial")
+```
+
+---
+
+**Exploramos el objeto `logit01`**
+
+
+```r
+class(logit01)
+```
+
+```
+## [1] "glm" "lm"
+```
+
+
+### ¿Qué tipo de información contiene?
+
+
+```r
+logit01
+```
+
+```
+## 
+## Call:  glm(formula = surv ~ sex + pclass, family = "binomial", data = tt)
+## 
+## Coefficients:
+##            (Intercept)                sexMujer        pclassClase Baja  pclassClase Intermedia  
+##                -0.3682                  2.5281                 -1.7189                 -0.8984  
+## 
+## Degrees of Freedom: 1045 Total (i.e. Null);  1042 Residual
+## Null Deviance:	    1415 
+## Residual Deviance: 1014 	AIC: 1022
+```
+
+---
+
+### Revisemos los coeficientes:
+
+```r
+logit01$coefficients
+```
+
+```
+##            (Intercept)               sexMujer       pclassClase Baja pclassClase Intermedia 
+##             -0.3682364              2.5280910             -1.7189465             -0.8983816
+```
+
+```r
+coef(logit01)
+```
+
+```
+##            (Intercept)               sexMujer       pclassClase Baja pclassClase Intermedia 
+##             -0.3682364              2.5280910             -1.7189465             -0.8983816
+```
+
+---
+
+### Valores predichos y residuos:
+
+
+
+
+```r
+logit01$fitted.values
+```
+
+```
+##         1         2         3         4         5         6         7         8         9        10 
+## 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 
+##        11        12        13        14        15        16        17        18        19        20 
+## 0.4089672 0.8965861 0.8965861 0.8965861 0.4089672 0.4089672 0.8965861 0.8965861 0.4089672 0.4089672 
+##  [ reached getOption("max.print") -- omitted 1026 entries ]
+```
+
+```r
+logit01$residuals
+```
+
+```
+##         1         2         3         4         5         6         7         8         9        10 
+##  1.115342  2.445184 -9.669877 -1.691954 -9.669877  2.445184  1.115342 -1.691954  1.115342 -1.691954 
+##        11        12        13        14        15        16        17        18        19        20 
+## -1.691954  1.115342  1.115342  1.115342  2.445184 -1.691954  1.115342  1.115342 -1.691954  2.445184 
+##  [ reached getOption("max.print") -- omitted 1026 entries ]
+```
+
+---
+
+### Resumen del modelo: 
+
+
+```r
+summary(logit01)
+```
+
+```
+## 
+## Call:
+## glm(formula = surv ~ sex + pclass, family = "binomial", data = tt)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.1303  -0.7046  -0.4836   0.7062   2.0996  
+## 
+## Coefficients:
+##                        Estimate Std. Error z value             Pr(&gt;|z|)    
+## (Intercept)             -0.3682     0.1489  -2.473               0.0134 *  
+## sexMujer                 2.5281     0.1632  15.489 &lt; 0.0000000000000002 ***
+## pclassClase Baja        -1.7189     0.1910  -8.999 &lt; 0.0000000000000002 ***
+## pclassClase Intermedia  -0.8984     0.2082  -4.316            0.0000159 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1414.6  on 1045  degrees of freedom
+## Residual deviance: 1013.8  on 1042  degrees of freedom
+## AIC: 1021.8
+## 
+## Number of Fisher Scoring iterations: 4
+```
+
 ---
 # Algunos tips
 
 * Para crear códigos es útil mantener buenas prácticas con el objetivo de que ustedes recuerden lo que han hecho, como también para que otras personas puedan comprender su trabajo.
-
+ 
 1. Comentar código. En R se utiliza el símbolo **`#`** para crear comentarios
 2. Utilizar secciones en el código, de modo que se sepa cuando comienza y termina un procedimiento.
 3. Cuando realicen algún procedimiento más complejo, describirlo en detalle. 
 
 
 ```r
-#Código de Julio Iturra -  jciturra@uc.cl
+#Codigo de Julio Iturra -  jciturra@uc.cl
 #Fecha: 17.10.2018
 
 # Mi primera sección -------------------------------------------
@@ -382,6 +859,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
  [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
  
 ---
+class: slideInRight
 ## Actividad
 
 Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
@@ -394,11 +872,13 @@ Empleando la base "titanic", realice algunos procedimientos de exploración y an
  
 1. Según esto, determine cuál comando va emplear para describir las variables.
 
-1. Explore gráficamente la variable `age` y `pclass`
+1. Construya una tabla de contingencia (filas x columnas): `survived` x `pclass` 
 
-1. Construya una tabla de contingencia (filas x columnas): 
+1. Estime un modelo de regresión logística para `surv` con los predictores `sex`, `age` y `pclass`.
 
-&lt;center&gt; survived x pclass &lt;/center&gt;
+1. Obtenga el resumen del modelo y responda:
+
+   - ¿Cuál es el valor del coeficiente de regresión de `age`?
 
 
 ---

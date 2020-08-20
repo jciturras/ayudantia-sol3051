@@ -8,12 +8,14 @@ navbar:
 #      href: index.html
     - text: "Sesiones"
       icon: fa-desktop
-      href: talleres.html
+      menu:
+        - text: "Sesión 00"
+          href: 00-intro-r.html
     - text: "Links"
       icon: ion-social-markdown
       href: links.html
 output:
-  html_document:
+  bookdown::html_document2:
     includes:
       after_body: footer.html
     css: style.css

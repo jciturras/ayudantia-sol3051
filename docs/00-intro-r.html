@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Introducción a R</title>
+
+<script src="site_libs/header-attrs/header-attrs.js"></script>
+<script src="site_libs/jquery/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui/jquery-ui.min.js"></script>
+<link href="site_libs/tocify/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify/jquery.tocify.js"></script>
+<script src="site_libs/navigation/tabsets.js"></script>
+<script src="site_libs/navigation/codefolding.js"></script>
+<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs/highlight.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<link href="site_libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="site_libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+<link href="site_libs/font-awesome/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/ionicons/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Análisis de Datos Multinivel - SOL3051</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-desktop"></span>
+     
+    Sesiones
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="00-intro-r.html">Sesión 00</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="links.html">
+    <span class="ion ion-social-markdown"></span>
+     
+    Links
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Introducción a R</h1>
+<h4 class="date">jueves 20 agosto</h4>
+
+</div>
+
+
+<p><strong>Libraries</strong></p>
+<p><a href="slides/00-intro-r/intro-r.html">Sesión 00: Introducción a R</a></p>
+<iframe src="slides/00-intro-r/intro-r.html" height="440" width="775">
+</iframe>
+<p><br/></p>
+<div id="contenidos-ayudantía" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Contenidos ayudantía</h1>
+<ul>
+<li>¿Qué es R?</li>
+<li>Interfaz de R-studio
+<ul>
+<li>Consola</li>
+<li>Sintáxis</li>
+<li>Enviornment (objetos)</li>
+</ul></li>
+<li>Funciones básicas en R
+<ul>
+<li>Operadores lógicos</li>
+<li>Transformaciones básicas</li>
+</ul></li>
+<li>Uso de Bases de Datos
+<ul>
+<li>Cargar una base de datos</li>
+<li>Tipos de datos</li>
+<li>Descripción de datos</li>
+</ul></li>
+</ul>
+<div id="r-es-una-gran-calculadora" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> <code>R</code> es una gran calculadora</h2>
+<ul>
+<li><p>Una de las características principales de R es que nos permite emplearlo como una “base” para realizar cálculos matemáticos simples, como también emplear funciones complejas a través de paquetes especializados.</p></li>
+<li><p>Al ser una plataforma abierta, es posible utilizar una infinidad de paquetes que otros usuarios han desarrollado. Los paquetes son grupos de funciones que usuarios han programado con algún objetivo, el cual queda abierto a la comunidad para su libre acceso.</p></li>
+</ul>
+<p>Aquí hay algunos ejemplos:</p>
+<pre class="r"><code>1+1</code></pre>
+<pre><code>## [1] 2</code></pre>
+<pre class="r"><code>(100+100)/4</code></pre>
+<pre><code>## [1] 50</code></pre>
+</div>
+<div id="programación-orientada-a-objetos" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Programación orientada a objetos</h2>
+<ul>
+<li>El hecho de R tenga una “orientación a objetos” tiene varias ventajas.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>Es posible “guardar” nuestros objetos, los cuales pueden ser números, palabras, resultados, funciones, etc.</li>
+<li>Al tenerlos “guardados” los podemos “llamar” cuando sea necesario.</li>
+<li>El símbolo <code>&lt;-</code> permite indicarle a R que queremos “guardar” un objeto</li>
+</ol>
+<pre class="r"><code>a &lt;- 100 #Guardamos 100 dentro del objeto a
+b &lt;- 4   #Guardamos 4 dentro del objeto b
+c &lt;- 1+1 #Guardamos el resultado de 1+1 en c</code></pre>
+<pre class="r"><code>print(a)</code></pre>
+<pre><code>## [1] 100</code></pre>
+<pre class="r"><code>print(a*b) #multiplicando a x b</code></pre>
+<pre><code>## [1] 400</code></pre>
+<pre class="r"><code>d &lt;- (a*a)/b #a x a dividido b
+print(d)
+#O su versión abreviada:
+d</code></pre>
+<pre><code>## [1] 2500
+## [1] 2500</code></pre>
+<pre class="r"><code>d^2 #Estamos elevando al cuadrado al objeto e</code></pre>
+<pre><code>## [1] 6250000</code></pre>
+</div>
+<div id="operadores-en-r-i" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Operadores en R (I)</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&lt;</td>
+<td>Menos que</td>
+</tr>
+<tr class="even">
+<td>&gt;</td>
+<td>Mayor que</td>
+</tr>
+<tr class="odd">
+<td>&lt;=</td>
+<td>Menor o igual que</td>
+</tr>
+<tr class="even">
+<td>&gt;=</td>
+<td>Mayor o igual que</td>
+</tr>
+<tr class="odd">
+<td>==</td>
+<td>Igual que</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Distinto de</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code> x &lt;- 5
+ y &lt;- 16
+ x&lt;y
+ x&gt;y</code></pre>
+<pre><code>## [1] TRUE
+## [1] FALSE</code></pre>
+<pre class="r"><code> x&lt;=5
+ y&gt;=20
+ y == 16
+ x != 5</code></pre>
+<pre><code>## [1] TRUE
+## [1] FALSE
+## [1] TRUE
+## [1] FALSE</code></pre>
+</div>
+<div id="operadores-en-r-ii" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Operadores en R (II)</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Operador</th>
+<th align="center">Comparación</th>
+<th align="center">Ejemplo</th>
+<th align="center">Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">x</td>
+<td align="center">y</td>
+<td align="center">x Ó y es verdadero</td>
+<td align="center">TRUE</td>
+</tr>
+<tr class="even">
+<td align="center">x &amp; y</td>
+<td align="center">x Y y son verdaderos</td>
+<td align="center">TRUE &amp; FALSE</td>
+<td align="center">FALSE</td>
+</tr>
+<tr class="odd">
+<td align="center">!x</td>
+<td align="center">x no es verdadero (negación)</td>
+<td align="center">!TRUE</td>
+<td align="center">FALSE</td>
+</tr>
+<tr class="even">
+<td align="center">isTRUE(x)</td>
+<td align="center">x es verdadero (afirmación)</td>
+<td align="center">isTRUE(TRUE)</td>
+<td align="center">TRUE</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>TRUE|FALSE
+TRUE &amp; FALSE
+!TRUE
+isTRUE(TRUE)</code></pre>
+<pre><code>## [1] TRUE
+## [1] FALSE
+## [1] FALSE
+## [1] TRUE</code></pre>
+</div>
+</div>
+<div id="tipos-de-datos-en-r" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Tipos de datos en R</h1>
+<ul>
+<li>Numérico (numeric; números con decimales)</li>
+<li>Números enteros (integer)</li>
+<li>Lógicos: Verdadero o Falso</li>
+<li>Variables cadena o texto (string / character)</li>
+<li>Factores (factor): para variables cualitativas (nominales)</li>
+</ul>
+</div>
+<div id="tipos-de-estructura-de-datos" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Tipos de estructura de datos:</h1>
+<ul>
+<li>Vector (vector) columna o fila de datos numéricos (una variable individual)</li>
+<li>Matrices (matrix): arreglo de dos dimenisones de datos numéricos (conjunto de variables)</li>
+<li>Data.frame (base de datos): Matriz de datos en el que las columnas tienen adignado nombres, y que permite usar todo tipo de datos.</li>
+</ul>
+<blockquote>
+<p>Todos estos pueden ser tratados como objetos.</p>
+</blockquote>
+<p>Ejemplo:</p>
+<p>Crear dos objetos:</p>
+<pre class="r"><code>x &lt;- 1:20
+x
+z &lt;- NA
+z</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+## [1] NA</code></pre>
+<ul>
+<li>x es un vector numérico que incluye valores discretos de 1 a 20</li>
+<li>z es un objeto sin valor/información (NA)</li>
+</ul>
+<p>Manipulemos z en base a x:</p>
+<pre class="r"><code>z[x&gt;=8] &lt;- 1
+z</code></pre>
+<pre><code>##  [1] NA NA NA NA NA NA NA  1  1  1  1  1  1  1  1  1  1  1  1  1</code></pre>
+<pre class="r"><code>z[x&lt;15] &lt;- 0
+z</code></pre>
+<pre><code>##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1</code></pre>
+<pre class="r"><code>z &lt;- ifelse(test = x&gt;5, yes = 1, no = 0)
+z</code></pre>
+<pre><code>##  [1] 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+</div>
+<div id="matrices-y-data-frame" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Matrices y data frame</h1>
+<p>Creamos un vector <code>x</code> con valores de 1 a 20:</p>
+<pre class="r"><code>x &lt;- 1:20
+x[2]
+x[2:3]</code></pre>
+<pre><code>## [1] 2
+## [1] 2 3</code></pre>
+<p>Creamos una matriz en base a los objetos <code>x</code> y <code>z</code>:</p>
+<pre class="r"><code>w &lt;- cbind(x, z)
+w</code></pre>
+<pre><code>##        x z
+##  [1,]  1 0
+##  [2,]  2 0
+##  [3,]  3 0
+##  [4,]  4 0
+##  [5,]  5 0
+##  [6,]  6 1
+##  [7,]  7 1
+##  [8,]  8 1
+##  [9,]  9 1
+## [10,] 10 1
+## [11,] 11 1
+## [12,] 12 1
+## [13,] 13 1
+## [14,] 14 1
+## [15,] 15 1
+## [16,] 16 1
+## [17,] 17 1
+## [18,] 18 1
+## [19,] 19 1
+## [20,] 20 1</code></pre>
+<ul>
+<li>La función <code>cbind()</code> nos permite unir dos elementos en forma de columnas (por eso la c).</li>
+</ul>
+<p>Exploremos la matriz que creamos usando: <code>matrix[row, column]</code></p>
+<pre class="r"><code>w[1,] 
+w[,1]  </code></pre>
+<pre><code>## x z 
+## 1 0 
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<p>Creamos un data.frame <code>d</code> en base a la información de la matriz <code>w</code> usando la función <code>data.frame()</code></p>
+<pre class="r"><code>d &lt;- data.frame(w)
+d$x
+d$z
+d$x + d$z</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+##  [1] 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##  [1]  1  2  3  4  5  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21</code></pre>
+</div>
+<div id="abrir-una-base-de-datos" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Abrir una base de datos:</h1>
+<ul>
+<li>Para introducir datos en R es posible emplear distintas formas:</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>A través de comando para leer texto (read.txt, read.csv)</li>
+<li>Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:</li>
+</ol>
+<pre class="r"><code>install.packages(&quot;haven&quot;) #cargar .sav (SPSS)
+library(haven) #Cargar la librería</code></pre>
+<p>Cargar una base de datos en .csv</p>
+<pre class="r"><code>tt &lt;- read_sav(url(&quot;https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic2.sav&quot;)) 
+tt &lt;- read.csv(url(&quot;https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic.csv&quot;))</code></pre>
+</div>
+<div id="exploración-de-datos" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Exploración de datos</h1>
+<blockquote>
+<p><code>datos$variable</code></p>
+</blockquote>
+<pre class="r"><code>class(tt) #ver el tipo de datos 
+class(tt$sex) #¿qué tipo de variable es sex?
+class(tt$age) #¿qué tipo de variable es age?
+class(tt$pclass) #¿qué tipo de variable es pclass?
+str(tt) #Contenido y estructura de la base de datos</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;
+## [1] &quot;character&quot;
+## [1] &quot;numeric&quot;
+## [1] &quot;character&quot;
+## &#39;data.frame&#39;:    1046 obs. of  8 variables:
+##  $ X       : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ pclass  : chr  &quot;Clase Alta&quot; &quot;Clase Alta&quot; &quot;Clase Alta&quot; &quot;Clase Alta&quot; ...
+##  $ survived: chr  &quot;Sobrevive&quot; &quot;Sobrevive&quot; &quot;No sobrevive&quot; &quot;No sobrevive&quot; ...
+##  $ name    : chr  &quot;Allen, Miss. Elisabeth Walton&quot; &quot;Allison, Master. Hudson Trevor&quot; &quot;Allison, Miss. Helen Loraine&quot; &quot;Allison, Mr. Hudson Joshua Creighton&quot; ...
+##  $ sex     : chr  &quot;Mujer&quot; &quot;Hombre&quot; &quot;Mujer&quot; &quot;Hombre&quot; ...
+##  $ age     : num  29 0.917 2 30 25 ...
+##  $ sibsp   : int  0 1 1 1 1 0 1 0 2 0 ...
+##  $ parch   : int  0 2 2 2 2 0 0 0 0 0 ...</code></pre>
+</div>
+<div id="describamos-nuestros-datos" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Describamos nuestros datos</h1>
+<pre class="r"><code>summary(tt$age) #Estadísticos descriptivos
+mean(tt$age) #Media de edad
+sd(tt$age) #desviación estándar de edad
+summary.factor(tt$sex) # ¿cuántos hombres y mujeres hay?</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##  0.1667 21.0000 28.0000 29.8811 39.0000 80.0000 
+## [1] 29.88113
+## [1] 14.4135
+## Hombre  Mujer 
+##    658    388</code></pre>
+<pre class="r"><code>summary.factor(tt$pclass) #Con summary también podemos ver un factor
+table(tt$pclass) #Otra alternativa
+prop.table(table(tt$pclass)) #Vemos las proporciones
+table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social</code></pre>
+<pre><code>##       Clase Alta       Clase Baja Clase Intermedia 
+##              284              501              261 
+## 
+##       Clase Alta       Clase Baja Clase Intermedia 
+##              284              501              261 
+## 
+##       Clase Alta       Clase Baja Clase Intermedia 
+##        0.2715105        0.4789675        0.2495220 
+##                   
+##                    Hombre Mujer
+##   Clase Alta          151   133
+##   Clase Baja          349   152
+##   Clase Intermedia    158   103</code></pre>
+<div id="ejemplo-con-regresión" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Ejemplo con regresión</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Tranformamos <code>survived</code> en una variable dummy: </strong></li>
+</ol>
+<pre class="r"><code>table(tt$survived)
+tt$surv&lt;- ifelse(tt$survived==&quot;Sobrevive&quot;,yes = 1,no = 0)
+table(tt$surv)</code></pre>
+<pre><code>## 
+## No sobrevive    Sobrevive 
+##          619          427 
+## 
+##   0   1 
+## 619 427</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Estimamos un modelo usando <code>sex</code> y <code>pclass</code> como predictores de <code>surv</code>:</strong></li>
+</ol>
+<pre class="r"><code>logit01&lt;- glm(formula = surv~sex+pclass,data = tt,family = &quot;binomial&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Exploramos el objeto <code>logit01</code></strong></li>
+</ol>
+<pre class="r"><code>class(logit01)</code></pre>
+<pre><code>## [1] &quot;glm&quot; &quot;lm&quot;</code></pre>
+<div id="qué-tipo-de-información-contiene" class="section level3" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> ¿Qué tipo de información contiene?</h3>
+<pre class="r"><code>logit01</code></pre>
+<pre><code>## 
+## Call:  glm(formula = surv ~ sex + pclass, family = &quot;binomial&quot;, data = tt)
+## 
+## Coefficients:
+##            (Intercept)                sexMujer        pclassClase Baja  pclassClase Intermedia  
+##                -0.3682                  2.5281                 -1.7189                 -0.8984  
+## 
+## Degrees of Freedom: 1045 Total (i.e. Null);  1042 Residual
+## Null Deviance:       1415 
+## Residual Deviance: 1014  AIC: 1022</code></pre>
+</div>
+<div id="revisemos-los-coeficientes" class="section level3" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Revisemos los coeficientes:</h3>
+<pre class="r"><code>logit01$coefficients
+coef(logit01)</code></pre>
+<pre><code>##            (Intercept)               sexMujer       pclassClase Baja pclassClase Intermedia 
+##             -0.3682364              2.5280910             -1.7189465             -0.8983816 
+##            (Intercept)               sexMujer       pclassClase Baja pclassClase Intermedia 
+##             -0.3682364              2.5280910             -1.7189465             -0.8983816</code></pre>
+</div>
+<div id="valores-predichos-y-residuos" class="section level3" number="7.1.3">
+<h3><span class="header-section-number">7.1.3</span> Valores predichos y residuos:</h3>
+<pre class="r"><code>logit01$fitted.values</code></pre>
+<pre><code>##         1         2         3         4         5         6         7         8         9        10        11 
+## 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.4089672 
+##        12        13        14        15        16        17        18        19        20 
+## 0.8965861 0.8965861 0.8965861 0.4089672 0.4089672 0.8965861 0.8965861 0.4089672 0.4089672 
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 1026 entries ]</code></pre>
+<pre class="r"><code>logit01$residuals</code></pre>
+<pre><code>##         1         2         3         4         5         6         7         8         9        10        11 
+##  1.115342  2.445184 -9.669877 -1.691954 -9.669877  2.445184  1.115342 -1.691954  1.115342 -1.691954 -1.691954 
+##        12        13        14        15        16        17        18        19        20 
+##  1.115342  1.115342  1.115342  2.445184 -1.691954  1.115342  1.115342 -1.691954  2.445184 
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 1026 entries ]</code></pre>
+</div>
+<div id="resumen-del-modelo" class="section level3" number="7.1.4">
+<h3><span class="header-section-number">7.1.4</span> Resumen del modelo:</h3>
+<pre class="r"><code>summary(logit01)</code></pre>
+<pre><code>## 
+## Call:
+## glm(formula = surv ~ sex + pclass, family = &quot;binomial&quot;, data = tt)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.1303  -0.7046  -0.4836   0.7062   2.0996  
+## 
+## Coefficients:
+##                        Estimate Std. Error z value             Pr(&gt;|z|)    
+## (Intercept)             -0.3682     0.1489  -2.473               0.0134 *  
+## sexMujer                 2.5281     0.1632  15.489 &lt; 0.0000000000000002 ***
+## pclassClase Baja        -1.7189     0.1910  -8.999 &lt; 0.0000000000000002 ***
+## pclassClase Intermedia  -0.8984     0.2082  -4.316            0.0000159 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 1414.6  on 1045  degrees of freedom
+## Residual deviance: 1013.8  on 1042  degrees of freedom
+## AIC: 1021.8
+## 
+## Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+</div>
+<div id="actividad" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Actividad</h2>
+<p>Empleando la base “titanic”, realice algunos procedimientos de exploración y análisis de datos.</p>
+<ol style="list-style-type: decimal">
+<li><p>Observe el tipo de estructura de datos que está empleando.</p></li>
+<li><p>En base a la base señalada, observe su “estructura”</p></li>
+<li><p>Observe qué tipo/clase de variable es: <code>sex</code>, <code>pclass</code>, <code>age</code> y <code>survived</code></p></li>
+<li><p>Según esto, determine cuál comando va emplear para describir las variables.</p></li>
+<li><p>Construya una tabla de contingencia (filas x columnas):</p></li>
+</ol>
+<center>
+survived x pclass
+</center>
+<ol style="list-style-type: decimal">
+<li><p>Estime un modelo de regresión logística para <code>surv</code> con los predictores <code>sex</code>, <code>age</code> y <code>pclass</code>.</p></li>
+<li><p>Obtenga el resumen del modelo y responda:</p>
+<ul>
+<li>¿Cuál es el valor del coeficiente de regresión de <code>age</code>?</li>
+</ul></li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="base-de-datos" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Base de datos</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th>Descripción</th>
+<th>Valores</th>
+<th>Categorías</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pclass</td>
+<td>Clase del pasajero/a</td>
+<td>1</td>
+<td>Clase Alta</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>2</td>
+<td>Clase Intermedia</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>3</td>
+<td>Clase Baja</td>
+</tr>
+<tr class="even">
+<td>survived</td>
+<td>Estatus sobrevivencia</td>
+<td>1</td>
+<td>No sobrevive</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>2</td>
+<td>Sobrevive</td>
+</tr>
+<tr class="even">
+<td>name</td>
+<td>Nombre</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>sex</td>
+<td>Sexo pasajero/a</td>
+<td>1</td>
+<td>Hombre</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>2</td>
+<td>Mujer</td>
+</tr>
+<tr class="odd">
+<td>age</td>
+<td>Edad pasajero/a</td>
+<td></td>
+<td>rango: 0.2-80.0</td>
+</tr>
+<tr class="even">
+<td>sibsp</td>
+<td>Número de parientes</td>
+<td></td>
+<td>rango: 0-8</td>
+</tr>
+<tr class="odd">
+<td>parch</td>
+<td>Número de padres / niños a bordo</td>
+<td></td>
+<td>rango: 0-9</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Sitio por <a href="https://github.com/jciturras/">Julio Iturra Sanhueza</a></p>
+<p style="text-align: center;"><span style="color: #808080;">julioiturrasanhueza@gmail.com</span></p>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://twitter.com/jciturras" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/jciturras/" class="fa fa-linkedin"></a>
+    <a href="https://github.com/jciturras/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
