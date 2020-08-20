@@ -14,4 +14,7 @@ navbar:
       href: links.html
 output:
   html_document:
+    includes:
+      after_body: footer.html
     css: style.css
+    

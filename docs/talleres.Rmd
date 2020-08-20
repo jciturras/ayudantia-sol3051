@@ -1,14 +1,14 @@
 ---
-title: "Talleres"
+title: "Sesiones"
 output: html_document
 ---
 
 
-[*Taller 01: Análisis de Regresión Múltiple*](slides/taller01/taller01-slides.html)
+[Sesión 00: Introducción a R](slides/00-intro-r/intro-r.html)
  
 
 
-<iframe src=slides/taller01/taller01-slides.html height="500" width="775">
+<iframe src=slides/00-intro-r/intro-r.html height="440" width="775">
 </iframe>
 
 <br/>

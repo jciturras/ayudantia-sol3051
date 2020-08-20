@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
-    <title>Introducción a R</title>
+    <title>Introducción a R   .small[Análisis de Datos Multinivel]</title>
     <meta charset="utf-8" />
     <meta name="author" content="Julio César Iturra Sanhueza" />
-    <meta name="date" content="2019-11-14" />
-    <link href="libs/remark-css/default.css" rel="stylesheet" />
-    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clipboard\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-coes.css" type="text/css" />
+    <link rel="stylesheet" href="https:\\cdnjs.cloudflare.com\ajax\libs\animate.css\3.7.0\animate.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Introducción a R
+# Introducción a R <br> .small[Análisis de Datos Multinivel]
 ### Julio César Iturra Sanhueza
-### 2019-11-14
+### Agosto, 2020
 
 ---
+
+layout: true
+class: animated, fadeIn
+
+---
+class: slideInRight,
+
+
 
 
 
 
 #Contenidos ayudantía
-
+ 
 * ¿Qué es R?
 * Interfaz de R-studio 
     - Consola
     - Sintáxis
     - Enviornment (objetos)
-    
 * Funciones básicas en R
-
+    - Operadores lógicos
+    - Transformaciones básicas
 * Uso de Bases de Datos  
     - Cargar una base de datos
     - Tipos de datos 
@@ -38,15 +52,14 @@ class: center, middle, inverse, title-slide
 ---
 class: inverse, middle, center
 
-#¿Qué es R?
+# ¿Qué es R?
 
 ---
 
-##¿Qué es **_R_** ?
+## ¿Qué es **_R_** ?
 
 1. R es un software libre, por tanto es totalmente gratuito y abierto. Tiene una comunidad a nivel mundial muy activa, donde se comparte
 todo tipo de contenido relacionado con el análisis de datos.
-
 2. Es un lenguaje de programación, de modo que también es posible que los usuarios elaboren sus propias funciones o "paquetes".
 
 3. Tiene una fuerte orientación al análisis estadístico y visualización de datos.
@@ -54,10 +67,12 @@ todo tipo de contenido relacionado con el análisis de datos.
 4. Una de sus principales características es que posee una lógica de programación orientada a **Objetos** (Object Oriented programming). Lo veremos en detalle más adelante. 
 
 5. El editor nativo de R es poco amigable para los usuarios. Por lo tanto, lo más adecuado es emplear una **Interfaz de Usuario** (IDE por *Integrated development environment*) 
-  * [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
+
+  - [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
 
 ---
-## **R** es una gran calculadora
+
+## `R` es una gran calculadora
 
 * Una de las características principales de R es que nos permite emplearlo como una "base" para realizar cálculos matemáticos simples, como también emplear funciones complejas a través de paquetes especializados.
 
@@ -83,13 +98,13 @@ Aquí hay algunos ejemplos:
 ## [1] 50
 ```
 ---
-##Programación orientada a objetos
+## Programación orientada a objetos
 
 * El hecho de R tenga una "orientación a objetos" tiene varias ventajas.
 
 1. Es posible "guardar" nuestros objetos, los cuales pueden ser números, palabras, resultados, funciones, etc.
 2. Al tenerlos "guardados" los podemos "llamar" cuando sea necesario. 
-3. El símbolo ` &lt;- ` permite indicarle a R que queremos "guardar" un objeto
+3. El símbolo `&lt;-` permite indicarle a R que queremos "guardar" un objeto
 
 
 ```r
@@ -144,6 +159,14 @@ d^2 #Estamos elevando al cuadrado al objeto e
 ```
 ## [1] 6250000
 ```
+---
+
+## Operadores lógicos
+
+---
+## Transformaciones básicas
+
+
 
 ---
 class: inverse, middle, center
@@ -151,7 +174,7 @@ class: inverse, middle, center
 # RStudio 
 
 ---
-#Interfaz de RStudio
+# Interfaz de RStudio
 
 RStudio se compone de varias partes, pero las más importarten son:
 
@@ -165,10 +188,9 @@ RStudio se compone de varias partes, pero las más importarten son:
 * **Panel de visualización**: Aquí se visualizan nuestros gráficos y otro tipo de resultados.
 
 ---
+class: top
+.center[![:scale 74%](images/rstudio.png)] 
 
-class: middle, center
-
-&lt;img src="rstudio.png" width="100%" style="display: block; margin: auto;" /&gt;
 ---
 #Abrir una Base de datos:
 
@@ -188,8 +210,10 @@ library(haven) #Cargar la librería
 Cargar una base de datos en .csv
 
 
+
+
 ```r
-tt &lt;- read_sav("titanic.sav")
+tt &lt;- read_sav("titanic2.sav") 
 tt &lt;- read.csv("titanic.csv")
 ```
 
@@ -214,7 +238,7 @@ tt &lt;- read.csv("titanic.csv")
 &gt; Todos estos pueden ser tratados como objetos.
 
 ---
-#Exploración de datos
+# Exploración de datos
 
 &gt; `datos$variable`
 
@@ -229,22 +253,22 @@ str(tt) #Contenido y estructura de la base de datos
 
 ```
 ## [1] "data.frame"
-## [1] "factor"
+## [1] "character"
 ## [1] "numeric"
-## [1] "factor"
+## [1] "character"
 ## 'data.frame':	1046 obs. of  8 variables:
 ##  $ X       : int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ pclass  : Factor w/ 3 levels "Clase Alta","Clase Baja",..: 1 1 1 1 1 1 1 1 1 1 ...
-##  $ survived: Factor w/ 2 levels "No sobrevive",..: 2 2 1 1 1 2 2 1 2 1 ...
-##  $ name    : Factor w/ 1044 levels "Abbing, Mr. Anthony",..: 22 24 25 26 27 31 46 47 51 55 ...
-##  $ sex     : Factor w/ 2 levels "Hombre","Mujer": 2 1 2 1 2 1 2 1 2 1 ...
+##  $ pclass  : chr  "Clase Alta" "Clase Alta" "Clase Alta" "Clase Alta" ...
+##  $ survived: chr  "Sobrevive" "Sobrevive" "No sobrevive" "No sobrevive" ...
+##  $ name    : chr  "Allen, Miss. Elisabeth Walton" "Allison, Master. Hudson Trevor" "Allison, Miss. Helen Loraine" "Allison, Mr. Hudson Joshua Creighton" ...
+##  $ sex     : chr  "Mujer" "Hombre" "Mujer" "Hombre" ...
 ##  $ age     : num  29 0.917 2 30 25 ...
 ##  $ sibsp   : int  0 1 1 1 1 0 1 0 2 0 ...
 ##  $ parch   : int  0 2 2 2 2 0 0 0 0 0 ...
 ```
 
 ---
-#Describamos nuestros datos
+# Describamos nuestros datos
 
 
 ```r
@@ -324,7 +348,7 @@ table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
 ##   Clase Intermedia    158   103
 ```
 ---
-#Algunos tips
+# Algunos tips
 
 * Para crear códigos es útil mantener buenas prácticas con el objetivo de que ustedes recuerden lo que han hecho, como también para que otras personas puedan comprender su trabajo.
 
@@ -358,7 +382,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
  [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
  
 ---
-##Actividad
+## Actividad
 
 Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
 
@@ -378,7 +402,7 @@ Empleando la base "titanic", realice algunos procedimientos de exploración y an
 
 
 ---
-#Base de datos 
+# Base de datos 
 
 | Nombre   	| Descripción                        	| Valores 	| Categorías       	|
 |----------	|------------------------------------	|---------	|------------------	|
@@ -396,10 +420,11 @@ Empleando la base "titanic", realice algunos procedimientos de exploración y an
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+"ratio": "16:9",
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div>` "
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -439,9 +464,25 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
-
-<script>
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
 (function() {
   var links = document.getElementsByTagName('a');
   for (var i = 0; i < links.length; i++) {
@@ -449,8 +490,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
       links[i].target = '_blank';
     }
   }
-})();
-</script>
+})();</script>
 
 <script>
 slideshow._releaseMath = function(el) {

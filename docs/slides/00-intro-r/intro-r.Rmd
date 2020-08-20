@@ -1,32 +1,54 @@
 ---
-title: "Introducción a R"
-subtitle: " "
-author: "Julio César Iturra Sanhueza"
-date: "`r Sys.Date()`"
+title: "Introducción a R <br> .small[Análisis de Datos Multinivel]"
+date: "Agosto, 2020"
+author: 
+- "Julio César Iturra Sanhueza" 
 output:
   xaringan::moon_reader:
     lib_dir: libs
     nature:
-      highlightStyle: github
-      highlightLines: true
+      ratio: '16:9'
       countIncrementalSlides: false
-    css: [default ,rladies-fonts] 
+      beforeInit: "macros.js"
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+    seal: true # esto omite title slide automática
+    css: ["xaringan-coes.css","https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"]
 ---
+layout: true
+class: animated, fadeIn
+
+---
+class: slideInRight,
 
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+options(htmltools.dir.version = FALSE) 
 ```
 
-#Contenidos ayudantía
+```{r xaringanExtra-clipboard, echo=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clipboard\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
 
+
+#Contenidos ayudantía
+ 
 * ¿Qué es R?
 * Interfaz de R-studio 
     - Consola
     - Sintáxis
     - Enviornment (objetos)
-    
 * Funciones básicas en R
-
+    - Operadores lógicos
+    - Transformaciones básicas
 * Uso de Bases de Datos  
     - Cargar una base de datos
     - Tipos de datos 
@@ -34,15 +56,14 @@ options(htmltools.dir.version = FALSE)
 ---
 class: inverse, middle, center
 
-#¿Qué es R?
+# ¿Qué es R?
 
 ---
 
-##¿Qué es **_R_** ?
+## ¿Qué es **_R_** ?
 
 1. R es un software libre, por tanto es totalmente gratuito y abierto. Tiene una comunidad a nivel mundial muy activa, donde se comparte
 todo tipo de contenido relacionado con el análisis de datos.
-
 2. Es un lenguaje de programación, de modo que también es posible que los usuarios elaboren sus propias funciones o "paquetes".
 
 3. Tiene una fuerte orientación al análisis estadístico y visualización de datos.
@@ -50,10 +71,12 @@ todo tipo de contenido relacionado con el análisis de datos.
 4. Una de sus principales características es que posee una lógica de programación orientada a **Objetos** (Object Oriented programming). Lo veremos en detalle más adelante. 
 
 5. El editor nativo de R es poco amigable para los usuarios. Por lo tanto, lo más adecuado es emplear una **Interfaz de Usuario** (IDE por *Integrated development environment*) 
-  * [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
+
+  - [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
 
 ---
-## **R** es una gran calculadora
+
+## `R` es una gran calculadora
 
 * Una de las características principales de R es que nos permite emplearlo como una "base" para realizar cálculos matemáticos simples, como también emplear funciones complejas a través de paquetes especializados.
 
@@ -69,13 +92,13 @@ Aquí hay algunos ejemplos:
 (100+100)/4
 ```
 ---
-##Programación orientada a objetos
+## Programación orientada a objetos
 
 * El hecho de R tenga una "orientación a objetos" tiene varias ventajas.
 
 1. Es posible "guardar" nuestros objetos, los cuales pueden ser números, palabras, resultados, funciones, etc.
 2. Al tenerlos "guardados" los podemos "llamar" cuando sea necesario. 
-3. El símbolo ` <- ` permite indicarle a R que queremos "guardar" un objeto
+3. El símbolo `<-` permite indicarle a R que queremos "guardar" un objeto
 
 ```{r}
 a <- 100 #Guardamos 100 dentro del objeto a
@@ -102,6 +125,14 @@ d
 ```{r}
 d^2 #Estamos elevando al cuadrado al objeto e
 ```
+---
+
+## Operadores lógicos
+
+---
+## Transformaciones básicas
+
+
 
 ---
 class: inverse, middle, center
@@ -109,7 +140,7 @@ class: inverse, middle, center
 # RStudio 
 
 ---
-#Interfaz de RStudio
+# Interfaz de RStudio
 
 RStudio se compone de varias partes, pero las más importarten son:
 
@@ -123,12 +154,9 @@ RStudio se compone de varias partes, pero las más importarten son:
 * **Panel de visualización**: Aquí se visualizan nuestros gráficos y otro tipo de resultados.
 
 ---
+class: top
+.center[![:scale 74%](images/rstudio.png)] 
 
-class: middle, center
-
-```{r, echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics("rstudio.png")
-```
 ---
 #Abrir una Base de datos:
 
@@ -148,8 +176,13 @@ library(haven) #Cargar la librería
 
 Cargar una base de datos en .csv
 
-```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
-tt <- read_sav("titanic.sav")
+```{r message=FALSE, warning=FALSE, include=FALSE, size="small"}
+tt <- read_sav("data/titanic2.sav") 
+tt <- read.csv("data/titanic.csv")
+```
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
+tt <- read_sav("titanic2.sav") 
 tt <- read.csv("titanic.csv")
 ```
 
@@ -182,7 +215,7 @@ write.csv(tt,"titanic.csv", fileEncoding = "UTF-8")
 > Todos estos pueden ser tratados como objetos.
 
 ---
-#Exploración de datos
+# Exploración de datos
 
 > `datos$variable`
 
@@ -195,7 +228,7 @@ str(tt) #Contenido y estructura de la base de datos
 ```
 
 ---
-#Describamos nuestros datos
+# Describamos nuestros datos
 
 ```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
 summary(tt$age) #Estadísticos descriptivos
@@ -212,7 +245,7 @@ prop.table(table(tt$pclass)) #Vemos las proporciones
 table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
 ```
 ---
-#Algunos tips
+# Algunos tips
 
 * Para crear códigos es útil mantener buenas prácticas con el objetivo de que ustedes recuerden lo que han hecho, como también para que otras personas puedan comprender su trabajo.
 
@@ -241,7 +274,7 @@ Slides created via the R package [**xaringan**](https://github.com/yihui/xaringa
  [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
  
 ---
-##Actividad
+## Actividad
 
 Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
 
@@ -261,7 +294,7 @@ Empleando la base "titanic", realice algunos procedimientos de exploración y an
 
 
 ---
-#Base de datos 
+# Base de datos 
 
 | Nombre   	| Descripción                        	| Valores 	| Categorías       	|
 |----------	|------------------------------------	|---------	|------------------	|
