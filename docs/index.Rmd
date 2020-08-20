@@ -1,0 +1,18 @@
+---
+title: Presentación
+output: html_document
+---
+
+## Objetivo general del sitio
+
+Generar un apoyo adicional para las/os estudiantes del curso.
+Sitio web desarrollado por [Julio Iturra Sanhueza](), ayudante del curso "Análisis de Datos Multinivel" del Magister/Doctorado en Sociología de la Pontificia Universidad Católica de Chile.
+
+
+### Profesor:
+
+[Matías Bargsted Valdés](https://sites.google.com/uc.cl/matiasbargsted) 
+
+### Ayudante:
+
+[Julio César Iturra Sanhueza](https://coes.cl/integrantes/julio-cesar-iturra/)

@@ -1,0 +1,17 @@
+name: "multinivel2020-uc"
+output_dir: "." # Esto es para que se compile en el rootdir
+navbar:
+  title: "Análisis de Datos Multinivel - SOL3051"
+  right:
+#    - text: "Inicio"
+#      icon: fa-home
+#      href: index.html
+    - text: "Sesiones"
+      icon: fa-desktop
+      href: talleres.html
+    - text: "Links"
+      icon: ion-social-markdown
+      href: links.html
+output:
+  html_document:
+    css: style.css

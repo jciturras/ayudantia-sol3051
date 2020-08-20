@@ -1,0 +1,278 @@
+---
+title: "Introducción a R"
+subtitle: " "
+author: "Julio César Iturra Sanhueza"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    css: [default ,rladies-fonts] 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+#Contenidos ayudantía
+
+* ¿Qué es R?
+* Interfaz de R-studio 
+    - Consola
+    - Sintáxis
+    - Enviornment (objetos)
+    
+* Funciones básicas en R
+
+* Uso de Bases de Datos  
+    - Cargar una base de datos
+    - Tipos de datos 
+    - Descripción de datos
+---
+class: inverse, middle, center
+
+#¿Qué es R?
+
+---
+
+##¿Qué es **_R_** ?
+
+1. R es un software libre, por tanto es totalmente gratuito y abierto. Tiene una comunidad a nivel mundial muy activa, donde se comparte
+todo tipo de contenido relacionado con el análisis de datos.
+
+2. Es un lenguaje de programación, de modo que también es posible que los usuarios elaboren sus propias funciones o "paquetes".
+
+3. Tiene una fuerte orientación al análisis estadístico y visualización de datos.
+
+4. Una de sus principales características es que posee una lógica de programación orientada a **Objetos** (Object Oriented programming). Lo veremos en detalle más adelante. 
+
+5. El editor nativo de R es poco amigable para los usuarios. Por lo tanto, lo más adecuado es emplear una **Interfaz de Usuario** (IDE por *Integrated development environment*) 
+  * [**RStudio**](https://www.rstudio.com/) será la interfaz que utilizaremos en el curso.
+
+---
+## **R** es una gran calculadora
+
+* Una de las características principales de R es que nos permite emplearlo como una "base" para realizar cálculos matemáticos simples, como también emplear funciones complejas a través de paquetes especializados.
+
+* Al ser una plataforma abierta, es posible utilizar una infinidad de paquetes que otros usuarios han desarrollado. Los paquetes son grupos de funciones que usuarios han programado con algún objetivo, el cual queda abierto a la comunidad para su libre acceso. 
+
+Aquí hay algunos ejemplos:
+
+```{r}
+1+1
+```
+
+```{r}
+(100+100)/4
+```
+---
+##Programación orientada a objetos
+
+* El hecho de R tenga una "orientación a objetos" tiene varias ventajas.
+
+1. Es posible "guardar" nuestros objetos, los cuales pueden ser números, palabras, resultados, funciones, etc.
+2. Al tenerlos "guardados" los podemos "llamar" cuando sea necesario. 
+3. El símbolo ` <- ` permite indicarle a R que queremos "guardar" un objeto
+
+```{r}
+a <- 100 #Guardamos 100 dentro del objeto a
+b <- 4   #Guardamos 4 dentro del objeto b
+c <- 1+1 #Guardamos el resultado de 1+1 en c
+```
+
+```{r}
+print(a)
+```
+
+```{r}
+print(a*b) #multiplicando a x b
+```
+---
+
+```{r}
+d <- (a*a)/b #a x a dividido b
+print(d)
+#O su versión abreviada:
+d
+```
+
+```{r}
+d^2 #Estamos elevando al cuadrado al objeto e
+```
+
+---
+class: inverse, middle, center
+
+# RStudio 
+
+---
+#Interfaz de RStudio
+
+RStudio se compone de varias partes, pero las más importarten son:
+
+
+* **Sintaxis**: Es donde escribimos nuestro código
+
+* **Consola**: Es donde podemos visualizar nuestros resultados 
+
+* **Enviornment**: Es donde se "guardan" nuestros objetos 
+
+* **Panel de visualización**: Aquí se visualizan nuestros gráficos y otro tipo de resultados.
+
+---
+
+class: middle, center
+
+```{r, echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics("rstudio.png")
+```
+---
+#Abrir una Base de datos:
+
+* Para introducir datos en R es posible emplear distintas formas:
+
+1. A través de comando para leer texto (read.txt, read.csv)
+2. Empleando librerías complementarias con funcionalidades para importar bases provenientes de otros programas:
+
+```{r, eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+install.packages("haven") #cargar .sav (SPSS)
+library(haven) #Cargar la librería
+```
+
+```{r, include=FALSE}
+library(haven) #Cargar la librería
+```
+
+Cargar una base de datos en .csv
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, size="small"}
+tt <- read_sav("titanic.sav")
+tt <- read.csv("titanic.csv")
+```
+
+
+```{r, eval=FALSE, include=FALSE}
+# tt <- read_sav("C:/Users/JC/Desktop/Ayudantía UDP/Intro a R/titatic3_2.sav")
+tt <- na.omit(tt)
+tt$pclass <- factor(tt$pclass, levels = c(1,2,3), labels = c("Clase Alta", "Clase Intermedia", "Clase Baja")) 
+tt$sex <- factor(tt$sex, levels = c(0,1), labels = c("Hombre", "Mujer"))
+tt$survived <- factor(tt$survived, levels = c(0,1), labels = c("No sobrevive", "Sobrevive"))
+# write_sav(tt,"titanic.sav")
+write.csv(tt,"titanic.csv", fileEncoding = "UTF-8")
+```
+
+---
+#Tipos de datos en R
+
+* Numérico (numeric; números con decimales)
+* Números enteros (integer)
+* Lógicos: Verdadero o Falso
+* Variables cadena o texto (string / character)
+* Factores (factor): para variables cualitativas (nominales)
+
+#Tipos de estructura de datos:
+
+* Vector (vector) columna o fila de datos numéricos (una variable individual)
+* Matrices (matrix): arreglo de dos dimenisones de datos numéricos (conjunto de variables)
+* Data.frame (base de datos): Matriz de datos en el que las columnas tienen adignado nombres, y que permite usar todo tipo de datos.
+
+> Todos estos pueden ser tratados como objetos.
+
+---
+#Exploración de datos
+
+> `datos$variable`
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE, results='hold'}
+class(tt) #ver el tipo de datos 
+class(tt$sex) #¿qué tipo de variable es sex?
+class(tt$age) #¿qué tipo de variable es age?
+class(tt$pclass) #¿qué tipo de variable es pclass?
+str(tt) #Contenido y estructura de la base de datos
+```
+
+---
+#Describamos nuestros datos
+
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+summary(tt$age) #Estadísticos descriptivos
+mean(tt$age) #Media de edad
+sd(tt$age) #desviación estándar de edad
+summary.factor(tt$sex) # ¿cuántos hombres y mujeres hay?
+```
+
+---
+```{r, eval=TRUE, message=FALSE, warning=FALSE, include=TRUE}
+summary.factor(tt$pclass) #Con summary también podemos ver un factor
+table(tt$pclass) #Otra alternativa
+prop.table(table(tt$pclass)) #Vemos las proporciones
+table(tt$pclass, tt$sex) #tabla cruzada sexo y clase social
+```
+---
+#Algunos tips
+
+* Para crear códigos es útil mantener buenas prácticas con el objetivo de que ustedes recuerden lo que han hecho, como también para que otras personas puedan comprender su trabajo.
+
+1. Comentar código. En R se utiliza el símbolo **`#`** para crear comentarios
+2. Utilizar secciones en el código, de modo que se sepa cuando comienza y termina un procedimiento.
+3. Cuando realicen algún procedimiento más complejo, describirlo en detalle. 
+
+```{r, echo=TRUE}
+#Código de Julio Iturra -  jciturra@uc.cl
+#Fecha: 17.10.2018
+
+# Mi primera sección -------------------------------------------
+#Creación de "a" en base a "b", b = 45
+b <- 45 #creamos b
+a <- b  #creamos a en base b
+
+print(a) #comprobemos si "a" está OK
+```
+
+---
+class: center, middle
+
+# Consultas al correo julioiturrasanhueza@gmail.com
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan),
+ [**knitr**](http://yihui.name/knitr), y [R Markdown](https://rmarkdown.rstudio.com).
+ 
+---
+##Actividad
+
+Empleando la base "titanic", realice algunos procedimientos de exploración y análisis de datos.
+
+1. Observe el tipo de estructura de datos que está empleando.
+
+1. En base a la base señalada, observe su "estructura" 
+
+1. Observe qué tipo/clase de variable es: `sex`, `pclass`, `age` y `survived`
+ 
+1. Según esto, determine cuál comando va emplear para describir las variables.
+
+1. Explore gráficamente la variable `age` y `pclass`
+
+1. Construya una tabla de contingencia (filas x columnas): 
+
+<center> survived x pclass </center>
+
+
+---
+#Base de datos 
+
+| Nombre   	| Descripción                        	| Valores 	| Categorías       	|
+|----------	|------------------------------------	|---------	|------------------	|
+| pclass   	| Clase del pasajero/a               	| 1       	| Clase Alta       	|
+|          	|                                    	| 2       	| Clase Intermedia 	|
+|          	|                                    	| 3       	| Clase Baja       	|
+| survived 	| Estatus sobrevivencia              	| 1       	| No sobrevive     	|
+|          	|                                    	| 2       	| Sobrevive        	|
+| name     	| Nombre                             	|         	|                  	|
+| sex      	| Sexo pasajero/a                    	| 1       	| Hombre           	|
+|          	|                                    	| 2       	| Mujer            	|
+| age      	| Edad pasajero/a                    	|         	| rango: 0.2-80.0  	|
+| sibsp    	| Número de parientes                	|         	| rango: 0-8       	|
+| parch    	| Número de padres / niños a bordo   	|         	| rango: 0-9       	|
