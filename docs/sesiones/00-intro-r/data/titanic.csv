@@ -1,0 +1,1047 @@
+"","pclass","survived","name","sex","age","sibsp","parch"
+"1","Clase Alta","Sobrevive","Allen, Miss. Elisabeth Walton","Mujer",29,0,0
+"2","Clase Alta","Sobrevive","Allison, Master. Hudson Trevor","Hombre",0.9167,1,2
+"3","Clase Alta","No sobrevive","Allison, Miss. Helen Loraine","Mujer",2,1,2
+"4","Clase Alta","No sobrevive","Allison, Mr. Hudson Joshua Creighton","Hombre",30,1,2
+"5","Clase Alta","No sobrevive","Allison, Mrs. Hudson J C (Bessie Waldo Daniels)","Mujer",25,1,2
+"6","Clase Alta","Sobrevive","Anderson, Mr. Harry","Hombre",48,0,0
+"7","Clase Alta","Sobrevive","Andrews, Miss. Kornelia Theodosia","Mujer",63,1,0
+"8","Clase Alta","No sobrevive","Andrews, Mr. Thomas Jr","Hombre",39,0,0
+"9","Clase Alta","Sobrevive","Appleton, Mrs. Edward Dale (Charlotte Lamson)","Mujer",53,2,0
+"10","Clase Alta","No sobrevive","Artagaveytia, Mr. Ramon","Hombre",71,0,0
+"11","Clase Alta","No sobrevive","Astor, Col. John Jacob","Hombre",47,1,0
+"12","Clase Alta","Sobrevive","Astor, Mrs. John Jacob (Madeleine Talmadge Force)","Mujer",18,1,0
+"13","Clase Alta","Sobrevive","Aubart, Mme. Leontine Pauline","Mujer",24,0,0
+"14","Clase Alta","Sobrevive","Barber, Miss. Ellen ""Nellie""","Mujer",26,0,0
+"15","Clase Alta","Sobrevive","Barkworth, Mr. Algernon Henry Wilson","Hombre",80,0,0
+"16","Clase Alta","No sobrevive","Baxter, Mr. Quigg Edmond","Hombre",24,0,1
+"17","Clase Alta","Sobrevive","Baxter, Mrs. James (Helene DeLaudeniere Chaput)","Mujer",50,0,1
+"18","Clase Alta","Sobrevive","Bazzani, Miss. Albina","Mujer",32,0,0
+"19","Clase Alta","No sobrevive","Beattie, Mr. Thomson","Hombre",36,0,0
+"20","Clase Alta","Sobrevive","Beckwith, Mr. Richard Leonard","Hombre",37,1,1
+"21","Clase Alta","Sobrevive","Beckwith, Mrs. Richard Leonard (Sallie Monypeny)","Mujer",47,1,1
+"22","Clase Alta","Sobrevive","Behr, Mr. Karl Howell","Hombre",26,0,0
+"23","Clase Alta","Sobrevive","Bidois, Miss. Rosalie","Mujer",42,0,0
+"24","Clase Alta","Sobrevive","Bird, Miss. Ellen","Mujer",29,0,0
+"25","Clase Alta","No sobrevive","Birnbaum, Mr. Jakob","Hombre",25,0,0
+"26","Clase Alta","Sobrevive","Bishop, Mr. Dickinson H","Hombre",25,1,0
+"27","Clase Alta","Sobrevive","Bishop, Mrs. Dickinson H (Helen Walton)","Mujer",19,1,0
+"28","Clase Alta","Sobrevive","Bissette, Miss. Amelia","Mujer",35,0,0
+"29","Clase Alta","Sobrevive","Bjornstrom-Steffansson, Mr. Mauritz Hakan","Hombre",28,0,0
+"30","Clase Alta","No sobrevive","Blackwell, Mr. Stephen Weart","Hombre",45,0,0
+"31","Clase Alta","Sobrevive","Blank, Mr. Henry","Hombre",40,0,0
+"32","Clase Alta","Sobrevive","Bonnell, Miss. Caroline","Mujer",30,0,0
+"33","Clase Alta","Sobrevive","Bonnell, Miss. Elizabeth","Mujer",58,0,0
+"34","Clase Alta","No sobrevive","Borebank, Mr. John James","Hombre",42,0,0
+"35","Clase Alta","Sobrevive","Bowen, Miss. Grace Scott","Mujer",45,0,0
+"36","Clase Alta","Sobrevive","Bowerman, Miss. Elsie Edith","Mujer",22,0,1
+"37","Clase Alta","No sobrevive","Brady, Mr. John Bertram","Hombre",41,0,0
+"38","Clase Alta","No sobrevive","Brandeis, Mr. Emil","Hombre",48,0,0
+"39","Clase Alta","Sobrevive","Brown, Mrs. James Joseph (Margaret Tobin)","Mujer",44,0,0
+"40","Clase Alta","Sobrevive","Brown, Mrs. John Murray (Caroline Lane Lamson)","Mujer",59,2,0
+"41","Clase Alta","Sobrevive","Bucknell, Mrs. William Robert (Emma Eliza Ward)","Mujer",60,0,0
+"42","Clase Alta","Sobrevive","Burns, Miss. Elizabeth Margaret","Mujer",41,0,0
+"43","Clase Alta","No sobrevive","Butt, Major. Archibald Willingham","Hombre",45,0,0
+"44","Clase Alta","Sobrevive","Calderhead, Mr. Edward Pennington","Hombre",42,0,0
+"45","Clase Alta","Sobrevive","Candee, Mrs. Edward (Helen Churchill Hungerford)","Mujer",53,0,0
+"46","Clase Alta","Sobrevive","Cardeza, Mr. Thomas Drake Martinez","Hombre",36,0,1
+"47","Clase Alta","Sobrevive","Cardeza, Mrs. James Warburton Martinez (Charlotte Wardle Drake)","Mujer",58,0,1
+"48","Clase Alta","No sobrevive","Carlsson, Mr. Frans Olof","Hombre",33,0,0
+"49","Clase Alta","No sobrevive","Carrau, Mr. Francisco M","Hombre",28,0,0
+"50","Clase Alta","No sobrevive","Carrau, Mr. Jose Pedro","Hombre",17,0,0
+"51","Clase Alta","Sobrevive","Carter, Master. William Thornton II","Hombre",11,1,2
+"52","Clase Alta","Sobrevive","Carter, Miss. Lucile Polk","Mujer",14,1,2
+"53","Clase Alta","Sobrevive","Carter, Mr. William Ernest","Hombre",36,1,2
+"54","Clase Alta","Sobrevive","Carter, Mrs. William Ernest (Lucile Polk)","Mujer",36,1,2
+"55","Clase Alta","No sobrevive","Case, Mr. Howard Brown","Hombre",49,0,0
+"56","Clase Alta","No sobrevive","Cavendish, Mr. Tyrell William","Hombre",36,1,0
+"57","Clase Alta","Sobrevive","Cavendish, Mrs. Tyrell William (Julia Florence Siegel)","Mujer",76,1,0
+"58","Clase Alta","No sobrevive","Chaffee, Mr. Herbert Fuller","Hombre",46,1,0
+"59","Clase Alta","Sobrevive","Chaffee, Mrs. Herbert Fuller (Carrie Constance Toogood)","Mujer",47,1,0
+"60","Clase Alta","Sobrevive","Chambers, Mr. Norman Campbell","Hombre",27,1,0
+"61","Clase Alta","Sobrevive","Chambers, Mrs. Norman Campbell (Bertha Griggs)","Mujer",33,1,0
+"62","Clase Alta","Sobrevive","Chaudanson, Miss. Victorine","Mujer",36,0,0
+"63","Clase Alta","Sobrevive","Cherry, Miss. Gladys","Mujer",30,0,0
+"64","Clase Alta","Sobrevive","Chevre, Mr. Paul Romaine","Hombre",45,0,0
+"65","Clase Alta","No sobrevive","Clark, Mr. Walter Miller","Hombre",27,1,0
+"66","Clase Alta","Sobrevive","Clark, Mrs. Walter Miller (Virginia McDowell)","Mujer",26,1,0
+"67","Clase Alta","Sobrevive","Cleaver, Miss. Alice","Mujer",22,0,0
+"68","Clase Alta","No sobrevive","Colley, Mr. Edward Pomeroy","Hombre",47,0,0
+"69","Clase Alta","Sobrevive","Compton, Miss. Sara Rebecca","Mujer",39,1,1
+"70","Clase Alta","No sobrevive","Compton, Mr. Alexander Taylor Jr","Hombre",37,1,1
+"71","Clase Alta","Sobrevive","Compton, Mrs. Alexander Taylor (Mary Eliza Ingersoll)","Mujer",64,0,2
+"72","Clase Alta","Sobrevive","Cornell, Mrs. Robert Clifford (Malvina Helen Lamson)","Mujer",55,2,0
+"73","Clase Alta","No sobrevive","Crosby, Capt. Edward Gifford","Hombre",70,1,1
+"74","Clase Alta","Sobrevive","Crosby, Miss. Harriet R","Mujer",36,0,2
+"75","Clase Alta","Sobrevive","Crosby, Mrs. Edward Gifford (Catherine Elizabeth Halstead)","Mujer",64,1,1
+"76","Clase Alta","No sobrevive","Cumings, Mr. John Bradley","Hombre",39,1,0
+"77","Clase Alta","Sobrevive","Cumings, Mrs. John Bradley (Florence Briggs Thayer)","Mujer",38,1,0
+"78","Clase Alta","Sobrevive","Daly, Mr. Peter Denis","Hombre",51,0,0
+"79","Clase Alta","Sobrevive","Daniel, Mr. Robert Williams","Hombre",27,0,0
+"80","Clase Alta","Sobrevive","Daniels, Miss. Sarah","Mujer",33,0,0
+"81","Clase Alta","No sobrevive","Davidson, Mr. Thornton","Hombre",31,1,0
+"82","Clase Alta","Sobrevive","Davidson, Mrs. Thornton (Orian Hays)","Mujer",27,1,2
+"83","Clase Alta","Sobrevive","Dick, Mr. Albert Adrian","Hombre",31,1,0
+"84","Clase Alta","Sobrevive","Dick, Mrs. Albert Adrian (Vera Gillespie)","Mujer",17,1,0
+"85","Clase Alta","Sobrevive","Dodge, Dr. Washington","Hombre",53,1,1
+"86","Clase Alta","Sobrevive","Dodge, Master. Washington","Hombre",4,0,2
+"87","Clase Alta","Sobrevive","Dodge, Mrs. Washington (Ruth Vidaver)","Mujer",54,1,1
+"88","Clase Alta","No sobrevive","Douglas, Mr. Walter Donald","Hombre",50,1,0
+"89","Clase Alta","Sobrevive","Douglas, Mrs. Frederick Charles (Mary Helene Baxter)","Mujer",27,1,1
+"90","Clase Alta","Sobrevive","Douglas, Mrs. Walter Donald (Mahala Dutton)","Mujer",48,1,0
+"91","Clase Alta","Sobrevive","Duff Gordon, Lady. (Lucille Christiana Sutherland) (""Mrs Morgan"")","Mujer",48,1,0
+"92","Clase Alta","Sobrevive","Duff Gordon, Sir. Cosmo Edmund (""Mr Morgan"")","Hombre",49,1,0
+"93","Clase Alta","No sobrevive","Dulles, Mr. William Crothers","Hombre",39,0,0
+"94","Clase Alta","Sobrevive","Earnshaw, Mrs. Boulton (Olive Potter)","Mujer",23,0,1
+"95","Clase Alta","Sobrevive","Endres, Miss. Caroline Louise","Mujer",38,0,0
+"96","Clase Alta","Sobrevive","Eustis, Miss. Elizabeth Mussey","Mujer",54,1,0
+"97","Clase Alta","No sobrevive","Evans, Miss. Edith Corse","Mujer",36,0,0
+"98","Clase Alta","Sobrevive","Flynn, Mr. John Irwin (""Irving"")","Hombre",36,0,0
+"99","Clase Alta","No sobrevive","Foreman, Mr. Benjamin Laventall","Hombre",30,0,0
+"100","Clase Alta","Sobrevive","Fortune, Miss. Alice Elizabeth","Mujer",24,3,2
+"101","Clase Alta","Sobrevive","Fortune, Miss. Ethel Flora","Mujer",28,3,2
+"102","Clase Alta","Sobrevive","Fortune, Miss. Mabel Helen","Mujer",23,3,2
+"103","Clase Alta","No sobrevive","Fortune, Mr. Charles Alexander","Hombre",19,3,2
+"104","Clase Alta","No sobrevive","Fortune, Mr. Mark","Hombre",64,1,4
+"105","Clase Alta","Sobrevive","Fortune, Mrs. Mark (Mary McDougald)","Mujer",60,1,4
+"106","Clase Alta","Sobrevive","Francatelli, Miss. Laura Mabel","Mujer",30,0,0
+"107","Clase Alta","Sobrevive","Frauenthal, Dr. Henry William","Hombre",50,2,0
+"108","Clase Alta","Sobrevive","Frauenthal, Mr. Isaac Gerald","Hombre",43,1,0
+"109","Clase Alta","Sobrevive","Frolicher, Miss. Hedwig Margaritha","Mujer",22,0,2
+"110","Clase Alta","Sobrevive","Frolicher-Stehli, Mr. Maxmillian","Hombre",60,1,1
+"111","Clase Alta","Sobrevive","Frolicher-Stehli, Mrs. Maxmillian (Margaretha Emerentia Stehli)","Mujer",48,1,1
+"112","Clase Alta","No sobrevive","Futrelle, Mr. Jacques Heath","Hombre",37,1,0
+"113","Clase Alta","Sobrevive","Futrelle, Mrs. Jacques Heath (Lily May Peel)","Mujer",35,1,0
+"114","Clase Alta","No sobrevive","Gee, Mr. Arthur H","Hombre",47,0,0
+"115","Clase Alta","Sobrevive","Geiger, Miss. Amalie","Mujer",35,0,0
+"116","Clase Alta","Sobrevive","Gibson, Miss. Dorothy Winifred","Mujer",22,0,1
+"117","Clase Alta","Sobrevive","Gibson, Mrs. Leonard (Pauline C Boeson)","Mujer",45,0,1
+"118","Clase Alta","No sobrevive","Giglio, Mr. Victor","Hombre",24,0,0
+"119","Clase Alta","Sobrevive","Goldenberg, Mr. Samuel L","Hombre",49,1,0
+"120","Clase Alta","No sobrevive","Goldschmidt, Mr. George B","Hombre",71,0,0
+"121","Clase Alta","Sobrevive","Gracie, Col. Archibald IV","Hombre",53,0,0
+"122","Clase Alta","Sobrevive","Graham, Miss. Margaret Edith","Mujer",19,0,0
+"123","Clase Alta","No sobrevive","Graham, Mr. George Edward","Hombre",38,0,1
+"124","Clase Alta","Sobrevive","Graham, Mrs. William Thompson (Edith Junkins)","Mujer",58,0,1
+"125","Clase Alta","Sobrevive","Greenfield, Mr. William Bertram","Hombre",23,0,1
+"126","Clase Alta","Sobrevive","Greenfield, Mrs. Leo David (Blanche Strouse)","Mujer",45,0,1
+"127","Clase Alta","No sobrevive","Guggenheim, Mr. Benjamin","Hombre",46,0,0
+"128","Clase Alta","Sobrevive","Harder, Mr. George Achilles","Hombre",25,1,0
+"129","Clase Alta","Sobrevive","Harder, Mrs. George Achilles (Dorothy Annan)","Mujer",25,1,0
+"130","Clase Alta","Sobrevive","Harper, Mr. Henry Sleeper","Hombre",48,1,0
+"131","Clase Alta","Sobrevive","Harper, Mrs. Henry Sleeper (Myna Haxtun)","Mujer",49,1,0
+"132","Clase Alta","No sobrevive","Harris, Mr. Henry Birkhardt","Hombre",45,1,0
+"133","Clase Alta","Sobrevive","Harris, Mrs. Henry Birkhardt (Irene Wallach)","Mujer",35,1,0
+"134","Clase Alta","No sobrevive","Harrison, Mr. William","Hombre",40,0,0
+"135","Clase Alta","Sobrevive","Hassab, Mr. Hammad","Hombre",27,0,0
+"136","Clase Alta","Sobrevive","Hays, Miss. Margaret Bechstein","Mujer",24,0,0
+"137","Clase Alta","No sobrevive","Hays, Mr. Charles Melville","Hombre",55,1,1
+"138","Clase Alta","Sobrevive","Hays, Mrs. Charles Melville (Clara Jennings Gregg)","Mujer",52,1,1
+"139","Clase Alta","No sobrevive","Head, Mr. Christopher","Hombre",42,0,0
+"140","Clase Alta","No sobrevive","Hipkins, Mr. William Edward","Hombre",55,0,0
+"141","Clase Alta","Sobrevive","Hippach, Miss. Jean Gertrude","Mujer",16,0,1
+"142","Clase Alta","Sobrevive","Hippach, Mrs. Louis Albert (Ida Sophia Fischer)","Mujer",44,0,1
+"143","Clase Alta","Sobrevive","Hogeboom, Mrs. John C (Anna Andrews)","Mujer",51,1,0
+"144","Clase Alta","No sobrevive","Holverson, Mr. Alexander Oskar","Hombre",42,1,0
+"145","Clase Alta","Sobrevive","Holverson, Mrs. Alexander Oskar (Mary Aline Towner)","Mujer",35,1,0
+"146","Clase Alta","Sobrevive","Homer, Mr. Harry (""Mr E Haven"")","Hombre",35,0,0
+"147","Clase Alta","Sobrevive","Hoyt, Mr. Frederick Maxfield","Hombre",38,1,0
+"148","Clase Alta","Sobrevive","Hoyt, Mrs. Frederick Maxfield (Jane Anne Forby)","Mujer",35,1,0
+"149","Clase Alta","Sobrevive","Icard, Miss. Amelie","Mujer",38,0,0
+"150","Clase Alta","No sobrevive","Isham, Miss. Ann Elizabeth","Mujer",50,0,0
+"151","Clase Alta","Sobrevive","Ismay, Mr. Joseph Bruce","Hombre",49,0,0
+"152","Clase Alta","No sobrevive","Jones, Mr. Charles Cresson","Hombre",46,0,0
+"153","Clase Alta","No sobrevive","Julian, Mr. Henry Forbes","Hombre",50,0,0
+"154","Clase Alta","No sobrevive","Keeping, Mr. Edwin","Hombre",32.5,0,0
+"155","Clase Alta","No sobrevive","Kent, Mr. Edward Austin","Hombre",58,0,0
+"156","Clase Alta","No sobrevive","Kenyon, Mr. Frederick R","Hombre",41,1,0
+"157","Clase Alta","Sobrevive","Kimball, Mr. Edwin Nelson Jr","Hombre",42,1,0
+"158","Clase Alta","Sobrevive","Kimball, Mrs. Edwin Nelson Jr (Gertrude Parsons)","Mujer",45,1,0
+"159","Clase Alta","Sobrevive","Kreuchen, Miss. Emilie","Mujer",39,0,0
+"160","Clase Alta","Sobrevive","Leader, Dr. Alice (Farnham)","Mujer",49,0,0
+"161","Clase Alta","Sobrevive","LeRoy, Miss. Bertha","Mujer",30,0,0
+"162","Clase Alta","Sobrevive","Lesurer, Mr. Gustave J","Hombre",35,0,0
+"163","Clase Alta","No sobrevive","Lindeberg-Lind, Mr. Erik Gustaf (""Mr Edward Lingrey"")","Hombre",42,0,0
+"164","Clase Alta","Sobrevive","Lindstrom, Mrs. Carl Johan (Sigrid Posse)","Mujer",55,0,0
+"165","Clase Alta","Sobrevive","Lines, Miss. Mary Conover","Mujer",16,0,1
+"166","Clase Alta","Sobrevive","Lines, Mrs. Ernest H (Elizabeth Lindsey James)","Mujer",51,0,1
+"167","Clase Alta","No sobrevive","Long, Mr. Milton Clyde","Hombre",29,0,0
+"168","Clase Alta","Sobrevive","Longley, Miss. Gretchen Fiske","Mujer",21,0,0
+"169","Clase Alta","No sobrevive","Loring, Mr. Joseph Holland","Hombre",30,0,0
+"170","Clase Alta","Sobrevive","Lurette, Miss. Elise","Mujer",58,0,0
+"171","Clase Alta","Sobrevive","Madill, Miss. Georgette Alexandra","Mujer",15,0,1
+"172","Clase Alta","No sobrevive","Maguire, Mr. John Edward","Hombre",30,0,0
+"173","Clase Alta","Sobrevive","Maioni, Miss. Roberta","Mujer",16,0,0
+"174","Clase Alta","No sobrevive","Marvin, Mr. Daniel Warner","Hombre",19,1,0
+"175","Clase Alta","Sobrevive","Marvin, Mrs. Daniel Warner (Mary Graham Carmichael Farquarson)","Mujer",18,1,0
+"176","Clase Alta","Sobrevive","Mayne, Mlle. Berthe Antonine (""Mrs de Villiers"")","Mujer",24,0,0
+"177","Clase Alta","No sobrevive","McCaffry, Mr. Thomas Francis","Hombre",46,0,0
+"178","Clase Alta","No sobrevive","McCarthy, Mr. Timothy J","Hombre",54,0,0
+"179","Clase Alta","Sobrevive","McGough, Mr. James Robert","Hombre",36,0,0
+"180","Clase Alta","No sobrevive","Meyer, Mr. Edgar Joseph","Hombre",28,1,0
+"181","Clase Alta","No sobrevive","Millet, Mr. Francis Davis","Hombre",65,0,0
+"182","Clase Alta","No sobrevive","Minahan, Dr. William Edward","Hombre",44,2,0
+"183","Clase Alta","Sobrevive","Minahan, Miss. Daisy E","Mujer",33,1,0
+"184","Clase Alta","Sobrevive","Minahan, Mrs. William Edward (Lillian E Thorpe)","Mujer",37,1,0
+"185","Clase Alta","Sobrevive","Mock, Mr. Philipp Edmund","Hombre",30,1,0
+"186","Clase Alta","No sobrevive","Molson, Mr. Harry Markland","Hombre",55,0,0
+"187","Clase Alta","No sobrevive","Moore, Mr. Clarence Bloomfield","Hombre",47,0,0
+"188","Clase Alta","No sobrevive","Natsch, Mr. Charles H","Hombre",37,0,1
+"189","Clase Alta","Sobrevive","Newell, Miss. Madeleine","Mujer",31,1,0
+"190","Clase Alta","Sobrevive","Newell, Miss. Marjorie","Mujer",23,1,0
+"191","Clase Alta","No sobrevive","Newell, Mr. Arthur Webster","Hombre",58,0,2
+"192","Clase Alta","Sobrevive","Newsom, Miss. Helen Monypeny","Mujer",19,0,2
+"193","Clase Alta","No sobrevive","Nicholson, Mr. Arthur Ernest","Hombre",64,0,0
+"194","Clase Alta","Sobrevive","Oliva y Ocana, Dona. Fermina","Mujer",39,0,0
+"195","Clase Alta","Sobrevive","Ostby, Miss. Helene Ragnhild","Mujer",22,0,1
+"196","Clase Alta","No sobrevive","Ostby, Mr. Engelhart Cornelius","Hombre",65,0,1
+"197","Clase Alta","No sobrevive","Ovies y Rodriguez, Mr. Servando","Hombre",28.5,0,0
+"198","Clase Alta","No sobrevive","Partner, Mr. Austen","Hombre",45.5,0,0
+"199","Clase Alta","No sobrevive","Payne, Mr. Vivian Ponsonby","Hombre",23,0,0
+"200","Clase Alta","No sobrevive","Pears, Mr. Thomas Clinton","Hombre",29,1,0
+"201","Clase Alta","Sobrevive","Pears, Mrs. Thomas (Edith Wearne)","Mujer",22,1,0
+"202","Clase Alta","No sobrevive","Penasco y Castellana, Mr. Victor de Satode","Hombre",18,1,0
+"203","Clase Alta","Sobrevive","Penasco y Castellana, Mrs. Victor de Satode (Maria Josefa Perez de Soto y Vallejo)","Mujer",17,1,0
+"204","Clase Alta","Sobrevive","Perreault, Miss. Anne","Mujer",30,0,0
+"205","Clase Alta","Sobrevive","Peuchen, Major. Arthur Godfrey","Hombre",52,0,0
+"206","Clase Alta","No sobrevive","Porter, Mr. Walter Chamberlain","Hombre",47,0,0
+"207","Clase Alta","Sobrevive","Potter, Mrs. Thomas Jr (Lily Alexenia Wilson)","Mujer",56,0,1
+"208","Clase Alta","No sobrevive","Reuchlin, Jonkheer. John George","Hombre",38,0,0
+"209","Clase Alta","No sobrevive","Ringhini, Mr. Sante","Hombre",22,0,0
+"210","Clase Alta","Sobrevive","Robert, Mrs. Edward Scott (Elisabeth Walton McMillan)","Mujer",43,0,1
+"211","Clase Alta","No sobrevive","Roebling, Mr. Washington Augustus II","Hombre",31,0,0
+"212","Clase Alta","Sobrevive","Romaine, Mr. Charles Hallace (""Mr C Rolmane"")","Hombre",45,0,0
+"213","Clase Alta","Sobrevive","Rosenbaum, Miss. Edith Louise","Mujer",33,0,0
+"214","Clase Alta","No sobrevive","Rosenshine, Mr. George (""Mr George Thorne"")","Hombre",46,0,0
+"215","Clase Alta","No sobrevive","Ross, Mr. John Hugo","Hombre",36,0,0
+"216","Clase Alta","Sobrevive","Rothes, the Countess. of (Lucy Noel Martha Dyer-Edwards)","Mujer",33,0,0
+"217","Clase Alta","No sobrevive","Rothschild, Mr. Martin","Hombre",55,1,0
+"218","Clase Alta","Sobrevive","Rothschild, Mrs. Martin (Elizabeth L. Barrett)","Mujer",54,1,0
+"219","Clase Alta","No sobrevive","Rowe, Mr. Alfred G","Hombre",33,0,0
+"220","Clase Alta","Sobrevive","Ryerson, Master. John Borie","Hombre",13,2,2
+"221","Clase Alta","Sobrevive","Ryerson, Miss. Emily Borie","Mujer",18,2,2
+"222","Clase Alta","Sobrevive","Ryerson, Miss. Susan Parker ""Suzette""","Mujer",21,2,2
+"223","Clase Alta","No sobrevive","Ryerson, Mr. Arthur Larned","Hombre",61,1,3
+"224","Clase Alta","Sobrevive","Ryerson, Mrs. Arthur Larned (Emily Maria Borie)","Mujer",48,1,3
+"225","Clase Alta","Sobrevive","Sagesser, Mlle. Emma","Mujer",24,0,0
+"226","Clase Alta","Sobrevive","Schabert, Mrs. Paul (Emma Mock)","Mujer",35,1,0
+"227","Clase Alta","Sobrevive","Serepeca, Miss. Augusta","Mujer",30,0,0
+"228","Clase Alta","Sobrevive","Seward, Mr. Frederic Kimber","Hombre",34,0,0
+"229","Clase Alta","Sobrevive","Shutes, Miss. Elizabeth W","Mujer",40,0,0
+"230","Clase Alta","Sobrevive","Silverthorne, Mr. Spencer Victor","Hombre",35,0,0
+"231","Clase Alta","No sobrevive","Silvey, Mr. William Baird","Hombre",50,1,0
+"232","Clase Alta","Sobrevive","Silvey, Mrs. William Baird (Alice Munger)","Mujer",39,1,0
+"233","Clase Alta","Sobrevive","Simonius-Blumer, Col. Oberst Alfons","Hombre",56,0,0
+"234","Clase Alta","Sobrevive","Sloper, Mr. William Thompson","Hombre",28,0,0
+"235","Clase Alta","No sobrevive","Smart, Mr. John Montgomery","Hombre",56,0,0
+"236","Clase Alta","No sobrevive","Smith, Mr. James Clinch","Hombre",56,0,0
+"237","Clase Alta","No sobrevive","Smith, Mr. Lucien Philip","Hombre",24,1,0
+"238","Clase Alta","Sobrevive","Smith, Mrs. Lucien Philip (Mary Eloise Hughes)","Mujer",18,1,0
+"239","Clase Alta","Sobrevive","Snyder, Mr. John Pillsbury","Hombre",24,1,0
+"240","Clase Alta","Sobrevive","Snyder, Mrs. John Pillsbury (Nelle Stevenson)","Mujer",23,1,0
+"241","Clase Alta","Sobrevive","Spedden, Master. Robert Douglas","Hombre",6,0,2
+"242","Clase Alta","Sobrevive","Spedden, Mr. Frederic Oakley","Hombre",45,1,1
+"243","Clase Alta","Sobrevive","Spedden, Mrs. Frederic Oakley (Margaretta Corning Stone)","Mujer",40,1,1
+"244","Clase Alta","No sobrevive","Spencer, Mr. William Augustus","Hombre",57,1,0
+"245","Clase Alta","Sobrevive","Stahelin-Maeglin, Dr. Max","Hombre",32,0,0
+"246","Clase Alta","No sobrevive","Stead, Mr. William Thomas","Hombre",62,0,0
+"247","Clase Alta","Sobrevive","Stengel, Mr. Charles Emil Henry","Hombre",54,1,0
+"248","Clase Alta","Sobrevive","Stengel, Mrs. Charles Emil Henry (Annie May Morris)","Mujer",43,1,0
+"249","Clase Alta","Sobrevive","Stephenson, Mrs. Walter Bertram (Martha Eustis)","Mujer",52,1,0
+"250","Clase Alta","Sobrevive","Stone, Mrs. George Nelson (Martha Evelyn)","Mujer",62,0,0
+"251","Clase Alta","No sobrevive","Straus, Mr. Isidor","Hombre",67,1,0
+"252","Clase Alta","No sobrevive","Straus, Mrs. Isidor (Rosalie Ida Blun)","Mujer",63,1,0
+"253","Clase Alta","No sobrevive","Sutton, Mr. Frederick","Hombre",61,0,0
+"254","Clase Alta","Sobrevive","Swift, Mrs. Frederick Joel (Margaret Welles Barron)","Mujer",48,0,0
+"255","Clase Alta","Sobrevive","Taussig, Miss. Ruth","Mujer",18,0,2
+"256","Clase Alta","No sobrevive","Taussig, Mr. Emil","Hombre",52,1,1
+"257","Clase Alta","Sobrevive","Taussig, Mrs. Emil (Tillie Mandelbaum)","Mujer",39,1,1
+"258","Clase Alta","Sobrevive","Taylor, Mr. Elmer Zebley","Hombre",48,1,0
+"259","Clase Alta","No sobrevive","Thayer, Mr. John Borland","Hombre",49,1,1
+"260","Clase Alta","Sobrevive","Thayer, Mr. John Borland Jr","Hombre",17,0,2
+"261","Clase Alta","Sobrevive","Thayer, Mrs. John Borland (Marian Longstreth Morris)","Mujer",39,1,1
+"262","Clase Alta","Sobrevive","Tucker, Mr. Gilbert Milligan Jr","Hombre",31,0,0
+"263","Clase Alta","No sobrevive","Uruchurtu, Don. Manuel E","Hombre",40,0,0
+"264","Clase Alta","No sobrevive","Van der hoef, Mr. Wyckoff","Hombre",61,0,0
+"265","Clase Alta","No sobrevive","Walker, Mr. William Anderson","Hombre",47,0,0
+"266","Clase Alta","Sobrevive","Ward, Miss. Anna","Mujer",35,0,0
+"267","Clase Alta","No sobrevive","Warren, Mr. Frank Manley","Hombre",64,1,0
+"268","Clase Alta","Sobrevive","Warren, Mrs. Frank Manley (Anna Sophia Atkinson)","Mujer",60,1,0
+"269","Clase Alta","No sobrevive","Weir, Col. John","Hombre",60,0,0
+"270","Clase Alta","No sobrevive","White, Mr. Percival Wayland","Hombre",54,0,1
+"271","Clase Alta","No sobrevive","White, Mr. Richard Frasar","Hombre",21,0,1
+"272","Clase Alta","Sobrevive","White, Mrs. John Stuart (Ella Holmes)","Mujer",55,0,0
+"273","Clase Alta","Sobrevive","Wick, Miss. Mary Natalie","Mujer",31,0,2
+"274","Clase Alta","No sobrevive","Wick, Mr. George Dennick","Hombre",57,1,1
+"275","Clase Alta","Sobrevive","Wick, Mrs. George Dennick (Mary Hitchcock)","Mujer",45,1,1
+"276","Clase Alta","No sobrevive","Widener, Mr. George Dunton","Hombre",50,1,1
+"277","Clase Alta","No sobrevive","Widener, Mr. Harry Elkins","Hombre",27,0,2
+"278","Clase Alta","Sobrevive","Widener, Mrs. George Dunton (Eleanor Elkins)","Mujer",50,1,1
+"279","Clase Alta","Sobrevive","Willard, Miss. Constance","Mujer",21,0,0
+"280","Clase Alta","No sobrevive","Williams, Mr. Charles Duane","Hombre",51,0,1
+"281","Clase Alta","Sobrevive","Williams, Mr. Richard Norris II","Hombre",21,0,1
+"282","Clase Alta","Sobrevive","Wilson, Miss. Helen Alice","Mujer",31,0,0
+"283","Clase Alta","No sobrevive","Wright, Mr. George","Hombre",62,0,0
+"284","Clase Alta","Sobrevive","Young, Miss. Marie Grice","Mujer",36,0,0
+"285","Clase Intermedia","No sobrevive","Abelson, Mr. Samuel","Hombre",30,1,0
+"286","Clase Intermedia","Sobrevive","Abelson, Mrs. Samuel (Hannah Wizosky)","Mujer",28,1,0
+"287","Clase Intermedia","No sobrevive","Aldworth, Mr. Charles Augustus","Hombre",30,0,0
+"288","Clase Intermedia","No sobrevive","Andrew, Mr. Edgardo Samuel","Hombre",18,0,0
+"289","Clase Intermedia","No sobrevive","Andrew, Mr. Frank Thomas","Hombre",25,0,0
+"290","Clase Intermedia","No sobrevive","Angle, Mr. William A","Hombre",34,1,0
+"291","Clase Intermedia","Sobrevive","Angle, Mrs. William A (Florence ""Mary"" Agnes Hughes)","Mujer",36,1,0
+"292","Clase Intermedia","No sobrevive","Ashby, Mr. John","Hombre",57,0,0
+"293","Clase Intermedia","No sobrevive","Bailey, Mr. Percy Andrew","Hombre",18,0,0
+"294","Clase Intermedia","No sobrevive","Baimbrigge, Mr. Charles Robert","Hombre",23,0,0
+"295","Clase Intermedia","Sobrevive","Ball, Mrs. (Ada E Hall)","Mujer",36,0,0
+"296","Clase Intermedia","No sobrevive","Banfield, Mr. Frederick James","Hombre",28,0,0
+"297","Clase Intermedia","No sobrevive","Bateman, Rev. Robert James","Hombre",51,0,0
+"298","Clase Intermedia","Sobrevive","Beane, Mr. Edward","Hombre",32,1,0
+"299","Clase Intermedia","Sobrevive","Beane, Mrs. Edward (Ethel Clarke)","Mujer",19,1,0
+"300","Clase Intermedia","No sobrevive","Beauchamp, Mr. Henry James","Hombre",28,0,0
+"301","Clase Intermedia","Sobrevive","Becker, Master. Richard F","Hombre",1,2,1
+"302","Clase Intermedia","Sobrevive","Becker, Miss. Marion Louise","Mujer",4,2,1
+"303","Clase Intermedia","Sobrevive","Becker, Miss. Ruth Elizabeth","Mujer",12,2,1
+"304","Clase Intermedia","Sobrevive","Becker, Mrs. Allen Oliver (Nellie E Baumgardner)","Mujer",36,0,3
+"305","Clase Intermedia","Sobrevive","Beesley, Mr. Lawrence","Hombre",34,0,0
+"306","Clase Intermedia","Sobrevive","Bentham, Miss. Lilian W","Mujer",19,0,0
+"307","Clase Intermedia","No sobrevive","Berriman, Mr. William John","Hombre",23,0,0
+"308","Clase Intermedia","No sobrevive","Botsford, Mr. William Hull","Hombre",26,0,0
+"309","Clase Intermedia","No sobrevive","Bowenur, Mr. Solomon","Hombre",42,0,0
+"310","Clase Intermedia","No sobrevive","Bracken, Mr. James H","Hombre",27,0,0
+"311","Clase Intermedia","Sobrevive","Brown, Miss. Amelia ""Mildred""","Mujer",24,0,0
+"312","Clase Intermedia","Sobrevive","Brown, Miss. Edith Eileen","Mujer",15,0,2
+"313","Clase Intermedia","No sobrevive","Brown, Mr. Thomas William Solomon","Hombre",60,1,1
+"314","Clase Intermedia","Sobrevive","Brown, Mrs. Thomas William Solomon (Elizabeth Catherine Ford)","Mujer",40,1,1
+"315","Clase Intermedia","Sobrevive","Bryhl, Miss. Dagmar Jenny Ingeborg","Mujer",20,1,0
+"316","Clase Intermedia","No sobrevive","Bryhl, Mr. Kurt Arnold Gottfrid","Hombre",25,1,0
+"317","Clase Intermedia","Sobrevive","Buss, Miss. Kate","Mujer",36,0,0
+"318","Clase Intermedia","No sobrevive","Butler, Mr. Reginald Fenton","Hombre",25,0,0
+"319","Clase Intermedia","No sobrevive","Byles, Rev. Thomas Roussel Davids","Hombre",42,0,0
+"320","Clase Intermedia","Sobrevive","Bystrom, Mrs. (Karolina)","Mujer",42,0,0
+"321","Clase Intermedia","Sobrevive","Caldwell, Master. Alden Gates","Hombre",0.8333,0,2
+"322","Clase Intermedia","Sobrevive","Caldwell, Mr. Albert Francis","Hombre",26,1,1
+"323","Clase Intermedia","Sobrevive","Caldwell, Mrs. Albert Francis (Sylvia Mae Harbaugh)","Mujer",22,1,1
+"324","Clase Intermedia","Sobrevive","Cameron, Miss. Clear Annie","Mujer",35,0,0
+"325","Clase Intermedia","No sobrevive","Carbines, Mr. William","Hombre",19,0,0
+"326","Clase Intermedia","No sobrevive","Carter, Mrs. Ernest Courtenay (Lilian Hughes)","Mujer",44,1,0
+"327","Clase Intermedia","No sobrevive","Carter, Rev. Ernest Courtenay","Hombre",54,1,0
+"328","Clase Intermedia","No sobrevive","Chapman, Mr. Charles Henry","Hombre",52,0,0
+"329","Clase Intermedia","No sobrevive","Chapman, Mr. John Henry","Hombre",37,1,0
+"330","Clase Intermedia","No sobrevive","Chapman, Mrs. John Henry (Sara Elizabeth Lawry)","Mujer",29,1,0
+"331","Clase Intermedia","Sobrevive","Christy, Miss. Julie Rachel","Mujer",25,1,1
+"332","Clase Intermedia","Sobrevive","Christy, Mrs. (Alice Frances)","Mujer",45,0,2
+"333","Clase Intermedia","No sobrevive","Clarke, Mr. Charles Valentine","Hombre",29,1,0
+"334","Clase Intermedia","Sobrevive","Clarke, Mrs. Charles V (Ada Maria Winfield)","Mujer",28,1,0
+"335","Clase Intermedia","No sobrevive","Coleridge, Mr. Reginald Charles","Hombre",29,0,0
+"336","Clase Intermedia","No sobrevive","Collander, Mr. Erik Gustaf","Hombre",28,0,0
+"337","Clase Intermedia","Sobrevive","Collett, Mr. Sidney C Stuart","Hombre",24,0,0
+"338","Clase Intermedia","Sobrevive","Collyer, Miss. Marjorie ""Lottie""","Mujer",8,0,2
+"339","Clase Intermedia","No sobrevive","Collyer, Mr. Harvey","Hombre",31,1,1
+"340","Clase Intermedia","Sobrevive","Collyer, Mrs. Harvey (Charlotte Annie Tate)","Mujer",31,1,1
+"341","Clase Intermedia","Sobrevive","Cook, Mrs. (Selena Rogers)","Mujer",22,0,0
+"342","Clase Intermedia","No sobrevive","Corbett, Mrs. Walter H (Irene Colvin)","Mujer",30,0,0
+"343","Clase Intermedia","No sobrevive","Cotterill, Mr. Henry ""Harry""","Hombre",21,0,0
+"344","Clase Intermedia","Sobrevive","Davies, Master. John Morgan Jr","Hombre",8,1,1
+"345","Clase Intermedia","No sobrevive","Davies, Mr. Charles Henry","Hombre",18,0,0
+"346","Clase Intermedia","Sobrevive","Davies, Mrs. John Morgan (Elizabeth Agnes Mary White)","Mujer",48,0,2
+"347","Clase Intermedia","Sobrevive","Davis, Miss. Mary","Mujer",28,0,0
+"348","Clase Intermedia","No sobrevive","de Brito, Mr. Jose Joaquim","Hombre",32,0,0
+"349","Clase Intermedia","No sobrevive","Deacon, Mr. Percy William","Hombre",17,0,0
+"350","Clase Intermedia","No sobrevive","del Carlo, Mr. Sebastiano","Hombre",29,1,0
+"351","Clase Intermedia","Sobrevive","del Carlo, Mrs. Sebastiano (Argenia Genovesi)","Mujer",24,1,0
+"352","Clase Intermedia","No sobrevive","Denbury, Mr. Herbert","Hombre",25,0,0
+"353","Clase Intermedia","No sobrevive","Dibden, Mr. William","Hombre",18,0,0
+"354","Clase Intermedia","Sobrevive","Doling, Miss. Elsie","Mujer",18,0,1
+"355","Clase Intermedia","Sobrevive","Doling, Mrs. John T (Ada Julia Bone)","Mujer",34,0,1
+"356","Clase Intermedia","No sobrevive","Downton, Mr. William James","Hombre",54,0,0
+"357","Clase Intermedia","Sobrevive","Drew, Master. Marshall Brines","Hombre",8,0,2
+"358","Clase Intermedia","No sobrevive","Drew, Mr. James Vivian","Hombre",42,1,1
+"359","Clase Intermedia","Sobrevive","Drew, Mrs. James Vivian (Lulu Thorne Christian)","Mujer",34,1,1
+"360","Clase Intermedia","Sobrevive","Duran y More, Miss. Asuncion","Mujer",27,1,0
+"361","Clase Intermedia","Sobrevive","Duran y More, Miss. Florentina","Mujer",30,1,0
+"362","Clase Intermedia","No sobrevive","Eitemiller, Mr. George Floyd","Hombre",23,0,0
+"363","Clase Intermedia","No sobrevive","Enander, Mr. Ingvar","Hombre",21,0,0
+"364","Clase Intermedia","No sobrevive","Fahlstrom, Mr. Arne Jonas","Hombre",18,0,0
+"365","Clase Intermedia","No sobrevive","Faunthorpe, Mr. Harry","Hombre",40,1,0
+"366","Clase Intermedia","Sobrevive","Faunthorpe, Mrs. Lizzie (Elizabeth Anne Wilkinson)","Mujer",29,1,0
+"367","Clase Intermedia","No sobrevive","Fillbrook, Mr. Joseph Charles","Hombre",18,0,0
+"368","Clase Intermedia","No sobrevive","Fox, Mr. Stanley Hubert","Hombre",36,0,0
+"369","Clase Intermedia","No sobrevive","Funk, Miss. Annie Clemmer","Mujer",38,0,0
+"370","Clase Intermedia","No sobrevive","Fynney, Mr. Joseph J","Hombre",35,0,0
+"371","Clase Intermedia","No sobrevive","Gale, Mr. Harry","Hombre",38,1,0
+"372","Clase Intermedia","No sobrevive","Gale, Mr. Shadrach","Hombre",34,1,0
+"373","Clase Intermedia","Sobrevive","Garside, Miss. Ethel","Mujer",34,0,0
+"374","Clase Intermedia","No sobrevive","Gaskell, Mr. Alfred","Hombre",16,0,0
+"375","Clase Intermedia","No sobrevive","Gavey, Mr. Lawrence","Hombre",26,0,0
+"376","Clase Intermedia","No sobrevive","Gilbert, Mr. William","Hombre",47,0,0
+"377","Clase Intermedia","No sobrevive","Giles, Mr. Edgar","Hombre",21,1,0
+"378","Clase Intermedia","No sobrevive","Giles, Mr. Frederick Edward","Hombre",21,1,0
+"379","Clase Intermedia","No sobrevive","Giles, Mr. Ralph","Hombre",24,0,0
+"380","Clase Intermedia","No sobrevive","Gill, Mr. John William","Hombre",24,0,0
+"381","Clase Intermedia","No sobrevive","Gillespie, Mr. William Henry","Hombre",34,0,0
+"382","Clase Intermedia","No sobrevive","Givard, Mr. Hans Kristensen","Hombre",30,0,0
+"383","Clase Intermedia","No sobrevive","Greenberg, Mr. Samuel","Hombre",52,0,0
+"384","Clase Intermedia","No sobrevive","Hale, Mr. Reginald","Hombre",30,0,0
+"385","Clase Intermedia","Sobrevive","Hamalainen, Master. Viljo","Hombre",0.6667,1,1
+"386","Clase Intermedia","Sobrevive","Hamalainen, Mrs. William (Anna)","Mujer",24,0,2
+"387","Clase Intermedia","No sobrevive","Harbeck, Mr. William H","Hombre",44,0,0
+"388","Clase Intermedia","Sobrevive","Harper, Miss. Annie Jessie ""Nina""","Mujer",6,0,1
+"389","Clase Intermedia","No sobrevive","Harper, Rev. John","Hombre",28,0,1
+"390","Clase Intermedia","Sobrevive","Harris, Mr. George","Hombre",62,0,0
+"391","Clase Intermedia","No sobrevive","Harris, Mr. Walter","Hombre",30,0,0
+"392","Clase Intermedia","Sobrevive","Hart, Miss. Eva Miriam","Mujer",7,0,2
+"393","Clase Intermedia","No sobrevive","Hart, Mr. Benjamin","Hombre",43,1,1
+"394","Clase Intermedia","Sobrevive","Hart, Mrs. Benjamin (Esther Ada Bloomfield)","Mujer",45,1,1
+"395","Clase Intermedia","Sobrevive","Herman, Miss. Alice","Mujer",24,1,2
+"396","Clase Intermedia","Sobrevive","Herman, Miss. Kate","Mujer",24,1,2
+"397","Clase Intermedia","No sobrevive","Herman, Mr. Samuel","Hombre",49,1,2
+"398","Clase Intermedia","Sobrevive","Herman, Mrs. Samuel (Jane Laver)","Mujer",48,1,2
+"399","Clase Intermedia","Sobrevive","Hewlett, Mrs. (Mary D Kingcome)","Mujer",55,0,0
+"400","Clase Intermedia","No sobrevive","Hickman, Mr. Leonard Mark","Hombre",24,2,0
+"401","Clase Intermedia","No sobrevive","Hickman, Mr. Lewis","Hombre",32,2,0
+"402","Clase Intermedia","No sobrevive","Hickman, Mr. Stanley George","Hombre",21,2,0
+"403","Clase Intermedia","No sobrevive","Hiltunen, Miss. Marta","Mujer",18,1,1
+"404","Clase Intermedia","Sobrevive","Hocking, Miss. Ellen ""Nellie""","Mujer",20,2,1
+"405","Clase Intermedia","No sobrevive","Hocking, Mr. Richard George","Hombre",23,2,1
+"406","Clase Intermedia","No sobrevive","Hocking, Mr. Samuel James Metcalfe","Hombre",36,0,0
+"407","Clase Intermedia","Sobrevive","Hocking, Mrs. Elizabeth (Eliza Needs)","Mujer",54,1,3
+"408","Clase Intermedia","No sobrevive","Hodges, Mr. Henry Price","Hombre",50,0,0
+"409","Clase Intermedia","No sobrevive","Hold, Mr. Stephen","Hombre",44,1,0
+"410","Clase Intermedia","Sobrevive","Hold, Mrs. Stephen (Annie Margaret Hill)","Mujer",29,1,0
+"411","Clase Intermedia","No sobrevive","Hood, Mr. Ambrose Jr","Hombre",21,0,0
+"412","Clase Intermedia","Sobrevive","Hosono, Mr. Masabumi","Hombre",42,0,0
+"413","Clase Intermedia","No sobrevive","Howard, Mr. Benjamin","Hombre",63,1,0
+"414","Clase Intermedia","No sobrevive","Howard, Mrs. Benjamin (Ellen Truelove Arman)","Mujer",60,1,0
+"415","Clase Intermedia","No sobrevive","Hunt, Mr. George Henry","Hombre",33,0,0
+"416","Clase Intermedia","Sobrevive","Ilett, Miss. Bertha","Mujer",17,0,0
+"417","Clase Intermedia","No sobrevive","Jacobsohn, Mr. Sidney Samuel","Hombre",42,1,0
+"418","Clase Intermedia","Sobrevive","Jacobsohn, Mrs. Sidney Samuel (Amy Frances Christy)","Mujer",24,2,1
+"419","Clase Intermedia","No sobrevive","Jarvis, Mr. John Denzil","Hombre",47,0,0
+"420","Clase Intermedia","No sobrevive","Jefferys, Mr. Clifford Thomas","Hombre",24,2,0
+"421","Clase Intermedia","No sobrevive","Jefferys, Mr. Ernest Wilfred","Hombre",22,2,0
+"422","Clase Intermedia","No sobrevive","Jenkin, Mr. Stephen Curnow","Hombre",32,0,0
+"423","Clase Intermedia","Sobrevive","Jerwan, Mrs. Amin S (Marie Marthe Thuillard)","Mujer",23,0,0
+"424","Clase Intermedia","No sobrevive","Kantor, Mr. Sinai","Hombre",34,1,0
+"425","Clase Intermedia","Sobrevive","Kantor, Mrs. Sinai (Miriam Sternin)","Mujer",24,1,0
+"426","Clase Intermedia","No sobrevive","Karnes, Mrs. J Frank (Claire Bennett)","Mujer",22,0,0
+"427","Clase Intermedia","No sobrevive","Keane, Mr. Daniel","Hombre",35,0,0
+"428","Clase Intermedia","Sobrevive","Kelly, Mrs. Florence ""Fannie""","Mujer",45,0,0
+"429","Clase Intermedia","No sobrevive","Kirkland, Rev. Charles Leonard","Hombre",57,0,0
+"430","Clase Intermedia","No sobrevive","Kvillner, Mr. Johan Henrik Johannesson","Hombre",31,0,0
+"431","Clase Intermedia","No sobrevive","Lahtinen, Mrs. William (Anna Sylfven)","Mujer",26,1,1
+"432","Clase Intermedia","No sobrevive","Lahtinen, Rev. William","Hombre",30,1,1
+"433","Clase Intermedia","Sobrevive","Laroche, Miss. Louise","Mujer",1,1,2
+"434","Clase Intermedia","Sobrevive","Laroche, Miss. Simonne Marie Anne Andree","Mujer",3,1,2
+"435","Clase Intermedia","No sobrevive","Laroche, Mr. Joseph Philippe Lemercier","Hombre",25,1,2
+"436","Clase Intermedia","Sobrevive","Laroche, Mrs. Joseph (Juliette Marie Louise Lafargue)","Mujer",22,1,2
+"437","Clase Intermedia","Sobrevive","Lehmann, Miss. Bertha","Mujer",17,0,0
+"438","Clase Intermedia","Sobrevive","Lemore, Mrs. (Amelia Milley)","Mujer",34,0,0
+"439","Clase Intermedia","No sobrevive","Levy, Mr. Rene Jacques","Hombre",36,0,0
+"440","Clase Intermedia","No sobrevive","Leyson, Mr. Robert William Norman","Hombre",24,0,0
+"441","Clase Intermedia","No sobrevive","Lingane, Mr. John","Hombre",61,0,0
+"442","Clase Intermedia","No sobrevive","Louch, Mr. Charles Alexander","Hombre",50,1,0
+"443","Clase Intermedia","Sobrevive","Louch, Mrs. Charles Alexander (Alice Adelaide Slow)","Mujer",42,1,0
+"444","Clase Intermedia","No sobrevive","Mack, Mrs. (Mary)","Mujer",57,0,0
+"445","Clase Intermedia","Sobrevive","Mallet, Master. Andre","Hombre",1,0,2
+"446","Clase Intermedia","No sobrevive","Mallet, Mr. Albert","Hombre",31,1,1
+"447","Clase Intermedia","Sobrevive","Mallet, Mrs. Albert (Antoinette Magnin)","Mujer",24,1,1
+"448","Clase Intermedia","No sobrevive","Matthews, Mr. William John","Hombre",30,0,0
+"449","Clase Intermedia","No sobrevive","Maybery, Mr. Frank Hubert","Hombre",40,0,0
+"450","Clase Intermedia","No sobrevive","McCrae, Mr. Arthur Gordon","Hombre",32,0,0
+"451","Clase Intermedia","No sobrevive","McCrie, Mr. James Matthew","Hombre",30,0,0
+"452","Clase Intermedia","No sobrevive","McKane, Mr. Peter David","Hombre",46,0,0
+"453","Clase Intermedia","Sobrevive","Mellinger, Miss. Madeleine Violet","Mujer",13,0,1
+"454","Clase Intermedia","Sobrevive","Mellinger, Mrs. (Elizabeth Anne Maidment)","Mujer",41,0,1
+"455","Clase Intermedia","Sobrevive","Mellors, Mr. William John","Hombre",19,0,0
+"456","Clase Intermedia","No sobrevive","Meyer, Mr. August","Hombre",39,0,0
+"457","Clase Intermedia","No sobrevive","Milling, Mr. Jacob Christian","Hombre",48,0,0
+"458","Clase Intermedia","No sobrevive","Mitchell, Mr. Henry Michael","Hombre",70,0,0
+"459","Clase Intermedia","No sobrevive","Montvila, Rev. Juozas","Hombre",27,0,0
+"460","Clase Intermedia","No sobrevive","Moraweck, Dr. Ernest","Hombre",54,0,0
+"461","Clase Intermedia","No sobrevive","Morley, Mr. Henry Samuel (""Mr Henry Marshall"")","Hombre",39,0,0
+"462","Clase Intermedia","No sobrevive","Mudd, Mr. Thomas Charles","Hombre",16,0,0
+"463","Clase Intermedia","No sobrevive","Myles, Mr. Thomas Francis","Hombre",62,0,0
+"464","Clase Intermedia","No sobrevive","Nasser, Mr. Nicholas","Hombre",32.5,1,0
+"465","Clase Intermedia","Sobrevive","Nasser, Mrs. Nicholas (Adele Achem)","Mujer",14,1,0
+"466","Clase Intermedia","Sobrevive","Navratil, Master. Edmond Roger","Hombre",2,1,1
+"467","Clase Intermedia","Sobrevive","Navratil, Master. Michel M","Hombre",3,1,1
+"468","Clase Intermedia","No sobrevive","Navratil, Mr. Michel (""Louis M Hoffman"")","Hombre",36.5,0,2
+"469","Clase Intermedia","No sobrevive","Nesson, Mr. Israel","Hombre",26,0,0
+"470","Clase Intermedia","No sobrevive","Nicholls, Mr. Joseph Charles","Hombre",19,1,1
+"471","Clase Intermedia","No sobrevive","Norman, Mr. Robert Douglas","Hombre",28,0,0
+"472","Clase Intermedia","Sobrevive","Nourney, Mr. Alfred (""Baron von Drachstedt"")","Hombre",20,0,0
+"473","Clase Intermedia","Sobrevive","Nye, Mrs. (Elizabeth Ramell)","Mujer",29,0,0
+"474","Clase Intermedia","No sobrevive","Otter, Mr. Richard","Hombre",39,0,0
+"475","Clase Intermedia","Sobrevive","Oxenham, Mr. Percy Thomas","Hombre",22,0,0
+"476","Clase Intermedia","No sobrevive","Pain, Dr. Alfred","Hombre",23,0,0
+"477","Clase Intermedia","Sobrevive","Pallas y Castello, Mr. Emilio","Hombre",29,0,0
+"478","Clase Intermedia","No sobrevive","Parker, Mr. Clifford Richard","Hombre",28,0,0
+"479","Clase Intermedia","Sobrevive","Parrish, Mrs. (Lutie Davis)","Mujer",50,0,1
+"480","Clase Intermedia","No sobrevive","Pengelly, Mr. Frederick William","Hombre",19,0,0
+"481","Clase Intermedia","No sobrevive","Peruschitz, Rev. Joseph Maria","Hombre",41,0,0
+"482","Clase Intermedia","Sobrevive","Phillips, Miss. Alice Frances Louisa","Mujer",21,0,1
+"483","Clase Intermedia","Sobrevive","Phillips, Miss. Kate Florence (""Mrs Kate Louise Phillips Marshall"")","Mujer",19,0,0
+"484","Clase Intermedia","No sobrevive","Phillips, Mr. Escott Robert","Hombre",43,0,1
+"485","Clase Intermedia","Sobrevive","Pinsky, Mrs. (Rosa)","Mujer",32,0,0
+"486","Clase Intermedia","No sobrevive","Ponesell, Mr. Martin","Hombre",34,0,0
+"487","Clase Intermedia","Sobrevive","Portaluppi, Mr. Emilio Ilario Giuseppe","Hombre",30,0,0
+"488","Clase Intermedia","No sobrevive","Pulbaum, Mr. Franz","Hombre",27,0,0
+"489","Clase Intermedia","Sobrevive","Quick, Miss. Phyllis May","Mujer",2,1,1
+"490","Clase Intermedia","Sobrevive","Quick, Miss. Winifred Vera","Mujer",8,1,1
+"491","Clase Intermedia","Sobrevive","Quick, Mrs. Frederick Charles (Jane Richards)","Mujer",33,0,2
+"492","Clase Intermedia","No sobrevive","Reeves, Mr. David","Hombre",36,0,0
+"493","Clase Intermedia","No sobrevive","Renouf, Mr. Peter Henry","Hombre",34,1,0
+"494","Clase Intermedia","Sobrevive","Renouf, Mrs. Peter Henry (Lillian Jefferys)","Mujer",30,3,0
+"495","Clase Intermedia","Sobrevive","Reynaldo, Ms. Encarnacion","Mujer",28,0,0
+"496","Clase Intermedia","No sobrevive","Richard, Mr. Emile","Hombre",23,0,0
+"497","Clase Intermedia","Sobrevive","Richards, Master. George Sibley","Hombre",0.8333,1,1
+"498","Clase Intermedia","Sobrevive","Richards, Master. William Rowe","Hombre",3,1,1
+"499","Clase Intermedia","Sobrevive","Richards, Mrs. Sidney (Emily Hocking)","Mujer",24,2,3
+"500","Clase Intermedia","Sobrevive","Ridsdale, Miss. Lucy","Mujer",50,0,0
+"501","Clase Intermedia","No sobrevive","Rogers, Mr. Reginald Harry","Hombre",19,0,0
+"502","Clase Intermedia","Sobrevive","Rugg, Miss. Emily","Mujer",21,0,0
+"503","Clase Intermedia","No sobrevive","Schmidt, Mr. August","Hombre",26,0,0
+"504","Clase Intermedia","No sobrevive","Sedgwick, Mr. Charles Frederick Waddington","Hombre",25,0,0
+"505","Clase Intermedia","No sobrevive","Sharp, Mr. Percival James R","Hombre",27,0,0
+"506","Clase Intermedia","Sobrevive","Shelley, Mrs. William (Imanita Parrish Hall)","Mujer",25,0,1
+"507","Clase Intermedia","Sobrevive","Silven, Miss. Lyyli Karoliina","Mujer",18,0,2
+"508","Clase Intermedia","Sobrevive","Sincock, Miss. Maude","Mujer",20,0,0
+"509","Clase Intermedia","Sobrevive","Sinkkonen, Miss. Anna","Mujer",30,0,0
+"510","Clase Intermedia","No sobrevive","Sjostedt, Mr. Ernst Adolf","Hombre",59,0,0
+"511","Clase Intermedia","Sobrevive","Slayter, Miss. Hilda Mary","Mujer",30,0,0
+"512","Clase Intermedia","No sobrevive","Slemen, Mr. Richard James","Hombre",35,0,0
+"513","Clase Intermedia","Sobrevive","Smith, Miss. Marion Elsie","Mujer",40,0,0
+"514","Clase Intermedia","No sobrevive","Sobey, Mr. Samuel James Hayden","Hombre",25,0,0
+"515","Clase Intermedia","No sobrevive","Stanton, Mr. Samuel Ward","Hombre",41,0,0
+"516","Clase Intermedia","No sobrevive","Stokes, Mr. Philip Joseph","Hombre",25,0,0
+"517","Clase Intermedia","No sobrevive","Swane, Mr. George","Hombre",18.5,0,0
+"518","Clase Intermedia","No sobrevive","Sweet, Mr. George Frederick","Hombre",14,0,0
+"519","Clase Intermedia","Sobrevive","Toomey, Miss. Ellen","Mujer",50,0,0
+"520","Clase Intermedia","No sobrevive","Troupiansky, Mr. Moses Aaron","Hombre",23,0,0
+"521","Clase Intermedia","Sobrevive","Trout, Mrs. William H (Jessie L)","Mujer",28,0,0
+"522","Clase Intermedia","Sobrevive","Troutt, Miss. Edwina Celia ""Winnie""","Mujer",27,0,0
+"523","Clase Intermedia","No sobrevive","Turpin, Mr. William John Robert","Hombre",29,1,0
+"524","Clase Intermedia","No sobrevive","Turpin, Mrs. William John Robert (Dorothy Ann Wonnacott)","Mujer",27,1,0
+"525","Clase Intermedia","No sobrevive","Veal, Mr. James","Hombre",40,0,0
+"526","Clase Intermedia","Sobrevive","Walcroft, Miss. Nellie","Mujer",31,0,0
+"527","Clase Intermedia","No sobrevive","Ware, Mr. John James","Hombre",30,1,0
+"528","Clase Intermedia","No sobrevive","Ware, Mr. William Jeffery","Hombre",23,1,0
+"529","Clase Intermedia","Sobrevive","Ware, Mrs. John James (Florence Louise Long)","Mujer",31,0,0
+"530","Clase Intermedia","Sobrevive","Watt, Miss. Bertha J","Mujer",12,0,0
+"531","Clase Intermedia","Sobrevive","Watt, Mrs. James (Elizabeth ""Bessie"" Inglis Milne)","Mujer",40,0,0
+"532","Clase Intermedia","Sobrevive","Webber, Miss. Susan","Mujer",32.5,0,0
+"533","Clase Intermedia","No sobrevive","Weisz, Mr. Leopold","Hombre",27,1,0
+"534","Clase Intermedia","Sobrevive","Weisz, Mrs. Leopold (Mathilde Francoise Pede)","Mujer",29,1,0
+"535","Clase Intermedia","Sobrevive","Wells, Master. Ralph Lester","Hombre",2,1,1
+"536","Clase Intermedia","Sobrevive","Wells, Miss. Joan","Mujer",4,1,1
+"537","Clase Intermedia","Sobrevive","Wells, Mrs. Arthur Henry (""Addie"" Dart Trevaskis)","Mujer",29,0,2
+"538","Clase Intermedia","Sobrevive","West, Miss. Barbara J","Mujer",0.9167,1,2
+"539","Clase Intermedia","Sobrevive","West, Miss. Constance Mirium","Mujer",5,1,2
+"540","Clase Intermedia","No sobrevive","West, Mr. Edwy Arthur","Hombre",36,1,2
+"541","Clase Intermedia","Sobrevive","West, Mrs. Edwy Arthur (Ada Mary Worth)","Mujer",33,1,2
+"542","Clase Intermedia","No sobrevive","Wheadon, Mr. Edward H","Hombre",66,0,0
+"543","Clase Intermedia","Sobrevive","Wilhelms, Mr. Charles","Hombre",31,0,0
+"544","Clase Intermedia","Sobrevive","Wright, Miss. Marion","Mujer",26,0,0
+"545","Clase Intermedia","No sobrevive","Yrois, Miss. Henriette (""Mrs Harbeck"")","Mujer",24,0,0
+"546","Clase Baja","No sobrevive","Abbing, Mr. Anthony","Hombre",42,0,0
+"547","Clase Baja","No sobrevive","Abbott, Master. Eugene Joseph","Hombre",13,0,2
+"548","Clase Baja","No sobrevive","Abbott, Mr. Rossmore Edward","Hombre",16,1,1
+"549","Clase Baja","Sobrevive","Abbott, Mrs. Stanton (Rosa Hunt)","Mujer",35,1,1
+"550","Clase Baja","Sobrevive","Abelseth, Miss. Karen Marie","Mujer",16,0,0
+"551","Clase Baja","Sobrevive","Abelseth, Mr. Olaus Jorgensen","Hombre",25,0,0
+"552","Clase Baja","Sobrevive","Abrahamsson, Mr. Abraham August Johannes","Hombre",20,0,0
+"553","Clase Baja","Sobrevive","Abrahim, Mrs. Joseph (Sophie Halaut Easu)","Mujer",18,0,0
+"554","Clase Baja","No sobrevive","Adahl, Mr. Mauritz Nils Martin","Hombre",30,0,0
+"555","Clase Baja","No sobrevive","Adams, Mr. John","Hombre",26,0,0
+"556","Clase Baja","No sobrevive","Ahlin, Mrs. Johan (Johanna Persdotter Larsson)","Mujer",40,1,0
+"557","Clase Baja","Sobrevive","Aks, Master. Philip Frank","Hombre",0.8333,0,1
+"558","Clase Baja","Sobrevive","Aks, Mrs. Sam (Leah Rosen)","Mujer",18,0,1
+"559","Clase Baja","Sobrevive","Albimona, Mr. Nassef Cassem","Hombre",26,0,0
+"560","Clase Baja","No sobrevive","Alexander, Mr. William","Hombre",26,0,0
+"561","Clase Baja","No sobrevive","Alhomaki, Mr. Ilmari Rudolf","Hombre",20,0,0
+"562","Clase Baja","No sobrevive","Ali, Mr. Ahmed","Hombre",24,0,0
+"563","Clase Baja","No sobrevive","Ali, Mr. William","Hombre",25,0,0
+"564","Clase Baja","No sobrevive","Allen, Mr. William Henry","Hombre",35,0,0
+"565","Clase Baja","No sobrevive","Allum, Mr. Owen George","Hombre",18,0,0
+"566","Clase Baja","No sobrevive","Andersen, Mr. Albert Karvin","Hombre",32,0,0
+"567","Clase Baja","Sobrevive","Andersen-Jensen, Miss. Carla Christine Nielsine","Mujer",19,1,0
+"568","Clase Baja","No sobrevive","Andersson, Master. Sigvard Harald Elias","Hombre",4,4,2
+"569","Clase Baja","No sobrevive","Andersson, Miss. Ebba Iris Alfrida","Mujer",6,4,2
+"570","Clase Baja","No sobrevive","Andersson, Miss. Ellis Anna Maria","Mujer",2,4,2
+"571","Clase Baja","Sobrevive","Andersson, Miss. Erna Alexandra","Mujer",17,4,2
+"572","Clase Baja","No sobrevive","Andersson, Miss. Ida Augusta Margareta","Mujer",38,4,2
+"573","Clase Baja","No sobrevive","Andersson, Miss. Ingeborg Constanzia","Mujer",9,4,2
+"574","Clase Baja","No sobrevive","Andersson, Miss. Sigrid Elisabeth","Mujer",11,4,2
+"575","Clase Baja","No sobrevive","Andersson, Mr. Anders Johan","Hombre",39,1,5
+"576","Clase Baja","Sobrevive","Andersson, Mr. August Edvard (""Wennerstrom"")","Hombre",27,0,0
+"577","Clase Baja","No sobrevive","Andersson, Mr. Johan Samuel","Hombre",26,0,0
+"578","Clase Baja","No sobrevive","Andersson, Mrs. Anders Johan (Alfrida Konstantia Brogren)","Mujer",39,1,5
+"579","Clase Baja","No sobrevive","Andreasson, Mr. Paul Edvin","Hombre",20,0,0
+"580","Clase Baja","No sobrevive","Angheloff, Mr. Minko","Hombre",26,0,0
+"581","Clase Baja","No sobrevive","Arnold-Franchi, Mr. Josef","Hombre",25,1,0
+"582","Clase Baja","No sobrevive","Arnold-Franchi, Mrs. Josef (Josefine Franchi)","Mujer",18,1,0
+"583","Clase Baja","No sobrevive","Aronsson, Mr. Ernst Axel Algot","Hombre",24,0,0
+"584","Clase Baja","No sobrevive","Asim, Mr. Adola","Hombre",35,0,0
+"585","Clase Baja","No sobrevive","Asplund, Master. Carl Edgar","Hombre",5,4,2
+"586","Clase Baja","No sobrevive","Asplund, Master. Clarence Gustaf Hugo","Hombre",9,4,2
+"587","Clase Baja","Sobrevive","Asplund, Master. Edvin Rojj Felix","Hombre",3,4,2
+"588","Clase Baja","No sobrevive","Asplund, Master. Filip Oscar","Hombre",13,4,2
+"589","Clase Baja","Sobrevive","Asplund, Miss. Lillian Gertrud","Mujer",5,4,2
+"590","Clase Baja","No sobrevive","Asplund, Mr. Carl Oscar Vilhelm Gustafsson","Hombre",40,1,5
+"591","Clase Baja","Sobrevive","Asplund, Mr. Johan Charles","Hombre",23,0,0
+"592","Clase Baja","Sobrevive","Asplund, Mrs. Carl Oscar (Selma Augusta Emilia Johansson)","Mujer",38,1,5
+"593","Clase Baja","Sobrevive","Assaf Khalil, Mrs. Mariana (""Miriam"")","Mujer",45,0,0
+"594","Clase Baja","No sobrevive","Assaf, Mr. Gerios","Hombre",21,0,0
+"595","Clase Baja","No sobrevive","Assam, Mr. Ali","Hombre",23,0,0
+"596","Clase Baja","No sobrevive","Attalah, Miss. Malake","Mujer",17,0,0
+"597","Clase Baja","No sobrevive","Attalah, Mr. Sleiman","Hombre",30,0,0
+"598","Clase Baja","No sobrevive","Augustsson, Mr. Albert","Hombre",23,0,0
+"599","Clase Baja","Sobrevive","Ayoub, Miss. Banoura","Mujer",13,0,0
+"600","Clase Baja","No sobrevive","Baccos, Mr. Raffull","Hombre",20,0,0
+"601","Clase Baja","No sobrevive","Backstrom, Mr. Karl Alfred","Hombre",32,1,0
+"602","Clase Baja","Sobrevive","Backstrom, Mrs. Karl Alfred (Maria Mathilda Gustafsson)","Mujer",33,3,0
+"603","Clase Baja","Sobrevive","Baclini, Miss. Eugenie","Mujer",0.75,2,1
+"604","Clase Baja","Sobrevive","Baclini, Miss. Helene Barbara","Mujer",0.75,2,1
+"605","Clase Baja","Sobrevive","Baclini, Miss. Marie Catherine","Mujer",5,2,1
+"606","Clase Baja","Sobrevive","Baclini, Mrs. Solomon (Latifa Qurban)","Mujer",24,0,3
+"607","Clase Baja","Sobrevive","Badman, Miss. Emily Louisa","Mujer",18,0,0
+"608","Clase Baja","No sobrevive","Badt, Mr. Mohamed","Hombre",40,0,0
+"609","Clase Baja","No sobrevive","Balkic, Mr. Cerin","Hombre",26,0,0
+"610","Clase Baja","Sobrevive","Barah, Mr. Hanna Assi","Hombre",20,0,0
+"611","Clase Baja","No sobrevive","Barbara, Miss. Saiide","Mujer",18,0,1
+"612","Clase Baja","No sobrevive","Barbara, Mrs. (Catherine David)","Mujer",45,0,1
+"613","Clase Baja","No sobrevive","Barry, Miss. Julia","Mujer",27,0,0
+"614","Clase Baja","No sobrevive","Barton, Mr. David John","Hombre",22,0,0
+"615","Clase Baja","No sobrevive","Beavan, Mr. William Thomas","Hombre",19,0,0
+"616","Clase Baja","No sobrevive","Bengtsson, Mr. John Viktor","Hombre",26,0,0
+"617","Clase Baja","No sobrevive","Berglund, Mr. Karl Ivar Sven","Hombre",22,0,0
+"618","Clase Baja","No sobrevive","Betros, Mr. Tannous","Hombre",20,0,0
+"619","Clase Baja","Sobrevive","Bing, Mr. Lee","Hombre",32,0,0
+"620","Clase Baja","No sobrevive","Birkeland, Mr. Hans Martin Monsen","Hombre",21,0,0
+"621","Clase Baja","No sobrevive","Bjorklund, Mr. Ernst Herbert","Hombre",18,0,0
+"622","Clase Baja","No sobrevive","Bostandyeff, Mr. Guentcho","Hombre",26,0,0
+"623","Clase Baja","No sobrevive","Boulos, Master. Akar","Hombre",6,1,1
+"624","Clase Baja","No sobrevive","Boulos, Miss. Nourelain","Mujer",9,1,1
+"625","Clase Baja","No sobrevive","Bourke, Mr. John","Hombre",40,1,1
+"626","Clase Baja","No sobrevive","Bourke, Mrs. John (Catherine)","Mujer",32,1,1
+"627","Clase Baja","No sobrevive","Bowen, Mr. David John ""Dai""","Hombre",21,0,0
+"628","Clase Baja","Sobrevive","Bradley, Miss. Bridget Delia","Mujer",22,0,0
+"629","Clase Baja","No sobrevive","Braf, Miss. Elin Ester Maria","Mujer",20,0,0
+"630","Clase Baja","No sobrevive","Braund, Mr. Lewis Richard","Hombre",29,1,0
+"631","Clase Baja","No sobrevive","Braund, Mr. Owen Harris","Hombre",22,1,0
+"632","Clase Baja","No sobrevive","Brobeck, Mr. Karl Rudolf","Hombre",22,0,0
+"633","Clase Baja","No sobrevive","Brocklebank, Mr. William Alfred","Hombre",35,0,0
+"634","Clase Baja","No sobrevive","Buckley, Miss. Katherine","Mujer",18.5,0,0
+"635","Clase Baja","Sobrevive","Buckley, Mr. Daniel","Hombre",21,0,0
+"636","Clase Baja","No sobrevive","Burke, Mr. Jeremiah","Hombre",19,0,0
+"637","Clase Baja","No sobrevive","Burns, Miss. Mary Delia","Mujer",18,0,0
+"638","Clase Baja","No sobrevive","Cacic, Miss. Manda","Mujer",21,0,0
+"639","Clase Baja","No sobrevive","Cacic, Miss. Marija","Mujer",30,0,0
+"640","Clase Baja","No sobrevive","Cacic, Mr. Jego Grga","Hombre",18,0,0
+"641","Clase Baja","No sobrevive","Cacic, Mr. Luka","Hombre",38,0,0
+"642","Clase Baja","No sobrevive","Calic, Mr. Jovo","Hombre",17,0,0
+"643","Clase Baja","No sobrevive","Calic, Mr. Petar","Hombre",17,0,0
+"644","Clase Baja","No sobrevive","Canavan, Miss. Mary","Mujer",21,0,0
+"645","Clase Baja","No sobrevive","Canavan, Mr. Patrick","Hombre",21,0,0
+"646","Clase Baja","No sobrevive","Cann, Mr. Ernest Charles","Hombre",21,0,0
+"647","Clase Baja","No sobrevive","Carlsson, Mr. August Sigfrid","Hombre",28,0,0
+"648","Clase Baja","No sobrevive","Carlsson, Mr. Carl Robert","Hombre",24,0,0
+"649","Clase Baja","Sobrevive","Carr, Miss. Helen ""Ellen""","Mujer",16,0,0
+"650","Clase Baja","No sobrevive","Carr, Miss. Jeannie","Mujer",37,0,0
+"651","Clase Baja","No sobrevive","Carver, Mr. Alfred John","Hombre",28,0,0
+"652","Clase Baja","No sobrevive","Celotti, Mr. Francesco","Hombre",24,0,0
+"653","Clase Baja","No sobrevive","Charters, Mr. David","Hombre",21,0,0
+"654","Clase Baja","Sobrevive","Chip, Mr. Chang","Hombre",32,0,0
+"655","Clase Baja","No sobrevive","Christmann, Mr. Emil","Hombre",29,0,0
+"656","Clase Baja","No sobrevive","Chronopoulos, Mr. Apostolos","Hombre",26,1,0
+"657","Clase Baja","No sobrevive","Chronopoulos, Mr. Demetrios","Hombre",18,1,0
+"658","Clase Baja","No sobrevive","Coelho, Mr. Domingos Fernandeo","Hombre",20,0,0
+"659","Clase Baja","Sobrevive","Cohen, Mr. Gurshon ""Gus""","Hombre",18,0,0
+"660","Clase Baja","No sobrevive","Colbert, Mr. Patrick","Hombre",24,0,0
+"661","Clase Baja","No sobrevive","Coleff, Mr. Peju","Hombre",36,0,0
+"662","Clase Baja","No sobrevive","Coleff, Mr. Satio","Hombre",24,0,0
+"663","Clase Baja","No sobrevive","Conlon, Mr. Thomas Henry","Hombre",31,0,0
+"664","Clase Baja","No sobrevive","Connaghton, Mr. Michael","Hombre",31,0,0
+"665","Clase Baja","Sobrevive","Connolly, Miss. Kate","Mujer",22,0,0
+"666","Clase Baja","No sobrevive","Connolly, Miss. Kate","Mujer",30,0,0
+"667","Clase Baja","No sobrevive","Connors, Mr. Patrick","Hombre",70.5,0,0
+"668","Clase Baja","No sobrevive","Cook, Mr. Jacob","Hombre",43,0,0
+"669","Clase Baja","No sobrevive","Cor, Mr. Bartol","Hombre",35,0,0
+"670","Clase Baja","No sobrevive","Cor, Mr. Ivan","Hombre",27,0,0
+"671","Clase Baja","No sobrevive","Cor, Mr. Liudevit","Hombre",19,0,0
+"672","Clase Baja","No sobrevive","Corn, Mr. Harry","Hombre",30,0,0
+"673","Clase Baja","Sobrevive","Coutts, Master. Eden Leslie ""Neville""","Hombre",9,1,1
+"674","Clase Baja","Sobrevive","Coutts, Master. William Loch ""William""","Hombre",3,1,1
+"675","Clase Baja","Sobrevive","Coutts, Mrs. William (Winnie ""Minnie"" Treanor)","Mujer",36,0,2
+"676","Clase Baja","No sobrevive","Coxon, Mr. Daniel","Hombre",59,0,0
+"677","Clase Baja","No sobrevive","Crease, Mr. Ernest James","Hombre",19,0,0
+"678","Clase Baja","Sobrevive","Cribb, Miss. Laura Alice","Mujer",17,0,1
+"679","Clase Baja","No sobrevive","Cribb, Mr. John Hatfield","Hombre",44,0,1
+"680","Clase Baja","No sobrevive","Culumovic, Mr. Jeso","Hombre",17,0,0
+"681","Clase Baja","No sobrevive","Daher, Mr. Shedid","Hombre",22.5,0,0
+"682","Clase Baja","Sobrevive","Dahl, Mr. Karl Edwart","Hombre",45,0,0
+"683","Clase Baja","No sobrevive","Dahlberg, Miss. Gerda Ulrika","Mujer",22,0,0
+"684","Clase Baja","No sobrevive","Dakic, Mr. Branko","Hombre",19,0,0
+"685","Clase Baja","Sobrevive","Daly, Miss. Margaret Marcella ""Maggie""","Mujer",30,0,0
+"686","Clase Baja","Sobrevive","Daly, Mr. Eugene Patrick","Hombre",29,0,0
+"687","Clase Baja","No sobrevive","Danbom, Master. Gilbert Sigvard Emanuel","Hombre",0.3333,0,2
+"688","Clase Baja","No sobrevive","Danbom, Mr. Ernst Gilbert","Hombre",34,1,1
+"689","Clase Baja","No sobrevive","Danbom, Mrs. Ernst Gilbert (Anna Sigrid Maria Brogren)","Mujer",28,1,1
+"690","Clase Baja","No sobrevive","Danoff, Mr. Yoto","Hombre",27,0,0
+"691","Clase Baja","No sobrevive","Dantcheff, Mr. Ristiu","Hombre",25,0,0
+"692","Clase Baja","No sobrevive","Davies, Mr. Alfred J","Hombre",24,2,0
+"693","Clase Baja","No sobrevive","Davies, Mr. Evan","Hombre",22,0,0
+"694","Clase Baja","No sobrevive","Davies, Mr. John Samuel","Hombre",21,2,0
+"695","Clase Baja","No sobrevive","Davies, Mr. Joseph","Hombre",17,2,0
+"696","Clase Baja","Sobrevive","de Messemaeker, Mr. Guillaume Joseph","Hombre",36.5,1,0
+"697","Clase Baja","Sobrevive","de Messemaeker, Mrs. Guillaume Joseph (Emma)","Mujer",36,1,0
+"698","Clase Baja","Sobrevive","de Mulder, Mr. Theodore","Hombre",30,0,0
+"699","Clase Baja","No sobrevive","de Pelsmaeker, Mr. Alfons","Hombre",16,0,0
+"700","Clase Baja","Sobrevive","Dean, Master. Bertram Vere","Hombre",1,1,2
+"701","Clase Baja","Sobrevive","Dean, Miss. Elizabeth Gladys ""Millvina""","Mujer",0.1667,1,2
+"702","Clase Baja","No sobrevive","Dean, Mr. Bertram Frank","Hombre",26,1,2
+"703","Clase Baja","Sobrevive","Dean, Mrs. Bertram (Eva Georgetta Light)","Mujer",33,1,2
+"704","Clase Baja","No sobrevive","Delalic, Mr. Redjo","Hombre",25,0,0
+"705","Clase Baja","No sobrevive","Dennis, Mr. Samuel","Hombre",22,0,0
+"706","Clase Baja","No sobrevive","Dennis, Mr. William","Hombre",36,0,0
+"707","Clase Baja","Sobrevive","Devaney, Miss. Margaret Delia","Mujer",19,0,0
+"708","Clase Baja","No sobrevive","Dika, Mr. Mirko","Hombre",17,0,0
+"709","Clase Baja","No sobrevive","Dimic, Mr. Jovan","Hombre",42,0,0
+"710","Clase Baja","No sobrevive","Dintcheff, Mr. Valtcho","Hombre",43,0,0
+"711","Clase Baja","No sobrevive","Dooley, Mr. Patrick","Hombre",32,0,0
+"712","Clase Baja","Sobrevive","Dorking, Mr. Edward Arthur","Hombre",19,0,0
+"713","Clase Baja","Sobrevive","Dowdell, Miss. Elizabeth","Mujer",30,0,0
+"714","Clase Baja","No sobrevive","Doyle, Miss. Elizabeth","Mujer",24,0,0
+"715","Clase Baja","Sobrevive","Drapkin, Miss. Jennie","Mujer",23,0,0
+"716","Clase Baja","No sobrevive","Drazenoic, Mr. Jozef","Hombre",33,0,0
+"717","Clase Baja","No sobrevive","Duane, Mr. Frank","Hombre",65,0,0
+"718","Clase Baja","Sobrevive","Duquemin, Mr. Joseph","Hombre",24,0,0
+"719","Clase Baja","No sobrevive","Dyker, Mr. Adolf Fredrik","Hombre",23,1,0
+"720","Clase Baja","Sobrevive","Dyker, Mrs. Adolf Fredrik (Anna Elisabeth Judith Andersson)","Mujer",22,1,0
+"721","Clase Baja","No sobrevive","Edvardsson, Mr. Gustaf Hjalmar","Hombre",18,0,0
+"722","Clase Baja","No sobrevive","Eklund, Mr. Hans Linus","Hombre",16,0,0
+"723","Clase Baja","No sobrevive","Ekstrom, Mr. Johan","Hombre",45,0,0
+"724","Clase Baja","No sobrevive","Elias, Mr. Joseph","Hombre",39,0,2
+"725","Clase Baja","No sobrevive","Elias, Mr. Joseph Jr","Hombre",17,1,1
+"726","Clase Baja","No sobrevive","Elias, Mr. Tannous","Hombre",15,1,1
+"727","Clase Baja","No sobrevive","Elsbury, Mr. William James","Hombre",47,0,0
+"728","Clase Baja","Sobrevive","Emanuel, Miss. Virginia Ethel","Mujer",5,0,0
+"729","Clase Baja","No sobrevive","Everett, Mr. Thomas James","Hombre",40.5,0,0
+"730","Clase Baja","No sobrevive","Farrell, Mr. James","Hombre",40.5,0,0
+"731","Clase Baja","No sobrevive","Fischer, Mr. Eberhard Thelander","Hombre",18,0,0
+"732","Clase Baja","No sobrevive","Foley, Mr. Joseph","Hombre",26,0,0
+"733","Clase Baja","No sobrevive","Ford, Miss. Doolina Margaret ""Daisy""","Mujer",21,2,2
+"734","Clase Baja","No sobrevive","Ford, Miss. Robina Maggie ""Ruby""","Mujer",9,2,2
+"735","Clase Baja","No sobrevive","Ford, Mr. Edward Watson","Hombre",18,2,2
+"736","Clase Baja","No sobrevive","Ford, Mr. William Neal","Hombre",16,1,3
+"737","Clase Baja","No sobrevive","Ford, Mrs. Edward (Margaret Ann Watson)","Mujer",48,1,3
+"738","Clase Baja","No sobrevive","Gallagher, Mr. Martin","Hombre",25,0,0
+"739","Clase Baja","No sobrevive","Gilinski, Mr. Eliezer","Hombre",22,0,0
+"740","Clase Baja","Sobrevive","Gilnagh, Miss. Katherine ""Katie""","Mujer",16,0,0
+"741","Clase Baja","Sobrevive","Goldsmith, Master. Frank John William ""Frankie""","Hombre",9,0,2
+"742","Clase Baja","No sobrevive","Goldsmith, Mr. Frank John","Hombre",33,1,1
+"743","Clase Baja","No sobrevive","Goldsmith, Mr. Nathan","Hombre",41,0,0
+"744","Clase Baja","Sobrevive","Goldsmith, Mrs. Frank John (Emily Alice Brown)","Mujer",31,1,1
+"745","Clase Baja","No sobrevive","Goncalves, Mr. Manuel Estanslas","Hombre",38,0,0
+"746","Clase Baja","No sobrevive","Goodwin, Master. Harold Victor","Hombre",9,5,2
+"747","Clase Baja","No sobrevive","Goodwin, Master. Sidney Leonard","Hombre",1,5,2
+"748","Clase Baja","No sobrevive","Goodwin, Master. William Frederick","Hombre",11,5,2
+"749","Clase Baja","No sobrevive","Goodwin, Miss. Jessie Allis","Mujer",10,5,2
+"750","Clase Baja","No sobrevive","Goodwin, Miss. Lillian Amy","Mujer",16,5,2
+"751","Clase Baja","No sobrevive","Goodwin, Mr. Charles Edward","Hombre",14,5,2
+"752","Clase Baja","No sobrevive","Goodwin, Mr. Charles Frederick","Hombre",40,1,6
+"753","Clase Baja","No sobrevive","Goodwin, Mrs. Frederick (Augusta Tyler)","Mujer",43,1,6
+"754","Clase Baja","No sobrevive","Green, Mr. George Henry","Hombre",51,0,0
+"755","Clase Baja","No sobrevive","Gronnestad, Mr. Daniel Danielsen","Hombre",32,0,0
+"756","Clase Baja","No sobrevive","Gustafsson, Mr. Alfred Ossian","Hombre",20,0,0
+"757","Clase Baja","No sobrevive","Gustafsson, Mr. Anders Vilhelm","Hombre",37,2,0
+"758","Clase Baja","No sobrevive","Gustafsson, Mr. Johan Birger","Hombre",28,2,0
+"759","Clase Baja","No sobrevive","Gustafsson, Mr. Karl Gideon","Hombre",19,0,0
+"760","Clase Baja","No sobrevive","Haas, Miss. Aloisia","Mujer",24,0,0
+"761","Clase Baja","No sobrevive","Hagardon, Miss. Kate","Mujer",17,0,0
+"762","Clase Baja","No sobrevive","Hakkarainen, Mr. Pekka Pietari","Hombre",28,1,0
+"763","Clase Baja","Sobrevive","Hakkarainen, Mrs. Pekka Pietari (Elin Matilda Dolck)","Mujer",24,1,0
+"764","Clase Baja","No sobrevive","Hampe, Mr. Leon","Hombre",20,0,0
+"765","Clase Baja","No sobrevive","Hanna, Mr. Mansour","Hombre",23.5,0,0
+"766","Clase Baja","No sobrevive","Hansen, Mr. Claus Peter","Hombre",41,2,0
+"767","Clase Baja","No sobrevive","Hansen, Mr. Henrik Juul","Hombre",26,1,0
+"768","Clase Baja","No sobrevive","Hansen, Mr. Henry Damsgaard","Hombre",21,0,0
+"769","Clase Baja","Sobrevive","Hansen, Mrs. Claus Peter (Jennie L Howard)","Mujer",45,1,0
+"770","Clase Baja","No sobrevive","Harmer, Mr. Abraham (David Lishin)","Hombre",25,0,0
+"771","Clase Baja","No sobrevive","Hassan, Mr. Houssein G N","Hombre",11,0,0
+"772","Clase Baja","Sobrevive","Hedman, Mr. Oskar Arvid","Hombre",27,0,0
+"773","Clase Baja","No sobrevive","Hegarty, Miss. Hanora ""Nora""","Mujer",18,0,0
+"774","Clase Baja","Sobrevive","Heikkinen, Miss. Laina","Mujer",26,0,0
+"775","Clase Baja","No sobrevive","Heininen, Miss. Wendla Maria","Mujer",23,0,0
+"776","Clase Baja","Sobrevive","Hellstrom, Miss. Hilda Maria","Mujer",22,0,0
+"777","Clase Baja","No sobrevive","Hendekovic, Mr. Ignjac","Hombre",28,0,0
+"778","Clase Baja","No sobrevive","Henriksson, Miss. Jenny Lovisa","Mujer",28,0,0
+"779","Clase Baja","Sobrevive","Hirvonen, Miss. Hildur E","Mujer",2,0,1
+"780","Clase Baja","Sobrevive","Hirvonen, Mrs. Alexander (Helga E Lindqvist)","Mujer",22,1,1
+"781","Clase Baja","No sobrevive","Holm, Mr. John Fredrik Alexander","Hombre",43,0,0
+"782","Clase Baja","No sobrevive","Holthen, Mr. Johan Martin","Hombre",28,0,0
+"783","Clase Baja","Sobrevive","Honkanen, Miss. Eliina","Mujer",27,0,0
+"784","Clase Baja","No sobrevive","Humblen, Mr. Adolf Mathias Nicolai Olsen","Hombre",42,0,0
+"785","Clase Baja","No sobrevive","Ibrahim Shawah, Mr. Yousseff","Hombre",30,0,0
+"786","Clase Baja","No sobrevive","Ilmakangas, Miss. Ida Livija","Mujer",27,1,0
+"787","Clase Baja","No sobrevive","Ilmakangas, Miss. Pieta Sofia","Mujer",25,1,0
+"788","Clase Baja","Sobrevive","Jalsevac, Mr. Ivan","Hombre",29,0,0
+"789","Clase Baja","Sobrevive","Jansson, Mr. Carl Olof","Hombre",21,0,0
+"790","Clase Baja","No sobrevive","Jensen, Mr. Hans Peder","Hombre",20,0,0
+"791","Clase Baja","No sobrevive","Jensen, Mr. Niels Peder","Hombre",48,0,0
+"792","Clase Baja","No sobrevive","Jensen, Mr. Svend Lauritz","Hombre",17,1,0
+"793","Clase Baja","No sobrevive","Johanson, Mr. Jakob Alfred","Hombre",34,0,0
+"794","Clase Baja","Sobrevive","Johansson Palmquist, Mr. Oskar Leander","Hombre",26,0,0
+"795","Clase Baja","No sobrevive","Johansson, Mr. Erik","Hombre",22,0,0
+"796","Clase Baja","No sobrevive","Johansson, Mr. Gustaf Joel","Hombre",33,0,0
+"797","Clase Baja","No sobrevive","Johansson, Mr. Karl Johan","Hombre",31,0,0
+"798","Clase Baja","No sobrevive","Johansson, Mr. Nils","Hombre",29,0,0
+"799","Clase Baja","Sobrevive","Johnson, Master. Harold Theodor","Hombre",4,1,1
+"800","Clase Baja","Sobrevive","Johnson, Miss. Eleanor Ileen","Mujer",1,1,1
+"801","Clase Baja","No sobrevive","Johnson, Mr. Alfred","Hombre",49,0,0
+"802","Clase Baja","No sobrevive","Johnson, Mr. Malkolm Joackim","Hombre",33,0,0
+"803","Clase Baja","No sobrevive","Johnson, Mr. William Cahoone Jr","Hombre",19,0,0
+"804","Clase Baja","Sobrevive","Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)","Mujer",27,0,2
+"805","Clase Baja","No sobrevive","Jonkoff, Mr. Lalio","Hombre",23,0,0
+"806","Clase Baja","Sobrevive","Jonsson, Mr. Carl","Hombre",32,0,0
+"807","Clase Baja","No sobrevive","Jonsson, Mr. Nils Hilding","Hombre",27,0,0
+"808","Clase Baja","No sobrevive","Jussila, Miss. Katriina","Mujer",20,1,0
+"809","Clase Baja","No sobrevive","Jussila, Miss. Mari Aina","Mujer",21,1,0
+"810","Clase Baja","Sobrevive","Jussila, Mr. Eiriik","Hombre",32,0,0
+"811","Clase Baja","No sobrevive","Kallio, Mr. Nikolai Erland","Hombre",17,0,0
+"812","Clase Baja","No sobrevive","Kalvik, Mr. Johannes Halvorsen","Hombre",21,0,0
+"813","Clase Baja","No sobrevive","Karaic, Mr. Milan","Hombre",30,0,0
+"814","Clase Baja","Sobrevive","Karlsson, Mr. Einar Gervasius","Hombre",21,0,0
+"815","Clase Baja","No sobrevive","Karlsson, Mr. Julius Konrad Eugen","Hombre",33,0,0
+"816","Clase Baja","No sobrevive","Karlsson, Mr. Nils August","Hombre",22,0,0
+"817","Clase Baja","Sobrevive","Karun, Miss. Manca","Mujer",4,0,1
+"818","Clase Baja","Sobrevive","Karun, Mr. Franz","Hombre",39,0,1
+"819","Clase Baja","No sobrevive","Katavelas, Mr. Vassilios (""Catavelas Vassilios"")","Hombre",18.5,0,0
+"820","Clase Baja","No sobrevive","Kelly, Mr. James","Hombre",34.5,0,0
+"821","Clase Baja","No sobrevive","Kelly, Mr. James","Hombre",44,0,0
+"822","Clase Baja","No sobrevive","Kink, Miss. Maria","Mujer",22,2,0
+"823","Clase Baja","No sobrevive","Kink, Mr. Vincenz","Hombre",26,2,0
+"824","Clase Baja","Sobrevive","Kink-Heilmann, Miss. Luise Gretchen","Mujer",4,0,2
+"825","Clase Baja","Sobrevive","Kink-Heilmann, Mr. Anton","Hombre",29,3,1
+"826","Clase Baja","Sobrevive","Kink-Heilmann, Mrs. Anton (Luise Heilmann)","Mujer",26,1,1
+"827","Clase Baja","No sobrevive","Klasen, Miss. Gertrud Emilia","Mujer",1,1,1
+"828","Clase Baja","No sobrevive","Klasen, Mr. Klas Albin","Hombre",18,1,1
+"829","Clase Baja","No sobrevive","Klasen, Mrs. (Hulda Kristina Eugenia Lofqvist)","Mujer",36,0,2
+"830","Clase Baja","Sobrevive","Krekorian, Mr. Neshan","Hombre",25,0,0
+"831","Clase Baja","No sobrevive","Laitinen, Miss. Kristina Sofia","Mujer",37,0,0
+"832","Clase Baja","Sobrevive","Landergren, Miss. Aurora Adelia","Mujer",22,0,0
+"833","Clase Baja","Sobrevive","Lang, Mr. Fang","Hombre",26,0,0
+"834","Clase Baja","No sobrevive","Larsson, Mr. August Viktor","Hombre",29,0,0
+"835","Clase Baja","No sobrevive","Larsson, Mr. Bengt Edvin","Hombre",29,0,0
+"836","Clase Baja","No sobrevive","Larsson-Rondberg, Mr. Edvard A","Hombre",22,0,0
+"837","Clase Baja","Sobrevive","Leeni, Mr. Fahim (""Philip Zenni"")","Hombre",22,0,0
+"838","Clase Baja","No sobrevive","Leinonen, Mr. Antti Gustaf","Hombre",32,0,0
+"839","Clase Baja","No sobrevive","Lemberopolous, Mr. Peter L","Hombre",34.5,0,0
+"840","Clase Baja","No sobrevive","Leonard, Mr. Lionel","Hombre",36,0,0
+"841","Clase Baja","No sobrevive","Lester, Mr. James","Hombre",39,0,0
+"842","Clase Baja","No sobrevive","Lievens, Mr. Rene Aime","Hombre",24,0,0
+"843","Clase Baja","No sobrevive","Lindahl, Miss. Agda Thorilda Viktoria","Mujer",25,0,0
+"844","Clase Baja","No sobrevive","Lindblom, Miss. Augusta Charlotta","Mujer",45,0,0
+"845","Clase Baja","No sobrevive","Lindell, Mr. Edvard Bengtsson","Hombre",36,1,0
+"846","Clase Baja","No sobrevive","Lindell, Mrs. Edvard Bengtsson (Elin Gerda Persson)","Mujer",30,1,0
+"847","Clase Baja","Sobrevive","Lindqvist, Mr. Eino William","Hombre",20,1,0
+"848","Clase Baja","No sobrevive","Ling, Mr. Lee","Hombre",28,0,0
+"849","Clase Baja","No sobrevive","Lobb, Mr. William Arthur","Hombre",30,1,0
+"850","Clase Baja","No sobrevive","Lobb, Mrs. William Arthur (Cordelia K Stanlick)","Mujer",26,1,0
+"851","Clase Baja","No sobrevive","Lovell, Mr. John Hall (""Henry"")","Hombre",20.5,0,0
+"852","Clase Baja","Sobrevive","Lulic, Mr. Nikola","Hombre",27,0,0
+"853","Clase Baja","No sobrevive","Lundahl, Mr. Johan Svensson","Hombre",51,0,0
+"854","Clase Baja","Sobrevive","Lundin, Miss. Olga Elida","Mujer",23,0,0
+"855","Clase Baja","Sobrevive","Lundstrom, Mr. Thure Edvin","Hombre",32,0,0
+"856","Clase Baja","Sobrevive","Madsen, Mr. Fridtjof Arne","Hombre",24,0,0
+"857","Clase Baja","No sobrevive","Maenpaa, Mr. Matti Alexanteri","Hombre",22,0,0
+"858","Clase Baja","No sobrevive","Makinen, Mr. Kalle Edvard","Hombre",29,0,0
+"859","Clase Baja","No sobrevive","Mangan, Miss. Mary","Mujer",30.5,0,0
+"860","Clase Baja","No sobrevive","Markoff, Mr. Marin","Hombre",35,0,0
+"861","Clase Baja","No sobrevive","Markun, Mr. Johann","Hombre",33,0,0
+"862","Clase Baja","Sobrevive","McGowan, Miss. Anna ""Annie""","Mujer",15,0,0
+"863","Clase Baja","No sobrevive","McGowan, Miss. Katherine","Mujer",35,0,0
+"864","Clase Baja","No sobrevive","McNamee, Mr. Neal","Hombre",24,1,0
+"865","Clase Baja","No sobrevive","McNamee, Mrs. Neal (Eileen O'Leary)","Mujer",19,1,0
+"866","Clase Baja","No sobrevive","Meo, Mr. Alfonzo","Hombre",55.5,0,0
+"867","Clase Baja","Sobrevive","Midtsjo, Mr. Karl Albert","Hombre",21,0,0
+"868","Clase Baja","No sobrevive","Mineff, Mr. Ivan","Hombre",24,0,0
+"869","Clase Baja","No sobrevive","Minkoff, Mr. Lazar","Hombre",21,0,0
+"870","Clase Baja","No sobrevive","Mionoff, Mr. Stoytcho","Hombre",28,0,0
+"871","Clase Baja","No sobrevive","Moen, Mr. Sigurd Hansen","Hombre",25,0,0
+"872","Clase Baja","Sobrevive","Moor, Master. Meier","Hombre",6,0,1
+"873","Clase Baja","Sobrevive","Moor, Mrs. (Beila)","Mujer",27,0,1
+"874","Clase Baja","No sobrevive","Morley, Mr. William","Hombre",34,0,0
+"875","Clase Baja","Sobrevive","Mulvihill, Miss. Bertha E","Mujer",24,0,0
+"876","Clase Baja","No sobrevive","Myhrman, Mr. Pehr Fabian Oliver Malkolm","Hombre",18,0,0
+"877","Clase Baja","No sobrevive","Naidenoff, Mr. Penko","Hombre",22,0,0
+"878","Clase Baja","Sobrevive","Najib, Miss. Adele Kiamie ""Jane""","Mujer",15,0,0
+"879","Clase Baja","Sobrevive","Nakid, Miss. Maria (""Mary"")","Mujer",1,0,2
+"880","Clase Baja","Sobrevive","Nakid, Mr. Sahid","Hombre",20,1,1
+"881","Clase Baja","Sobrevive","Nakid, Mrs. Said (Waika ""Mary"" Mowad)","Mujer",19,1,1
+"882","Clase Baja","No sobrevive","Nancarrow, Mr. William Henry","Hombre",33,0,0
+"883","Clase Baja","Sobrevive","Nicola-Yarred, Master. Elias","Hombre",12,1,0
+"884","Clase Baja","Sobrevive","Nicola-Yarred, Miss. Jamila","Mujer",14,1,0
+"885","Clase Baja","No sobrevive","Nieminen, Miss. Manta Josefina","Mujer",29,0,0
+"886","Clase Baja","No sobrevive","Niklasson, Mr. Samuel","Hombre",28,0,0
+"887","Clase Baja","Sobrevive","Nilsson, Miss. Berta Olivia","Mujer",18,0,0
+"888","Clase Baja","Sobrevive","Nilsson, Miss. Helmina Josefina","Mujer",26,0,0
+"889","Clase Baja","No sobrevive","Nilsson, Mr. August Ferdinand","Hombre",21,0,0
+"890","Clase Baja","No sobrevive","Nirva, Mr. Iisakki Antino Aijo","Hombre",41,0,0
+"891","Clase Baja","Sobrevive","Niskanen, Mr. Juha","Hombre",39,0,0
+"892","Clase Baja","No sobrevive","Nosworthy, Mr. Richard Cater","Hombre",21,0,0
+"893","Clase Baja","No sobrevive","Novel, Mr. Mansouer","Hombre",28.5,0,0
+"894","Clase Baja","Sobrevive","Nysten, Miss. Anna Sofia","Mujer",22,0,0
+"895","Clase Baja","No sobrevive","Nysveen, Mr. Johan Hansen","Hombre",61,0,0
+"896","Clase Baja","No sobrevive","Odahl, Mr. Nils Martin","Hombre",23,0,0
+"897","Clase Baja","Sobrevive","Ohman, Miss. Velin","Mujer",22,0,0
+"898","Clase Baja","Sobrevive","Olsen, Master. Artur Karl","Hombre",9,0,1
+"899","Clase Baja","No sobrevive","Olsen, Mr. Henry Margido","Hombre",28,0,0
+"900","Clase Baja","No sobrevive","Olsen, Mr. Karl Siegwart Andreas","Hombre",42,0,1
+"901","Clase Baja","No sobrevive","Olsson, Miss. Elina","Mujer",31,0,0
+"902","Clase Baja","No sobrevive","Olsson, Mr. Nils Johan Goransson","Hombre",28,0,0
+"903","Clase Baja","Sobrevive","Olsson, Mr. Oscar Wilhelm","Hombre",32,0,0
+"904","Clase Baja","No sobrevive","Olsvigen, Mr. Thor Anderson","Hombre",20,0,0
+"905","Clase Baja","No sobrevive","Oreskovic, Miss. Jelka","Mujer",23,0,0
+"906","Clase Baja","No sobrevive","Oreskovic, Miss. Marija","Mujer",20,0,0
+"907","Clase Baja","No sobrevive","Oreskovic, Mr. Luka","Hombre",20,0,0
+"908","Clase Baja","No sobrevive","Osen, Mr. Olaf Elon","Hombre",16,0,0
+"909","Clase Baja","Sobrevive","Osman, Mrs. Mara","Mujer",31,0,0
+"910","Clase Baja","No sobrevive","Palsson, Master. Gosta Leonard","Hombre",2,3,1
+"911","Clase Baja","No sobrevive","Palsson, Master. Paul Folke","Hombre",6,3,1
+"912","Clase Baja","No sobrevive","Palsson, Miss. Stina Viola","Mujer",3,3,1
+"913","Clase Baja","No sobrevive","Palsson, Miss. Torborg Danira","Mujer",8,3,1
+"914","Clase Baja","No sobrevive","Palsson, Mrs. Nils (Alma Cornelia Berglund)","Mujer",29,0,4
+"915","Clase Baja","No sobrevive","Panula, Master. Eino Viljami","Hombre",1,4,1
+"916","Clase Baja","No sobrevive","Panula, Master. Juha Niilo","Hombre",7,4,1
+"917","Clase Baja","No sobrevive","Panula, Master. Urho Abraham","Hombre",2,4,1
+"918","Clase Baja","No sobrevive","Panula, Mr. Ernesti Arvid","Hombre",16,4,1
+"919","Clase Baja","No sobrevive","Panula, Mr. Jaako Arnold","Hombre",14,4,1
+"920","Clase Baja","No sobrevive","Panula, Mrs. Juha (Maria Emilia Ojala)","Mujer",41,0,5
+"921","Clase Baja","No sobrevive","Pasic, Mr. Jakob","Hombre",21,0,0
+"922","Clase Baja","No sobrevive","Patchett, Mr. George","Hombre",19,0,0
+"923","Clase Baja","No sobrevive","Pavlovic, Mr. Stefo","Hombre",32,0,0
+"924","Clase Baja","No sobrevive","Peacock, Master. Alfred Edward","Hombre",0.75,1,1
+"925","Clase Baja","No sobrevive","Peacock, Miss. Treasteall","Mujer",3,1,1
+"926","Clase Baja","No sobrevive","Peacock, Mrs. Benjamin (Edith Nile)","Mujer",26,0,2
+"927","Clase Baja","No sobrevive","Pekoniemi, Mr. Edvard","Hombre",21,0,0
+"928","Clase Baja","No sobrevive","Peltomaki, Mr. Nikolai Johannes","Hombre",25,0,0
+"929","Clase Baja","No sobrevive","Perkin, Mr. John Henry","Hombre",22,0,0
+"930","Clase Baja","Sobrevive","Persson, Mr. Ernst Ulrik","Hombre",25,1,0
+"931","Clase Baja","No sobrevive","Petersen, Mr. Marius","Hombre",24,0,0
+"932","Clase Baja","No sobrevive","Petranec, Miss. Matilda","Mujer",28,0,0
+"933","Clase Baja","No sobrevive","Petroff, Mr. Nedelio","Hombre",19,0,0
+"934","Clase Baja","No sobrevive","Petterson, Mr. Johan Emil","Hombre",25,1,0
+"935","Clase Baja","No sobrevive","Pettersson, Miss. Ellen Natalia","Mujer",18,0,0
+"936","Clase Baja","Sobrevive","Pickard, Mr. Berk (Berk Trembisky)","Hombre",32,0,0
+"937","Clase Baja","No sobrevive","Pokrnic, Mr. Mate","Hombre",17,0,0
+"938","Clase Baja","No sobrevive","Pokrnic, Mr. Tome","Hombre",24,0,0
+"939","Clase Baja","No sobrevive","Rekic, Mr. Tido","Hombre",38,0,0
+"940","Clase Baja","No sobrevive","Reynolds, Mr. Harold J","Hombre",21,0,0
+"941","Clase Baja","No sobrevive","Rice, Master. Albert","Hombre",10,4,1
+"942","Clase Baja","No sobrevive","Rice, Master. Arthur","Hombre",4,4,1
+"943","Clase Baja","No sobrevive","Rice, Master. Eric","Hombre",7,4,1
+"944","Clase Baja","No sobrevive","Rice, Master. Eugene","Hombre",2,4,1
+"945","Clase Baja","No sobrevive","Rice, Master. George Hugh","Hombre",8,4,1
+"946","Clase Baja","No sobrevive","Rice, Mrs. William (Margaret Norton)","Mujer",39,0,5
+"947","Clase Baja","No sobrevive","Riihivouri, Miss. Susanna Juhantytar ""Sanni""","Mujer",22,0,0
+"948","Clase Baja","No sobrevive","Rintamaki, Mr. Matti","Hombre",35,0,0
+"949","Clase Baja","No sobrevive","Robins, Mr. Alexander A","Hombre",50,1,0
+"950","Clase Baja","No sobrevive","Robins, Mrs. Alexander A (Grace Charity Laury)","Mujer",47,1,0
+"951","Clase Baja","No sobrevive","Rosblom, Miss. Salli Helena","Mujer",2,1,1
+"952","Clase Baja","No sobrevive","Rosblom, Mr. Viktor Richard","Hombre",18,1,1
+"953","Clase Baja","No sobrevive","Rosblom, Mrs. Viktor (Helena Wilhelmina)","Mujer",41,0,2
+"954","Clase Baja","No sobrevive","Rouse, Mr. Richard Henry","Hombre",50,0,0
+"955","Clase Baja","No sobrevive","Rush, Mr. Alfred George John","Hombre",16,0,0
+"956","Clase Baja","No sobrevive","Saad, Mr. Khalil","Hombre",25,0,0
+"957","Clase Baja","No sobrevive","Saether, Mr. Simon Sivertsen","Hombre",38.5,0,0
+"958","Clase Baja","No sobrevive","Sage, Master. William Henry","Hombre",14.5,8,2
+"959","Clase Baja","No sobrevive","Salander, Mr. Karl Johan","Hombre",24,0,0
+"960","Clase Baja","Sobrevive","Salkjelsvik, Miss. Anna Kristine","Mujer",21,0,0
+"961","Clase Baja","No sobrevive","Salonen, Mr. Johan Werner","Hombre",39,0,0
+"962","Clase Baja","Sobrevive","Sandstrom, Miss. Beatrice Irene","Mujer",1,1,1
+"963","Clase Baja","Sobrevive","Sandstrom, Mrs. Hjalmar (Agnes Charlotta Bengtsson)","Mujer",24,0,2
+"964","Clase Baja","Sobrevive","Sandstrom, Miss. Marguerite Rut","Mujer",4,1,1
+"965","Clase Baja","Sobrevive","Sap, Mr. Julius","Hombre",25,0,0
+"966","Clase Baja","No sobrevive","Saundercock, Mr. William Henry","Hombre",20,0,0
+"967","Clase Baja","No sobrevive","Sawyer, Mr. Frederick Charles","Hombre",24.5,0,0
+"968","Clase Baja","Sobrevive","Sheerlinck, Mr. Jan Baptist","Hombre",29,0,0
+"969","Clase Baja","No sobrevive","Sirayanian, Mr. Orsen","Hombre",22,0,0
+"970","Clase Baja","No sobrevive","Sivic, Mr. Husein","Hombre",40,0,0
+"971","Clase Baja","No sobrevive","Sivola, Mr. Antti Wilhelm","Hombre",21,0,0
+"972","Clase Baja","Sobrevive","Sjoblom, Miss. Anna Sofia","Mujer",18,0,0
+"973","Clase Baja","No sobrevive","Skoog, Master. Harald","Hombre",4,3,2
+"974","Clase Baja","No sobrevive","Skoog, Master. Karl Thorsten","Hombre",10,3,2
+"975","Clase Baja","No sobrevive","Skoog, Miss. Mabel","Mujer",9,3,2
+"976","Clase Baja","No sobrevive","Skoog, Miss. Margit Elizabeth","Mujer",2,3,2
+"977","Clase Baja","No sobrevive","Skoog, Mr. Wilhelm","Hombre",40,1,4
+"978","Clase Baja","No sobrevive","Skoog, Mrs. William (Anna Bernhardina Karlsson)","Mujer",45,1,4
+"979","Clase Baja","No sobrevive","Soholt, Mr. Peter Andreas Lauritz Andersen","Hombre",19,0,0
+"980","Clase Baja","No sobrevive","Somerton, Mr. Francis William","Hombre",30,0,0
+"981","Clase Baja","No sobrevive","Spinner, Mr. Henry John","Hombre",32,0,0
+"982","Clase Baja","No sobrevive","Stankovic, Mr. Ivan","Hombre",33,0,0
+"983","Clase Baja","Sobrevive","Stanley, Miss. Amy Zillah Elsie","Mujer",23,0,0
+"984","Clase Baja","No sobrevive","Stanley, Mr. Edward Roland","Hombre",21,0,0
+"985","Clase Baja","No sobrevive","Storey, Mr. Thomas","Hombre",60.5,0,0
+"986","Clase Baja","No sobrevive","Stoytcheff, Mr. Ilia","Hombre",19,0,0
+"987","Clase Baja","No sobrevive","Strandberg, Miss. Ida Sofia","Mujer",22,0,0
+"988","Clase Baja","Sobrevive","Stranden, Mr. Juho","Hombre",31,0,0
+"989","Clase Baja","No sobrevive","Strilic, Mr. Ivan","Hombre",27,0,0
+"990","Clase Baja","No sobrevive","Strom, Miss. Telma Matilda","Mujer",2,0,1
+"991","Clase Baja","No sobrevive","Strom, Mrs. Wilhelm (Elna Matilda Persson)","Mujer",29,1,1
+"992","Clase Baja","Sobrevive","Sunderland, Mr. Victor Francis","Hombre",16,0,0
+"993","Clase Baja","Sobrevive","Sundman, Mr. Johan Julian","Hombre",44,0,0
+"994","Clase Baja","No sobrevive","Sutehall, Mr. Henry Jr","Hombre",25,0,0
+"995","Clase Baja","No sobrevive","Svensson, Mr. Johan","Hombre",74,0,0
+"996","Clase Baja","Sobrevive","Svensson, Mr. Johan Cervin","Hombre",14,0,0
+"997","Clase Baja","No sobrevive","Svensson, Mr. Olof","Hombre",24,0,0
+"998","Clase Baja","Sobrevive","Tenglin, Mr. Gunnar Isidor","Hombre",25,0,0
+"999","Clase Baja","No sobrevive","Theobald, Mr. Thomas Leonard","Hombre",34,0,0
+"1000","Clase Baja","Sobrevive","Thomas, Master. Assad Alexander","Hombre",0.4167,0,1
+"1001","Clase Baja","Sobrevive","Thomas, Mrs. Alexander (Thamine ""Thelma"")","Mujer",16,1,1
+"1002","Clase Baja","No sobrevive","Tikkanen, Mr. Juho","Hombre",32,0,0
+"1003","Clase Baja","No sobrevive","Tomlin, Mr. Ernest Portage","Hombre",30.5,0,0
+"1004","Clase Baja","No sobrevive","Torber, Mr. Ernst William","Hombre",44,0,0
+"1005","Clase Baja","Sobrevive","Tornquist, Mr. William Henry","Hombre",25,0,0
+"1006","Clase Baja","Sobrevive","Touma, Master. Georges Youssef","Hombre",7,1,1
+"1007","Clase Baja","Sobrevive","Touma, Miss. Maria Youssef","Mujer",9,1,1
+"1008","Clase Baja","Sobrevive","Touma, Mrs. Darwis (Hanne Youssef Razi)","Mujer",29,0,2
+"1009","Clase Baja","No sobrevive","Turcin, Mr. Stjepan","Hombre",36,0,0
+"1010","Clase Baja","Sobrevive","Turja, Miss. Anna Sofia","Mujer",18,0,0
+"1011","Clase Baja","Sobrevive","Turkula, Mrs. (Hedwig)","Mujer",63,0,0
+"1012","Clase Baja","No sobrevive","van Billiard, Master. Walter John","Hombre",11.5,1,1
+"1013","Clase Baja","No sobrevive","van Billiard, Mr. Austin Blyler","Hombre",40.5,0,2
+"1014","Clase Baja","No sobrevive","Van Impe, Miss. Catharina","Mujer",10,0,2
+"1015","Clase Baja","No sobrevive","Van Impe, Mr. Jean Baptiste","Hombre",36,1,1
+"1016","Clase Baja","No sobrevive","Van Impe, Mrs. Jean Baptiste (Rosalie Paula Govaert)","Mujer",30,1,1
+"1017","Clase Baja","No sobrevive","Vande Velde, Mr. Johannes Joseph","Hombre",33,0,0
+"1018","Clase Baja","No sobrevive","Vande Walle, Mr. Nestor Cyriel","Hombre",28,0,0
+"1019","Clase Baja","No sobrevive","Vanden Steen, Mr. Leo Peter","Hombre",28,0,0
+"1020","Clase Baja","No sobrevive","Vander Cruyssen, Mr. Victor","Hombre",47,0,0
+"1021","Clase Baja","No sobrevive","Vander Planke, Miss. Augusta Maria","Mujer",18,2,0
+"1022","Clase Baja","No sobrevive","Vander Planke, Mr. Julius","Hombre",31,3,0
+"1023","Clase Baja","No sobrevive","Vander Planke, Mr. Leo Edmondus","Hombre",16,2,0
+"1024","Clase Baja","No sobrevive","Vander Planke, Mrs. Julius (Emelia Maria Vandemoortele)","Mujer",31,1,0
+"1025","Clase Baja","Sobrevive","Vartanian, Mr. David","Hombre",22,0,0
+"1026","Clase Baja","No sobrevive","Vendel, Mr. Olof Edvin","Hombre",20,0,0
+"1027","Clase Baja","No sobrevive","Vestrom, Miss. Hulda Amanda Adolfina","Mujer",14,0,0
+"1028","Clase Baja","No sobrevive","Vovk, Mr. Janko","Hombre",22,0,0
+"1029","Clase Baja","No sobrevive","Waelens, Mr. Achille","Hombre",22,0,0
+"1030","Clase Baja","No sobrevive","Wenzel, Mr. Linhart","Hombre",32.5,0,0
+"1031","Clase Baja","Sobrevive","Whabee, Mrs. George Joseph (Shawneene Abi-Saab)","Mujer",38,0,0
+"1032","Clase Baja","No sobrevive","Widegren, Mr. Carl/Charles Peter","Hombre",51,0,0
+"1033","Clase Baja","No sobrevive","Wiklund, Mr. Jakob Alfred","Hombre",18,1,0
+"1034","Clase Baja","No sobrevive","Wiklund, Mr. Karl Johan","Hombre",21,1,0
+"1035","Clase Baja","Sobrevive","Wilkes, Mrs. James (Ellen Needs)","Mujer",47,1,0
+"1036","Clase Baja","No sobrevive","Williams, Mr. Leslie","Hombre",28.5,0,0
+"1037","Clase Baja","No sobrevive","Windelov, Mr. Einar","Hombre",21,0,0
+"1038","Clase Baja","No sobrevive","Wirz, Mr. Albert","Hombre",27,0,0
+"1039","Clase Baja","No sobrevive","Wittevrongel, Mr. Camille","Hombre",36,0,0
+"1040","Clase Baja","No sobrevive","Yasbeck, Mr. Antoni","Hombre",27,1,0
+"1041","Clase Baja","Sobrevive","Yasbeck, Mrs. Antoni (Selini Alexander)","Mujer",15,1,0
+"1042","Clase Baja","No sobrevive","Youseff, Mr. Gerious","Hombre",45.5,0,0
+"1043","Clase Baja","No sobrevive","Zabour, Miss. Hileni","Mujer",14.5,1,0
+"1044","Clase Baja","No sobrevive","Zakarian, Mr. Mapriededer","Hombre",26.5,0,0
+"1045","Clase Baja","No sobrevive","Zakarian, Mr. Ortin","Hombre",27,0,0
+"1046","Clase Baja","No sobrevive","Zimmerman, Mr. Leo","Hombre",29,0,0

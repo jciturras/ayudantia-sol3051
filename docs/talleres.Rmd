@@ -2,17 +2,7 @@
 title: "Sesiones"
 output: html_document
 ---
-
-
-[Sesión 00: Introducción a R](slides/00-intro-r/intro-r.html)
- 
-
-
-<iframe src=slides/00-intro-r/intro-r.html height="440" width="775">
-</iframe>
-
-<br/>
-
+# [Sesión 00: Introducción a R](sesiones/00-intro-r/00-intro-r.html) 
 
 <!-- [*Taller 02: Supuestos de Regresión*](slides/taller02/taller02-slides.html) -->
 
