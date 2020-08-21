@@ -44,6 +44,22 @@ htmltools::tagList(
 <br/>
 
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+**Descargar:**
+
+- [Datos .csv](https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic2.sav)
+- [Datos .sav](https://jciturras.github.io/ayudantia-sol3051/slides/00-intro-r/data/titanic.csv)
+- [Rscript](https://jciturras.github.io/ayudantia-sol3051/rscript/00-intro-r.R)
+
+</div>
+
+
+
+
 # Contenidos ayudantía
  
 * ¿Qué es R?

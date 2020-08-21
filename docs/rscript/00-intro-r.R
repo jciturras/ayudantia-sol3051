@@ -139,7 +139,17 @@ table(tt$surv)
 
 ## -------------------------------------------------------------------------------------------------------
 logit01<- glm(formula = surv~sex+pclass,data = tt,family = "binomial")
+logit02<- glm(formula = surv~sex+pclass+age,data = tt,family = "binomial")
 
+logit02$coefficients
+
+coef.age <- -0.03439323
+coef.age
+
+logit02$residuals
+logit02$fitted.values
+
+summary(logit02)
 
 ## -------------------------------------------------------------------------------------------------------
 class(logit01)
