@@ -1,10 +1,10 @@
 ---
-title: "Modelo de dos niveles"
+title: "Multinivel I"
 date: "`r format(Sys.time(), '%A %d %B')`"
 output:
   bookdown::html_document2:
     number_sections: true
-    toc: true
+    toc: false
     toc_float:
         collapsed: false
     toc_depth: 2
@@ -75,10 +75,12 @@ Por lo general, un procedimiento sociométrico pide a todos los alumnos de una c
 **Cargar Datos**
 
 ```{r echo=TRUE}
-popdata <-read_spss("popular2.sav")
+popdata <- read_spss("data/popular2.sav")
 ```
 
-```{r, include=F}
+**Seleccionar variables**
+
+```{r, include=T}
 popdata<- popdata %>% select(pupil,class,popular,sex,extrav,texp)
 ```
 
@@ -88,9 +90,9 @@ popdata<- popdata %>% select(pupil,class,popular,sex,extrav,texp)
 print(dfSummary(popdata, headings = FALSE), method = "render")
 ```
 
-# Contenidos
+# Práctica
 
-## Componentes de Varianza (within/between) 
+## Varianza within/between
 
 ![Varianza within y between](images/wb-var.jpg)
 
@@ -185,15 +187,9 @@ La correlación intraclase nos indica que una proporción del **`r round(sigma2_
 
 **Visualización de efectos aleatorios**
 
-```{r fig.show='hold', message=FALSE, warning=FALSE, out.width=c('50%', '50%'), fig.height=8}
+```{r fig.show='hold', message=FALSE, warning=FALSE, fig.width=12}
 library(lattice)
 qqmath(ranef(m00, condVar = TRUE))
-
-library(sjPlot)
-plot_model(m00, #modelo
-           type = "re", #tipo = random-effects
-           sort.est = T, # ordenar = SI
-           grid = FALSE) # mantener en 1 plot
 ```
 
 ## Modelo con intercepto aleatorio
@@ -202,43 +198,69 @@ A diferencia del modelo nulo, el modelo con intercepto aleatorio considera predi
 
 ```{r}
 m01.ri<- lmer(popular ~ sex + extrav + texp + (1 |class), popdata)
-screenreg(list(m00,m01.ri))
+screenreg(list(m00,m01.ri), custom.model.names = c("Modelo Nulo", "Modelo 1"))
 ```
 
 **Interpretación**
-> bla bla
+
+En el caso del Modelo Nulo 
+
+El intercepto para un modelo sin predictores representa el promedio de popularidad entre todos los cursos y estudiantes, que en este caso es 5.08.
+
+La varianza de los residuos a nivel de alumno es representada se puede ver en `Var: Residual` con un valor de 1.22, mientras que la varianza del residuo a nivel del curso se puede observar en `Var: class (Intercept)` con un valor de 0.7.
+
+En el Modelo 1 es el modelo con intercepto aleatorio y pendendientes fijas. Es decir, sólo el intercepto varía entre cursos, mientras que los efectos de sexo y extraversión se **consideran fijos** (no varían según curso).
 
 ## Modelo con intercepto y pendiente aleatoria
 
 ```{r}
 m01.rirs<- lmer(popular ~ sex + extrav + texp + (1+ sex + extrav |class), popdata)
-screenreg(list(m01.ri,m01.rirs))
+screenreg(list(m01.ri,m01.rirs),custom.model.names = c("Modelo 1", "Modelo 2"))
 ```
 
 **Interpretación**
-> bla bla
+
+A diferencia del Modelo 1 (Intercepto aleatorio, pendiente fija) el Modelo 2 considera que tanto el sexo como la extraversión de los alumnos tienen una pendiente aleatoria, esto significa que ahora sí se considera que el efecto de ambas variables es distinto según curso. A continuación se puede visualizar el Intercepto para cada curso, como también la pendiente de sexo y extraversión.
+
+Vemos que los coeficientes de todas las variables son estadísticamente significativos al 99.9% de confianza. 
+
+- El coeficiente para el género del alumno es 1.24. Dado que el valor 1= mujer y 0= hombre, esto significa que el promedio, las mujeres tienen 1.25 puntos más que los hombres en la escala de popularidad.
+
+- El coeficiente de la extraversión es 0.45, lo cual significa que por cada incremento de una unidad en la escala de estraversión, se espera que la popularidad incremente en 0.45.
+
+- El coeficiente para la experiencia del profesor es de 0.09, lo cual indica que por cada año de experiencia del profesor, la popularidad promedio del curso se incrementa en 0.09 puntos en la escala de popularidad.
+
+
+Para visualizarlo, usamos la función `lattice::qqmath()` sobre `lmer::ranef()`, esta última función nos entrega los valores de intercepto y pendiente aleatoria para cada curso. 
+
+```{r,fig.width=12}
+qqmath(ranef(m01.rirs))
+```
+
 
 ## Interacciones
 
-A) Nivel individual: sexo $\times$ extraversión 
+A) **Nivel individual:** extraversión $\times$ sexo
+
+Este modelo evalúa si el efecto de extraversión está moderado por el sexo del alumno. Para ello, se debe tomar en cuenta que efecto de extraversión varía en magnitud según el curso.
 
 ```{r}
-m02.rirs<- lmer(popular ~ sex * extrav + texp + (1+ sex + extrav |class), popdata)
-screenreg(list(m00,m01.ri,m01.rirs,m02.rirs))
+m02.rirs<- lmer(popular ~  extrav*sex + texp + (1+ sex + extrav |class), popdata)
 ```
 
 
+B) **Nivel cruzado:** extraversión $\times$ experiencia profesor
 
-**Interpretación**
-
-> 
-
-B) Nivel cruzado: extraversión $\times$ experiencia profesor
+En este ejemplo veremos si la experiencia del profeso modera el efecto de extraversión sobre popularidad.
 
 ```{r}
 m03.rirs<- lmer(popular ~ sex + extrav*texp + (1+ sex + extrav |class), popdata)
+```
+
+```{r}
 screenreg(list(m01.rirs,m02.rirs,m03.rirs))
 ```
+
 
 **Interpretación**
 

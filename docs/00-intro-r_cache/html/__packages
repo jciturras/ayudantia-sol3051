@@ -1,3 +1,12 @@
 base
 dplyr
 haven
+summarytools
+sjlabelled
+Matrix
+lme4
+texreg
+ggplot2
+ggExtra
+lattice
+sjPlot
