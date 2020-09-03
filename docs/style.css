@@ -7,6 +7,21 @@ body{
 }
 
 
+/* expandir el espacio del documento*/
+body .main-container {
+      max-width: 1600px !important;
+      width: 1600px !important;
+    }
+
+
+/* expandir width de la TOC*/
+
+div.tocify {
+    width: 22% !important;
+    max-width: 331px !important;
+    max-height: 102% !important;
+}
+
   
 h1 {
     margin-top: 65px;

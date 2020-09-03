@@ -11,6 +11,8 @@ navbar:
       menu:
         - text: "Sesión 00"
           href: 00-intro-r.html
+        - text: "Sesión 01"
+          href: 01-multinivel-a.html  
     - text: "Links"
       icon: ion-social-markdown
       href: links.html
