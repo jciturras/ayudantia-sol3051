@@ -54,7 +54,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 **Descargar:**
 
 - [Datos .sav](https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav)
-- [Rscript](https://jciturras.github.io/ayudantia-sol3051/rscript/00-intro-r.R)
+- [Rscript](https://jciturras.github.io/ayudantia-sol3051/rscript/01-multinivel-a.R)
 
 </div>
 
@@ -108,7 +108,7 @@ print(dfSummary(popdata, headings = FALSE), method = "render")
 
 * En el caso A, vemos que al interior de los grupos la varianza es **alta**, pero la varianza entre grupos es **baja**.
 
-* En el caso b, vemos que al interior de los grupos la varianza es **baja**, pero la varianza entre grupos es* *alta**.
+* En el caso B, vemos que al interior de los grupos la varianza es **baja**, pero la varianza entre grupos es **alta**.
 
 
 Ahora, ejemplifiquemos con nuestros datos. Seleccionamos tres cursos para observar cómo se distribuye la popularidad de los alumnos al interior de cada uno y a la vez, es posible identificar la variacion entre cursos. En este caso **La media de popularidad en la muestra es de `r mean(popdata$popular)`.**
