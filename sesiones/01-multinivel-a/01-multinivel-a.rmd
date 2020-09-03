@@ -14,7 +14,7 @@ editor_options:
 ---
 
 ```{r include=FALSE}
-knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = TRUE, results = "hold")
+knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = FALSE, results = "hold")
 options(scipen=999, max.print = 50)
 rm(list=ls())
 options(knitr.kable.NA = '')
@@ -85,7 +85,7 @@ Por lo general, un procedimiento sociométrico pide a todos los alumnos de una c
 **Cargar Datos**
 
 ```{r echo=TRUE}
-popdata <- read_spss(url("https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav"))
+popdata <- read_spss("data/popular2.sav")
 ```
 
 **Seleccionar variables**
@@ -273,11 +273,24 @@ screenreg(list(m01.rirs,m02.rirs,m03.rirs))
 
 **Interpretación**
 
-A. El coeficiente de extraversión (`extrav`) es de 0.42 y el coeficiente multiplicativo de extrav:sex es de 0.05. Sin embargo, el coeficiente multiplicativo no es estadísticamente signficativo. 
+A) El coeficiente de extraversión (`extrav`) es de 0.42 y el coeficiente multiplicativo de extrav:sex es de 0.05. Sin embargo, el coeficiente multiplicativo no es estadísticamente signficativo. 
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 Lo que nos indica es que el efecto de extraversión varía positivamente según el sexo del alumno. En este caso, dado que sexo=1 corresponde a las mujeres, vemos que en la medida que aumenta la extraversión del alumno, las mujeres sostenidamente tendrán un efecto mayor al de los hombres. Manteniendo todas las demás variables constantes.
 
-B. El coeficiente de extraversión (`extrav`) es de 0.80 y el coeficiente multiplicativo de extrav:texp es de -0.02, los cual es pequeño pero estadísticamente significativo al 99.9% de confianza. 
+</div>
+
+B) El coeficiente de extraversión (`extrav`) es de 0.80 y el coeficiente multiplicativo de extrav:texp es de -0.02, los cual es pequeño pero estadísticamente significativo al 99.9% de confianza. 
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 El valor negativo del del coeficiente multiplicativo de nivel cruzado nos indica que cuando los profesores son experimentados, las ventajas de ser extrovertido son menores de lo que indica el efecto principal de extraversión (0.80). Entonces, la diferencia en popularidad entre alumnos extrovertidos e introvertidos se vuelve menor con profesores más experimentados.
 
+</div>

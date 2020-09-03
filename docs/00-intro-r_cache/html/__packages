@@ -1,6 +1,5 @@
 base
 dplyr
-haven
 summarytools
 sjlabelled
 Matrix
@@ -10,3 +9,4 @@ ggplot2
 ggExtra
 lattice
 sjPlot
+haven

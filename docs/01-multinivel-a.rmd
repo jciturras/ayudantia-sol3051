@@ -14,7 +14,7 @@ editor_options:
 ---
 
 ```{r include=FALSE}
-knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = TRUE, results = "hold")
+knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = FALSE, results = "hold")
 options(scipen=999, max.print = 50)
 rm(list=ls())
 options(knitr.kable.NA = '')
@@ -41,6 +41,11 @@ htmltools::tagList(
 )
 ```
 
+```{r eval=FALSE, include=FALSE}
+knitr::purl("docs/01-multinivel-a.rmd")
+```
+
+
 <style>
 div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 </style>
@@ -48,7 +53,7 @@ div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
 
 **Descargar:**
 
-- [Datos .sav](https://stats.idre.ucla.edu/stat/stata/examples/mlm_ma_hox/popular.dta)
+- [Datos .sav](https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav)
 - [Rscript](https://jciturras.github.io/ayudantia-sol3051/rscript/00-intro-r.R)
 
 </div>
@@ -253,10 +258,9 @@ Este modelo evalúa si el efecto de extraversión está moderado por el sexo del
 m02.rirs<- lmer(popular ~  extrav*sex + texp + (1+ sex + extrav |class), popdata)
 ```
 
-
 B) **Nivel cruzado:** extraversión $\times$ experiencia profesor
 
-En este ejemplo veremos si la experiencia del profeso modera el efecto de extraversión sobre popularidad.
+En este ejemplo veremos si la experiencia del profesor modera el efecto de extraversión sobre popularidad.
 
 ```{r}
 m03.rirs<- lmer(popular ~ sex + extrav*texp + (1+ sex + extrav |class), popdata)
@@ -269,6 +273,24 @@ screenreg(list(m01.rirs,m02.rirs,m03.rirs))
 
 **Interpretación**
 
-> bla bla
+A) El coeficiente de extraversión (`extrav`) es de 0.42 y el coeficiente multiplicativo de extrav:sex es de 0.05. Sin embargo, el coeficiente multiplicativo no es estadísticamente signficativo. 
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
+Lo que nos indica es que el efecto de extraversión varía positivamente según el sexo del alumno. En este caso, dado que sexo=1 corresponde a las mujeres, vemos que en la medida que aumenta la extraversión del alumno, las mujeres sostenidamente tendrán un efecto mayor al de los hombres. Manteniendo todas las demás variables constantes.
+
+</div>
+
+B) El coeficiente de extraversión (`extrav`) es de 0.80 y el coeficiente multiplicativo de extrav:texp es de -0.02, los cual es pequeño pero estadísticamente significativo al 99.9% de confianza. 
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+El valor negativo del del coeficiente multiplicativo de nivel cruzado nos indica que cuando los profesores son experimentados, las ventajas de ser extrovertido son menores de lo que indica el efecto principal de extraversión (0.80). Entonces, la diferencia en popularidad entre alumnos extrovertidos e introvertidos se vuelve menor con profesores más experimentados.
+
+</div>

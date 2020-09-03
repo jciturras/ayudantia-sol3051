@@ -782,8 +782,10 @@ table(tt$surv)</code></pre>
 ## Call:  glm(formula = surv ~ sex + pclass, family = &quot;binomial&quot;, data = tt)
 ## 
 ## Coefficients:
-##            (Intercept)                sexMujer        pclassClase Baja  pclassClase Intermedia  
-##                -0.3682                  2.5281                 -1.7189                 -0.8984  
+##            (Intercept)                sexMujer        pclassClase Baja  
+##                -0.3682                  2.5281                 -1.7189  
+## pclassClase Intermedia  
+##                -0.8984  
 ## 
 ## Degrees of Freedom: 1045 Total (i.e. Null);  1042 Residual
 ## Null Deviance:       1415 
@@ -801,16 +803,20 @@ coef(logit01)</code></pre>
 <div id="valores-predichos-y-residuos" class="section level3" number="7.1.3">
 <h3><span class="header-section-number">7.1.3</span> Valores predichos y residuos:</h3>
 <pre class="r"><code>logit01$fitted.values</code></pre>
-<pre><code>##         1         2         3         4         5         6         7         8         9        10        11 
-## 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.4089672 
-##        12        13        14        15        16        17        18        19        20 
-## 0.8965861 0.8965861 0.8965861 0.4089672 0.4089672 0.8965861 0.8965861 0.4089672 0.4089672 
+<pre><code>##         1         2         3         4         5         6         7         8         9 
+## 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 0.4089672 0.8965861 
+##        10        11        12        13        14        15        16        17        18 
+## 0.4089672 0.4089672 0.8965861 0.8965861 0.8965861 0.4089672 0.4089672 0.8965861 0.8965861 
+##        19        20 
+## 0.4089672 0.4089672 
 ##  [ reached getOption(&quot;max.print&quot;) -- omitted 1026 entries ]</code></pre>
 <pre class="r"><code>logit01$residuals</code></pre>
-<pre><code>##         1         2         3         4         5         6         7         8         9        10        11 
-##  1.115342  2.445184 -9.669877 -1.691954 -9.669877  2.445184  1.115342 -1.691954  1.115342 -1.691954 -1.691954 
-##        12        13        14        15        16        17        18        19        20 
-##  1.115342  1.115342  1.115342  2.445184 -1.691954  1.115342  1.115342 -1.691954  2.445184 
+<pre><code>##         1         2         3         4         5         6         7         8         9 
+##  1.115342  2.445184 -9.669877 -1.691954 -9.669877  2.445184  1.115342 -1.691954  1.115342 
+##        10        11        12        13        14        15        16        17        18 
+## -1.691954 -1.691954  1.115342  1.115342  1.115342  2.445184 -1.691954  1.115342  1.115342 
+##        19        20 
+## -1.691954  2.445184 
 ##  [ reached getOption(&quot;max.print&quot;) -- omitted 1026 entries ]</code></pre>
 </div>
 <div id="resumen-del-modelo" class="section level3" number="7.1.4">
