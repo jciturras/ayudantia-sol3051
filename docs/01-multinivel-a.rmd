@@ -84,9 +84,14 @@ Por lo general, un procedimiento sociométrico pide a todos los alumnos de una c
 
 **Cargar Datos**
 
-```{r echo=TRUE}
+```{r eval=TRUE, include=TRUE}
 popdata <- read_spss("data/popular2.sav")
 ```
+
+```{r eval=FALSE, include=TRUE}
+popdata <- read_spss("https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav")
+```
+
 
 **Seleccionar variables**
 
@@ -104,7 +109,7 @@ print(dfSummary(popdata, headings = FALSE), method = "render")
 
 ## Varianza within/between
 
-![Varianza within y between](images/wb-var.jpg)
+![Varianza within y between](https://www.researchgate.net/profile/Gabriel_Liguori/publication/329788831/figure/fig2/AS:711397558206464@1546621803288/Graphical-representation-of-the-rationale-behind-the-analysis-of-variance-ANOVA-A.png)
 
 * En el caso A, vemos que al interior de los grupos la varianza es **alta**, pero la varianza entre grupos es **baja**.
 
@@ -183,7 +188,7 @@ sigma2_e <- sigma(m00)^2
 
 Tenemo que la correlación intraclase se calcula con:
 
-$\rho = \frac{\sigma_{\mu_0}^2}{\sigma_{\mu_0}^2+\sigma_{\epsilon}^2} = \frac{0.879}{0.879+0.638}=$ 
+$\rho = \frac{\sigma_{\mu_0}^2}{\sigma_{\mu_0}^2+\sigma_{\epsilon}^2} = \frac{0.702}{0.702+1.221}=$ 
 
 ```{r}
 sigma2_mu / (sigma2_mu+sigma2_e)
