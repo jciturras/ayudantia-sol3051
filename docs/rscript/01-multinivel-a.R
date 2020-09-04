@@ -1,11 +1,6 @@
 ## ----include=FALSE-------------------------------------------------------------------------
-library(dplyr)
-library(summarytools)
-library(sjlabelled)
-library(ggplot2)
-library(ggExtra)
-library(lme4)
-library(texreg)
+install.packages("pacman") #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+pacman::p_load(dplyr, summarytools, ggplot2,ggExtra,lme4,texreg)
 
 ## ----echo=TRUE-----------------------------------------------------------------------------
 popdata <- read_spss("https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav")

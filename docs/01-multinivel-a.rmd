@@ -21,15 +21,15 @@ options(knitr.kable.NA = '')
 ```
 
 **Libraries**
-```{r include=FALSE}
-library(dplyr)
-library(summarytools)
-library(sjlabelled)
-library(ggplot2)
-library(ggExtra)
-library(lme4)
-library(texreg)
+```{r include=TRUE,eval=FALSE}
+install.packages("pacman") #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+pacman::p_load(dplyr, summarytools, ggplot2,ggExtra,lme4,texreg)
 ```
+
+```{r include=FALSE}
+pacman::p_load(dplyr, summarytools, ggplot2,ggExtra,lme4,texreg)
+```
+
 
 ```{r xaringanExtra-clipboard, echo=FALSE}
 htmltools::tagList(
