@@ -23,19 +23,19 @@ options(knitr.kable.NA = '')
 **Libraries**
 ```{r include=TRUE,eval=FALSE}
 install.packages("pacman") #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
-pacman::p_load(dplyr, summarytools, ggplot2,ggExtra,lme4,texreg)
+pacman::p_load(dplyr, sjlabelled,summarytools, ggplot2,ggExtra,lme4,texreg)
 ```
 
 ```{r include=FALSE}
-pacman::p_load(dplyr, summarytools, ggplot2,ggExtra,lme4,texreg)
+pacman::p_load(dplyr, summarytools, sjlabelled,ggplot2,ggExtra,lme4,texreg)
 ```
 
 
-```{r xaringanExtra-clipboard, echo=FALSE}
+```{r xaringanExtra-clipboard, include=FALSE}
 htmltools::tagList(
   xaringanExtra::use_clipboard(
-    button_text = "<i class=\"fa fa-clipboard\"></i>",
-    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\"></i>",
+    button_text = "<i class=\"fas fa-clipboard\" style=\"font-size:24px\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\" style=\"font-size:50px\"></i>",
   ),
   rmarkdown::html_dependency_font_awesome()
 )
