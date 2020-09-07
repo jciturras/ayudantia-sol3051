@@ -22,7 +22,8 @@ options(knitr.kable.NA = '')
 
 **Libraries**
 ```{r include=TRUE,eval=FALSE}
-install.packages("pacman") #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+if (!require("pacman")) install.packages("pacman")  #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+
 pacman::p_load(dplyr, sjlabelled,summarytools, ggplot2,ggExtra,lme4,texreg)
 ```
 
