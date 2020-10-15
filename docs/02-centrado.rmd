@@ -1,0 +1,287 @@
+---
+title: "Centrado"
+date: "`r format(Sys.time(), '%A %d %B')`"
+output:
+  bookdown::html_document2:
+    number_sections: true
+    toc: true
+    toc_float:
+        collapsed: false
+    toc_depth: 2
+    code_folding: "show"
+editor_options:
+  chunk_output_type: console
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(warning = FALSE,message = FALSE, cache = FALSE, results = "hold")
+options(scipen=999, max.print = 50)
+rm(list=ls())
+options(knitr.kable.NA = '')
+```
+
+**Libraries**
+```{r include=TRUE,eval=FALSE}
+if (!require("pacman")) install.packages("pacman")  #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+
+pacman::p_load(dplyr, sjlabelled,summarytools, ggplot2,ggExtra,lme4,texreg)
+```
+
+```{r include=FALSE}
+pacman::p_load(dplyr, summarytools, sjlabelled,ggplot2,ggExtra,lme4,texreg,merTools)
+```
+
+
+```{r xaringanExtra-clipboard, include=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fas fa-clipboard\" style=\"font-size:24px\"></i>",
+    success_text = "<i class=\"fa fa-check\" style=\"color: #90BE6D\" style=\"font-size:50px\"></i>",
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+```{r eval=FALSE, include=FALSE}
+knitr::purl("docs/02-centrado.rmd")
+```
+
+
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
+
+**Descargar:**
+
+- [Datos .sav](https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav)
+- [Rscript](https://jciturras.github.io/ayudantia-sol3051/rscript/02-centrado.R)
+
+</div>
+
+**Contenidos ayudantía**
+ 
+1. Centrado
+2. Estrategias de CEntrado
+
+
+**Datos**
+
+Los datos de popularidad en `popular` son datos simulados para 2000 alumnos en 100 escuelas. El propósito es ofrecer un ejemplo muy simple para el análisis de regresión multinivel. La principal variable dependiente es la popularidad del alumno, medida a través un índice de popularidad en una escala del 1 al 10 a través de un procedimiento sociométrico.
+
+ 
+Por lo general, un procedimiento sociométrico pide a todos los alumnos de una clase que califiquen a todos los demás alumnos y luego asigna a cada alumno el índice de popularidad promedio recibido.
+
+* Debido al procedimiento sociométrico, los efectos de grupo como son evidentes en los componentes de varianza de nivel superior son bastante fuertes.
+
+* Hay una segunda variable de resultado: la popularidad del alumno según la calificación de su maestro, en una escala del 1 al 10.
+
+* Las variables explicativas son el sexo del alumno (hombre = 0, mujer = 1), la extraversión del alumno (escala de 10 puntos) y la experiencia del profesor en años.
+
+**Cargar Datos**
+
+```{r eval=TRUE, include=TRUE}
+popdata <- read_spss("https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav")
+```
+
+**Seleccionar variables**
+
+```{r, include=T}
+popdata<- popdata %>% dplyr::select(pupil,class,popular,sex,extrav,texp)
+```
+
+**Descriptivos**
+```{r echo=FALSE}
+print(dfSummary(popdata, headings = FALSE), method = "render")
+```
+
+# Práctica
+
+
+```{r}
+popdata$female <- as_numeric(popdata$sex)         # convertir sex en numerica
+ss <- sample(1:length(unique(popdata$class)), 20) # selecciona muestra de 20 cursos
+#------------------------------------------------#
+ggplot(popdata[popdata$class %in% ss,],
+aes(female, popular)) + 
+geom_smooth(method=lm, se=F) + 
+geom_jitter() + 
+facet_wrap(~class, ncol=5) + 
+theme_bw()
+```
+
+**Calculemos la variable centradas para género (1= mujer)**:
+
+## GM: centrado a la gran media      
+
+$\beta_b= X_{ij}-\bar{X}$ = variación intra-grupos (within); donde:
+
+$X_ij$ = Valor observado
+
+$\bar{X}$ = Gran media
+
+```{r}
+popdata <- popdata[order(popdata$class),]
+#                    val observado  - Gran_Media     
+popdata$female_gm <- popdata$female - mean(popdata$female)
+```
+
+## GC: centrado a la media grupal
+
+$\beta_b= X_{ij}-\bar{X_j}$ = variación entre-grupos (between), donde:
+
+$X_ij$ = Valor observado
+
+$\bar{X_j}$ = Media del grupo
+
+```{r}
+#Calcular media de sex (proportion de 1) para cada grupo
+popdata$meanfemale <- with(popdata, tapply(female, class, mean))[popdata$class]
+#                    val observado  - Media_Grupo  
+popdata$female_gc <- popdata$female - popdata$meanfemale
+```
+
+<div class = "blue">
+
+**Motivos del centrado:**
+
+* Modelo OLS en base a **datos agregados**, no centrados, permite estimar el efecto _between_.
+
+* Modelo multinivel con datos centrados en la **media grupal** (GC) permite estimar el efecto _within_. 
+
+* Modelo multinivel con datos centrado en la **gran media** (GM) permite estimar el efecto 'combinado' de X.
+    - En este caso, el efecto de una variable no centrada es una mezcla del efecto _within_ y _between_
+</div>
+
+## Modelo OLS nivel agregado
+
+Para estimar la regresión con datos agregados generamos dos variables con los promedios según curso:
+
+```{r}
+female_bar<-tapply(popdata$sex, popdata$class, mean,na.rm=T) 
+popularity_bar<-tapply(popdata$popular, popdata$class, mean,na.rm=T)
+#-------------------------------------------------------------------#
+m_agg <-lm(popularity_bar~female_bar) 
+```
+
+## Modelo Multinivel sin centrar
+
+```{r}
+m0 <- lmer(popular ~ female + extrav +(1|class), data=popdata)
+```
+
+## Modelo Multinivel con GC (centrado media grupal)
+
+```{r}
+#           Y_ij   ~ X_ij_gc   + (ranef|nivel2)
+m1 <- lmer(popular ~ female_gc + extrav + (1|class), data=popdata)
+```
+
+## Modelo Multinivel con GM (centrado gran media)
+
+```{r}
+#           Y_ij   ~ X_ij_gm   +  (ranef|nivel2)
+m2 <- lmer(popular ~ female_gm + extrav + (1|class),data=popdata)
+```
+
+```{r}
+screenreg(l=list(m_agg,m0, m1, m2),
+          custom.model.names = c("OLS","Sin centrar","Cent. Grupo","Cent. G. Media"),
+          include.variance = F)
+```
+
+
+<div class = "blue">
+
+**Compare los efectos de `female` centrados en la media grupal y en la gran media.? A que se deben las diferencias y/similitudes entre coeficientes estimados?**
+
+</div>
+
+
+## Estrategias de centrado en Modelos Multinivel
+
+###  **Coeficiente de variable de nivel 1**
+
+  - Es preferente el uso de GC debido a que:
+    - Remueve toda la variación _between_ contenida en el predictor. Por tanto, entrega una estimación menos distorsionada de la asociación entre X e Y.
+    - **Alternativa:** se puede emplear GM (centrado gran media), pero siempre debemos incluir la media de X a nivel grupal como predictor.
+
+### **Coeficiente de variable de nivel 2**
+
+  - Estimar el efecto de una variable de nivel 2, mientras se controla por la variación _within_ o de nivel 1: a esto se le llama **"Efecto de composición"**.
+  - Es preferible emplear GM, debido a que una variable de nivel 1 con GM, se compone por variación _within_ y _between_ (lo cual es altamente probable que correlacione con la variable de N2).
+  - Al incluir un predictor de N1 con GM, estamos controlando por dicha variación a nivel individual, es decir, **controlamos por el efecto de composición**.
+  
+```{r}
+#           Y_ij   ~ X_ij_gm   + W_j  + (1|nivel2)
+m3 <- lmer(popular ~ female_gm + extrav + texp + (1|class),data=popdata)
+```
+  
+```{r}
+screenreg(l=list(m_agg,m0, m1, m2,m3),
+          include.variance = F)
+```
+  
+### **Estimación de un predictor en dos niveles:**
+  - Se puede evaluar el efecto de un predictor a nivel agregado ($\bar{X_j}$) usando ambas formas de centrado:
+    a. Centrado Gran Media: Usando GM el coeficiente de $X_ij$ representa el efecto **_within-group_**, mientras que $\bar{X_j}$ refleja el **efecto contextual**.
+    b. Centrado Media Grupal: Usando GC el coeficiente $X_ij$ representa el efecto **_within-group_**, mientras que $\bar{X_j}$ refleja el **efecto between**.
+
+
+$$\text{context-effect = between-effect } -\text{within-effect}$$
+
+  - Esta es una de las pocas situaciones donde GM y GC producen estimaciones equivalentes.
+
+```{r}
+m4a <- lmer(popular ~ female_gm +  extrav + meanfemale + (1|class),data=popdata) 
+m4b <- lmer(popular ~ female_gc +  extrav + meanfemale + (1|class),data=popdata)
+```
+
+```{r}
+screenreg(list(m4a,m4b))
+```
+
+
+```{r eval=FALSE, include=FALSE}
+#clase: pp 24, 
+fixef(m4a)["(Intercept)"]-fixef(m4a)["female_gm"]
+fixef(m4b)["(Intercept)"]-fixef(m4b)["female_gc"]
+```
+
+###  **Estimación de interacciones de nivel cruzado**
+
+  - Usamos GC para 'eliminar influencia de variaciones entre grupos.
+  - Se recomienda emplear Centrado a la Media Grupal cuando se estiman efectos interactivos de nivel cruzado.
+  - Nos entrega una estimación más 'pura' (menos distorsionada) respecto a la influencia moderadora de la variable de nivel 2 sobre la asociación entre X e Y. 
+
+
+<div class = "blue">
+
+* Emplear GM es problemático ya que $X_{ij}$ contiene tanto variación _within_ como _between_, por tanto el estimador posee dos fuentes de información cualitativamente distintas.
+
+* Por esta razón, la estimación basada en GM nos entrega una estimación poco interpretable desde el punto de vista del efecto _within_ y _between_.
+
+</div>
+
+**Ejemplo para extraversión:**
+```{r}
+#                    val observado  - Gran_Media     
+popdata$extrav_gm <- popdata$extrav - mean(popdata$extrav)
+#Calcular media de sex (proportion de 1) para cada grupo
+popdata$meanextrav <- with(popdata, tapply(extrav, class, mean))[popdata$class]
+#                    val observado  - Media_Grupo  
+popdata$extrav_gc <- popdata$extrav - popdata$meanextrav
+```
+
+```{r}
+m5a <- lmer(popular ~ female +  extrav+texp + (1|class),data=popdata)
+m5b <- lmer(popular ~ female +  extrav_gc*texp + (extrav_gc|class),data=popdata)
+```
+
+```{r}
+screenreg(list(m5a,m5b))
+```
+
+
+
+

@@ -1,0 +1,186 @@
+\documentclass[fleqn, xcolor=dvipsnames]{beamer} 
+
+%Language definition
+\usepackage[spanish]{babel} % varias definiciones para el espa?ol (por ejemplo usa ''?ndice'' en lugar de ''Contents'')
+\usepackage[latin1]{inputenc} % caracteres especiales (acentos, e?ess)
+
+\usepackage{beamerthemeCopenhagen}
+\usecolortheme[named=Maroon]{structure} 
+\setbeamertemplate{navigation symbols}{}   %Get rid of navigation icons
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{caption}
+\captionsetup{skip=3pt}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{epic}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools} %%Vectors
+
+\title[Multilevel/Hierarchical Models]{Repaso y Ejercicio Centrado de Variables}
+\author{Matias Bargsted}
+
+\institute{Instituto de Sociolog?a \\ Pontificia Universidad Cat?lica de Chile}
+\date{\today}
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\frame{\titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Description of \textit{Populatity} Data}
+
+\begin{itemize}
+	\item Estimaremos varios modelos de dos niveles utilizando los datos \textit{populatity} de Hox (2002).
+	\begin{itemize}
+		\item Datos de 2000 estudiantes ($i$) anidados en 200 salas de clases ($j$) con un n?mero diferente de estudiantes ($n_j$) por sala de clases.
+		\item A nivel del estudiante tenemos: 
+		\begin{itemize}
+			\item Variable dependiente \textit{popular}, medida a trav?s de una escala de auto evaluaci?n que var?a de 0 (muy impopular) a 10 (muy popular).
+			\item Variable independiente: G?nero (0=ni?o; 1=ni?a).
+		\end{itemize}
+		\item A nivel de la sala de clases: 
+		\begin{itemize}
+			\item Variable independiente: Experiencia docente medida en a?os.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\framebreak
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize'>>=
+#Packages
+library(foreign)
+library(lme4)
+library(texreg)
+library(ggplot2)
+library(merTools)
+#Set Working Directory
+setwd("C:/Users/Matias Bargsted/Dropbox/Clases/Analisis Multinivel Sol 3051/")
+
+#Read data in stata and save as Rdata.
+dir <- "https://stats.idre.ucla.edu/stat/stata/examples/mlm_ma_hox/popular.dta"
+popdata<-read.dta(dir)
+str(popdata, give.attr=F)
+@
+
+\framebreak
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize'>>=
+head(popdata, n=10)
+@
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Ejercicios}
+
+\begin{enumerate}
+	\item Explore la estructura de la asociaci?n entre \textsf{sex} y \textsf{popular}.
+	\item Calcule y compare los efectos de \textsf{sex} centrados en la media grupal y en la gran media. ?A que se deben las diferencias y/similitudes entre coeficientes estimados?
+	\item ?Deber?a liberarse la pendiente de \textsf{sex}? ?Que consecuencias tiene (si es que tiene alguna)?
+	\item ?Como estimar el efecto \textit{within} de la interacci?n cruzada entre \textsf{sex} e \textsf{texp}
+\end{enumerate}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Respuestas}
+
+\begin{enumerate}
+	\item Explore la estructura de la asociaci?n entre \textsf{sex} y \textsf{popular}.
+
+\framebreak
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize', fig.width=8, fig.height=6, fig.pos="t">>=
+#Sexo numerico
+popdata$female <- as.numeric(popdata$sex) - 1
+
+ss <- sample(1:length(unique(popdata$class)), 20)
+ggplot(popdata[popdata$class %in% ss,],
+aes(female, popular)) + 
+geom_smooth(method=lm, se=F) + 
+geom_jitter() + 
+facet_wrap(~class, ncol=5) + 
+theme_bw()
+@
+
+\framebreak
+
+	\item Calcule y compare los efectos de \textsf{sex} centrados en la media grupal y en la gran media. ?A que se deben las diferencias y/similitudes entre coeficientes estimados?
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize'>>=
+#Ordenar base de datos seg?n colegio
+popdata <- popdata[order(popdata$school),]
+
+##Centrado
+#GM
+popdata$female_gm <- popdata$female - mean(popdata$female)
+#GC
+popdata$meanfemale <- with(popdata, tapply(female, school, mean))[popdata$school]
+popdata$female_gc <- popdata$female - popdata$meanfemale
+
+m0 <- lmer(popular ~ female + (female|school), data=popdata)
+m1 <- lmer(popular ~ female_gc + (female_gc|school), data=popdata)
+m2 <- lmer(popular ~ female_gm + meanfemale + (female_gm|school), 
+data=popdata)
+@
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='tiny'>>=
+screenreg(l=list(m0, m1, m2), include.variance = F)
+@
+
+\framebreak
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize'>>=
+#?Porque tan parecidos?
+cor(popdata$female_gm, popdata$female_gc)
+ICC("female", "class", data=popdata)
+@
+
+\framebreak
+
+	\item ?Deber?a liberarse la pendiente de \textsf{sex}? ?Que consecuencias tiene (si es que tiene alguna)?
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='tiny'>>=
+m3 <- lmer(popular ~ female_gc + (1|class), data=popdata)
+m4 <- update(m1, . ~. + (female_gc|class))
+screenreg(l=list(m3,m4), single.row=T)
+@
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='scriptsize'>>=
+anova(m3,m4)
+@
+
+\framebreak
+
+	
+	\item ?Como estimar el efecto \textit{within} de la interacci?n cruzada entre \textsf{sex} e \textsf{texp}?
+
+<<echo=TRUE, warning=FALSE, message=FALSE, results='markup', size='tiny'>>=
+m5 <- lmer(popular ~ female_gc * texp + (female_gc|school), data=popdata)
+m6 <- lmer(popular ~ female_gm * texp + meanfemale * texp + (female_gc|school), data=popdata)
+screenreg(l=list(m5,m6), single.row=T)
+@
+
+
+\end{enumerate}
+
+
+\end{frame}
+
+
+
+\end{document}
+        

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Centrado</title>
+
+<script src="site_libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/clipboard-2.0.6/clipboard.min.js"></script>
+<link href="site_libs/xaringanExtra-clipboard-0.1.0/xaringanExtra-clipboard.css" rel="stylesheet" />
+<script src="site_libs/xaringanExtra-clipboard-0.1.0/xaringanExtra-clipboard.js"></script>
+<script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fas fa-clipboard\" style=\"font-size:24px\"><\/i>","success":"<i class=\"fa fa-check\" style=\"color: #90BE6D\" style=\"font-size:50px\"><\/i>","error":"Press Ctrl+C to Copy"})</script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Análisis de Datos Multinivel - SOL3051</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-desktop"></span>
+     
+    Sesiones
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="00-intro-r.html">Sesión 00</a>
+    </li>
+    <li>
+      <a href="01-multinivel-a.html">Sesión 01</a>
+    </li>
+    <li>
+      <a href="02-centrado.html">Sesión 02</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="links.html">
+    <span class="ion ion-social-markdown"></span>
+     
+    Links
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Centrado</h1>
+<h4 class="date">jueves 15 octubre</h4>
+
+</div>
+
+
+<p><strong>Libraries</strong></p>
+<pre class="r"><code>if (!require(&quot;pacman&quot;)) install.packages(&quot;pacman&quot;)  #**ESTO SE DEBE CORRER UNA SOLA VEZ** (!)
+
+pacman::p_load(dplyr, sjlabelled,summarytools, ggplot2,ggExtra,lme4,texreg)</code></pre>
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class="blue">
+<p><strong>Descargar:</strong></p>
+<ul>
+<li><a href="https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav">Datos .sav</a></li>
+<li><a href="https://jciturras.github.io/ayudantia-sol3051/rscript/02-centrado.R">Rscript</a></li>
+</ul>
+</div>
+<p><strong>Contenidos ayudantía</strong></p>
+<ol style="list-style-type: decimal">
+<li>Centrado</li>
+<li>Estrategias de CEntrado</li>
+</ol>
+<p><strong>Datos</strong></p>
+<p>Los datos de popularidad en <code>popular</code> son datos simulados para 2000 alumnos en 100 escuelas. El propósito es ofrecer un ejemplo muy simple para el análisis de regresión multinivel. La principal variable dependiente es la popularidad del alumno, medida a través un índice de popularidad en una escala del 1 al 10 a través de un procedimiento sociométrico.</p>
+<p>Por lo general, un procedimiento sociométrico pide a todos los alumnos de una clase que califiquen a todos los demás alumnos y luego asigna a cada alumno el índice de popularidad promedio recibido.</p>
+<ul>
+<li><p>Debido al procedimiento sociométrico, los efectos de grupo como son evidentes en los componentes de varianza de nivel superior son bastante fuertes.</p></li>
+<li><p>Hay una segunda variable de resultado: la popularidad del alumno según la calificación de su maestro, en una escala del 1 al 10.</p></li>
+<li><p>Las variables explicativas son el sexo del alumno (hombre = 0, mujer = 1), la extraversión del alumno (escala de 10 puntos) y la experiencia del profesor en años.</p></li>
+</ul>
+<p><strong>Cargar Datos</strong></p>
+<pre class="r"><code>popdata &lt;- read_spss(&quot;https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav&quot;)</code></pre>
+<p><strong>Seleccionar variables</strong></p>
+<pre class="r"><code>popdata&lt;- popdata %&gt;% dplyr::select(pupil,class,popular,sex,extrav,texp)</code></pre>
+<p><strong>Descriptivos</strong>
+<div class="container st-container">
+<table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-multiline ">
+  <thead>
+    <tr>
+      <th align="center" class="st-protect-top-border"><strong>No</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Variable</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Label</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Stats / Values</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Freqs (% of Valid)</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Graph</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Valid</strong></th>
+      <th align="center" class="st-protect-top-border"><strong>Missing</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">1</td>
+      <td align="left">pupil
+[numeric]</td>
+      <td align="left">pupil ident</td>
+      <td align="left">Mean (sd) : 10.6 (6)
+min < med < max:
+1 < 11 < 26
+IQR (CV) : 10 (0.6)</td>
+      <td align="left" style="vertical-align:middle">26 distinct values</td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsi+BrUHQAAAIlJREFUaN7t2csNgCAQANFtgRLEDqD/3tSFGEIwmoWDgZkTq+HFgwc/ImTJa+7KP+deytgez4Lu0GWa470szn/F6s2tOYDNhOn9sQ3C9CAYGBgY2LpY+0HGiKUZDAwMDAwMDAwMDGw9rH6z6MLqywMDAwMDA/sJVvyg6cd0BpsJS59aM+aHJGTpAOW0h8vScr2ZAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTEwLTE1VDE2OjQzOjM0LTAzOjAwTCzSyAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0xMC0xNVQxNjo0MzozNC0wMzowMD1xanQAAAAASUVORK5CYII="></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+    <tr>
+      <td align="center">2</td>
+      <td align="left">class
+[numeric]</td>
+      <td align="left">class ident</td>
+      <td align="left">Mean (sd) : 50.4 (29.1)
+min < med < max:
+1 < 51 < 100
+IQR (CV) : 51 (0.6)</td>
+      <td align="left" style="vertical-align:middle">100 distinct values</td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsi+BrUHQAAAIVJREFUaN7t0MENgDAIhWFW0A3EDer+u5lYeiAhtcXe/N+FlIQPUhGSyZbLrjX2NMyaxyx2PSkeO2t3KTZ7YBd7P9D/0ggWHdgUNz6CRQe2uRCzRWswKz1MXT5irhQ/F27IYmEBAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA/sFpksiJJMblJQ4c81MDdEAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMTAtMTVUMTY6NDM6MzQtMDM6MDBMLNLIAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTEwLTE1VDE2OjQzOjM0LTAzOjAwPXFqdAAAAABJRU5ErkJggg=="></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+    <tr>
+      <td align="center">3</td>
+      <td align="left">popular
+[numeric]</td>
+      <td align="left">popularity sociometric score</td>
+      <td align="left">Mean (sd) : 5.1 (1.4)
+min < med < max:
+0 < 5.1 < 9.5
+IQR (CV) : 1.9 (0.3)</td>
+      <td align="left" style="vertical-align:middle">85 distinct values</td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsi+BrUHQAAAIdJREFUaN7t18ENgCAMQFFW0BFwA9l/NxPLpUlTscWD+v8ZXnoitBSKtFy2Vsk7M461sz2J9ZHmYJsoYGBgYGBgYGBgYLcw75/sYf2exrwBPUyUBgYGBgYGBgYGBgb2XszcLaKYOeDzmNpzsphSwMDAPoZZz0UYsxQX0w9uEtMD/gurUyoU6QBrpjDZx3J6zQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0xMC0xNVQxNjo0MzozNC0wMzowMEws0sgAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMTAtMTVUMTY6NDM6MzQtMDM6MDA9cWp0AAAAAElFTkSuQmCC"></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+    <tr>
+      <td align="center">4</td>
+      <td align="left">sex
+[numeric]</td>
+      <td align="left">pupil sex</td>
+      <td align="left">Min : 0
+Mean : 0.5
+Max : 1</td>
+      <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">0</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">989</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">49.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1011</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">50.5%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFgAAAA4BAMAAACLTyJdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsjjx3kiwAAADxJREFUSMdjYBiaQIkYoAhVrGxMBBhVPKp4VDHNFJOUYQWJAoNLMVEeVCIl6IxGFY8qHlVMK8UkZdihBgAUZEkqMlG4MQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMC0xMC0xNVQxNjo0MzozNS0wMzowMOpb2XwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjAtMTAtMTVUMTY6NDM6MzUtMDM6MDCbBmHAAAAAAElFTkSuQmCC"></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+    <tr>
+      <td align="center">5</td>
+      <td align="left">extrav
+[numeric]</td>
+      <td align="left">extraversion</td>
+      <td align="left">Mean (sd) : 5.2 (1.3)
+min < med < max:
+1 < 5 < 10
+IQR (CV) : 2 (0.2)</td>
+      <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">3</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">0.1%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">13</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">0.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">119</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">5.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">4</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">423</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">21.1%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">688</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">34.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">6</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">478</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">23.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">7</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">194</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">9.7%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">8</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">58</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">2.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">9</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">18</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">0.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">10</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">6</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">0.3%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEAAAAD6BAMAAADjFlz+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsjjx3kiwAAAJhJREFUaN7t08EJgDAMRmFXyAixG9j9d1NPVjANiIktvHf+Di3kX5YxUrECAAYFMgBYAYDZgMSD9awHSq11AwDygHuTYpY8nKbHbzZtAEAwcG/yh11cPf+i+Q8AEALcm0zYxYvhaHf+RwBAKHBvMm8XaoJyfzoAEA3cmxSzzOFoH5QKAKQC9ybF7LtdAACzARkAKAAwG/i7HcIhaISH3JCmAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTEwLTE1VDE2OjQzOjM1LTAzOjAw6lvZfAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0xMC0xNVQxNjo0MzozNS0wMzowMJsGYcAAAAAASUVORK5CYII="></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+    <tr>
+      <td align="center">6</td>
+      <td align="left">texp
+[numeric]</td>
+      <td align="left">teacher experience in years</td>
+      <td align="left">Mean (sd) : 14.3 (6.6)
+min < med < max:
+2 < 15 < 25
+IQR (CV) : 12 (0.5)</td>
+      <td align="left" style="vertical-align:middle">24 distinct values</td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH5AoPDSsjjx3kiwAAAKlJREFUaN7t1l0KgCAQRlG3UDtId1D731ukhANWijP0x/0eehjlBMY4OUd6MlQz+pjLPe3YsmUGAwMDAwN7NZZm32SDhVi5ETsZ3Z3Y8UmDgYE1YuI60WNi4eziMsLi4gz2AJa+oxGWygU25ncYYLkMVsdEn+ox8Xw7Jv9M1FgQjfFBTLSfHiv2/weTM02Nhav9YPvNZISlMhgYGBgYGBgY2P8xbxJHerICxqvrTOp0WfwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMTAtMTVUMTY6NDM6MzUtMDM6MDDqW9l8AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTEwLTE1VDE2OjQzOjM1LTAzOjAwmwZhwAAAAABJRU5ErkJggg=="></td>
+      <td align="center">2000
+(100%)</td>
+      <td align="center">0
+(0%)</td>
+    </tr>
+  </tbody>
+</table>
+<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.6 (<a href='https://www.r-project.org/'>R</a> version 4.0.2)<br/>2020-10-15</p>
+</div></p>
+<div id="práctica" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Práctica</h1>
+<pre class="r"><code>popdata$female &lt;- as_numeric(popdata$sex)         # convertir sex en numerica
+ss &lt;- sample(1:length(unique(popdata$class)), 20) # selecciona muestra de 20 cursos
+#------------------------------------------------#
+ggplot(popdata[popdata$class %in% ss,],
+aes(female, popular)) + 
+geom_smooth(method=lm, se=F) + 
+geom_jitter() + 
+facet_wrap(~class, ncol=5) + 
+theme_bw()</code></pre>
+<p><img src="02-centrado_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><strong>Calculemos la variable centradas para género (1= mujer)</strong>:</p>
+<div id="gm-centrado-a-la-gran-media" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> GM: centrado a la gran media</h2>
+<p><span class="math inline">\(\beta_b= X_{ij}-\bar{X}\)</span> = variación intra-grupos (within); donde:</p>
+<p><span class="math inline">\(X_ij\)</span> = Valor observado</p>
+<p><span class="math inline">\(\bar{X}\)</span> = Gran media</p>
+<pre class="r"><code>popdata &lt;- popdata[order(popdata$class),]
+#                    val observado  - Gran_Media     
+popdata$female_gm &lt;- popdata$female - mean(popdata$female)</code></pre>
+</div>
+<div id="gc-centrado-a-la-media-grupal" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> GC: centrado a la media grupal</h2>
+<p><span class="math inline">\(\beta_b= X_{ij}-\bar{X_j}\)</span> = variación entre-grupos (between), donde:</p>
+<p><span class="math inline">\(X_ij\)</span> = Valor observado</p>
+<p><span class="math inline">\(\bar{X_j}\)</span> = Media del grupo</p>
+<pre class="r"><code>#Calcular media de sex (proportion de 1) para cada grupo
+popdata$meanfemale &lt;- with(popdata, tapply(female, class, mean))[popdata$class]
+#                    val observado  - Media_Grupo  
+popdata$female_gc &lt;- popdata$female - popdata$meanfemale</code></pre>
+<div class="blue">
+<p><strong>Motivos del centrado:</strong></p>
+<ul>
+<li><p>Modelo OLS en base a <strong>datos agregados</strong>, no centrados, permite estimar el efecto <em>between</em>.</p></li>
+<li><p>Modelo multinivel con datos centrados en la <strong>media grupal</strong> (GC) permite estimar el efecto <em>within</em>.</p></li>
+<li><p>Modelo multinivel con datos centrado en la <strong>gran media</strong> (GM) permite estimar el efecto ‘combinado’ de X.</p>
+<ul>
+<li>En este caso, el efecto de una variable no centrada es una mezcla del efecto <em>within</em> y <em>between</em></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="modelo-ols-nivel-agregado" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Modelo OLS nivel agregado</h2>
+<p>Para estimar la regresión con datos agregados generamos dos variables con los promedios según curso:</p>
+<pre class="r"><code>female_bar&lt;-tapply(popdata$sex, popdata$class, mean,na.rm=T) 
+popularity_bar&lt;-tapply(popdata$popular, popdata$class, mean,na.rm=T)
+#-------------------------------------------------------------------#
+m_agg &lt;-lm(popularity_bar~female_bar) </code></pre>
+</div>
+<div id="modelo-multinivel-sin-centrar" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Modelo Multinivel sin centrar</h2>
+<pre class="r"><code>m0 &lt;- lmer(popular ~ female + extrav +(1|class), data=popdata)</code></pre>
+</div>
+<div id="modelo-multinivel-con-gc-centrado-media-grupal" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Modelo Multinivel con GC (centrado media grupal)</h2>
+<pre class="r"><code>#           Y_ij   ~ X_ij_gc   + (ranef|nivel2)
+m1 &lt;- lmer(popular ~ female_gc + extrav + (1|class), data=popdata)</code></pre>
+</div>
+<div id="modelo-multinivel-con-gm-centrado-gran-media" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> Modelo Multinivel con GM (centrado gran media)</h2>
+<pre class="r"><code>#           Y_ij   ~ X_ij_gm   +  (ranef|nivel2)
+m2 &lt;- lmer(popular ~ female_gm + extrav + (1|class),data=popdata)</code></pre>
+<pre class="r"><code>screenreg(l=list(m_agg,m0, m1, m2),
+          custom.model.names = c(&quot;OLS&quot;,&quot;Sin centrar&quot;,&quot;Cent. Grupo&quot;,&quot;Cent. G. Media&quot;),
+          include.variance = F)</code></pre>
+<pre><code>## 
+## ==========================================================================
+##                     OLS         Sin centrar   Cent. Grupo   Cent. G. Media
+## --------------------------------------------------------------------------
+## (Intercept)           3.62 ***      2.14 ***      2.76 ***      2.77 ***  
+##                      (0.18)        (0.12)        (0.13)        (0.12)     
+## female_bar            2.89 ***                                            
+##                      (0.33)                                               
+## female                              1.25 ***                              
+##                                    (0.04)                                 
+## extrav                              0.44 ***      0.44 ***      0.44 ***  
+##                                    (0.02)        (0.02)        (0.02)     
+## female_gc                                         1.24 ***                
+##                                                  (0.04)                   
+## female_gm                                                       1.25 ***  
+##                                                                (0.04)     
+## --------------------------------------------------------------------------
+## R^2                   0.43                                                
+## Adj. R^2              0.43                                                
+## Num. obs.           100          2000          2000          2000         
+## AIC                              4958.30       4985.59       4958.30      
+## BIC                              4986.30       5013.60       4986.30      
+## Log Likelihood                  -2474.15      -2487.80      -2474.15      
+## Num. groups: class                100           100           100         
+## ==========================================================================
+## *** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+<div class="blue">
+<p><strong>Compare los efectos de <code>female</code> centrados en la media grupal y en la gran media.? A que se deben las diferencias y/similitudes entre coeficientes estimados?</strong></p>
+</div>
+</div>
+<div id="estrategias-de-centrado-en-modelos-multinivel" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> Estrategias de centrado en Modelos Multinivel</h2>
+<div id="coeficiente-de-variable-de-nivel-1" class="section level3" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> <strong>Coeficiente de variable de nivel 1</strong></h3>
+<ul>
+<li>Es preferente el uso de GC debido a que:
+<ul>
+<li>Remueve toda la variación <em>between</em> contenida en el predictor. Por tanto, entrega una estimación menos distorsionada de la asociación entre X e Y.</li>
+<li><strong>Alternativa:</strong> se puede emplear GM (centrado gran media), pero siempre debemos incluir la media de X a nivel grupal como predictor.</li>
+</ul></li>
+</ul>
+</div>
+<div id="coeficiente-de-variable-de-nivel-2" class="section level3" number="1.7.2">
+<h3><span class="header-section-number">1.7.2</span> <strong>Coeficiente de variable de nivel 2</strong></h3>
+<ul>
+<li>Estimar el efecto de una variable de nivel 2, mientras se controla por la variación <em>within</em> o de nivel 1: a esto se le llama <strong>“Efecto de composición”</strong>.</li>
+<li>Es preferible emplear GM, debido a que una variable de nivel 1 con GM, se compone por variación <em>within</em> y <em>between</em> (lo cual es altamente probable que correlacione con la variable de N2).</li>
+<li>Al incluir un predictor de N1 con GM, estamos controlando por dicha variación a nivel individual, es decir, <strong>controlamos por el efecto de composición</strong>.</li>
+</ul>
+<pre class="r"><code>#           Y_ij   ~ X_ij_gm   + W_j  + (1|nivel2)
+m3 &lt;- lmer(popular ~ female_gm + extrav + texp + (1|class),data=popdata)</code></pre>
+<pre class="r"><code>screenreg(l=list(m_agg,m0, m1, m2,m3),
+          include.variance = F)</code></pre>
+<pre><code>## 
+## ======================================================================================
+##                     Model 1     Model 2       Model 3       Model 4       Model 5     
+## --------------------------------------------------------------------------------------
+## (Intercept)           3.62 ***      2.14 ***      2.76 ***      2.77 ***      1.44 ***
+##                      (0.18)        (0.12)        (0.13)        (0.12)        (0.17)   
+## female_bar            2.89 ***                                                        
+##                      (0.33)                                                           
+## female                              1.25 ***                                          
+##                                    (0.04)                                             
+## extrav                              0.44 ***      0.44 ***      0.44 ***      0.45 ***
+##                                    (0.02)        (0.02)        (0.02)        (0.02)   
+## female_gc                                         1.24 ***                            
+##                                                  (0.04)                               
+## female_gm                                                       1.25 ***      1.25 ***
+##                                                                (0.04)        (0.04)   
+## texp                                                                          0.09 ***
+##                                                                              (0.01)   
+## --------------------------------------------------------------------------------------
+## R^2                   0.43                                                            
+## Adj. R^2              0.43                                                            
+## Num. obs.           100          2000          2000          2000          2000       
+## AIC                              4958.30       4985.59       4958.30       4897.02    
+## BIC                              4986.30       5013.60       4986.30       4930.63    
+## Log Likelihood                  -2474.15      -2487.80      -2474.15      -2442.51    
+## Num. groups: class                100           100           100           100       
+## ======================================================================================
+## *** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+<div id="estimación-de-un-predictor-en-dos-niveles" class="section level3" number="1.7.3">
+<h3><span class="header-section-number">1.7.3</span> <strong>Estimación de un predictor en dos niveles:</strong></h3>
+<ul>
+<li>Se puede evaluar el efecto de un predictor a nivel agregado (<span class="math inline">\(\bar{X_j}\)</span>) usando ambas formas de centrado:
+<ol style="list-style-type: lower-alpha">
+<li>Centrado Gran Media: Usando GM el coeficiente de <span class="math inline">\(X_ij\)</span> representa el efecto <strong><em>within-group</em></strong>, mientras que <span class="math inline">\(\bar{X_j}\)</span> refleja el <strong>efecto contextual</strong>.</li>
+<li>Centrado Media Grupal: Usando GC el coeficiente <span class="math inline">\(X_ij\)</span> representa el efecto <strong><em>within-group</em></strong>, mientras que <span class="math inline">\(\bar{X_j}\)</span> refleja el <strong>efecto between</strong>.</li>
+</ol></li>
+</ul>
+<p><span class="math display">\[\text{context-effect = between-effect } -\text{within-effect}\]</span></p>
+<ul>
+<li>Esta es una de las pocas situaciones donde GM y GC producen estimaciones equivalentes.</li>
+</ul>
+<pre class="r"><code>m4a &lt;- lmer(popular ~ female_gm +  extrav + meanfemale + (1|class),data=popdata) 
+m4b &lt;- lmer(popular ~ female_gc +  extrav + meanfemale + (1|class),data=popdata)</code></pre>
+<pre class="r"><code>screenreg(list(m4a,m4b))</code></pre>
+<pre><code>## 
+## ==================================================
+##                         Model 1       Model 2     
+## --------------------------------------------------
+## (Intercept)                 2.03 ***      1.40 ***
+##                            (0.22)        (0.22)   
+## female_gm                   1.24 ***              
+##                            (0.04)                 
+## extrav                      0.44 ***      0.44 ***
+##                            (0.02)        (0.02)   
+## meanfemale                  1.49 ***      2.73 ***
+##                            (0.38)        (0.38)   
+## female_gc                                 1.24 ***
+##                                          (0.04)   
+## --------------------------------------------------
+## AIC                      4946.27       4946.27    
+## BIC                      4979.87       4979.87    
+## Log Likelihood          -2467.13      -2467.13    
+## Num. obs.                2000          2000       
+## Num. groups: class        100           100       
+## Var: class (Intercept)      0.55          0.55    
+## Var: Residual               0.59          0.59    
+## ==================================================
+## *** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+<div id="estimación-de-interacciones-de-nivel-cruzado" class="section level3" number="1.7.4">
+<h3><span class="header-section-number">1.7.4</span> <strong>Estimación de interacciones de nivel cruzado</strong></h3>
+<ul>
+<li>Usamos GC para ’eliminar influencia de variaciones entre grupos.</li>
+<li>Se recomienda emplear Centrado a la Media Grupal cuando se estiman efectos interactivos de nivel cruzado.</li>
+<li>Nos entrega una estimación más ‘pura’ (menos distorsionada) respecto a la influencia moderadora de la variable de nivel 2 sobre la asociación entre X e Y.</li>
+</ul>
+<div class="blue">
+<ul>
+<li><p>Emplear GM es problemático ya que <span class="math inline">\(X_{ij}\)</span> contiene tanto variación <em>within</em> como <em>between</em>, por tanto el estimador posee dos fuentes de información cualitativamente distintas.</p></li>
+<li><p>Por esta razón, la estimación basada en GM nos entrega una estimación poco interpretable desde el punto de vista del efecto <em>within</em> y <em>between</em>.</p></li>
+</ul>
+</div>
+<p><strong>Ejemplo para extraversión:</strong></p>
+<pre class="r"><code>#                    val observado  - Gran_Media     
+popdata$extrav_gm &lt;- popdata$extrav - mean(popdata$extrav)
+#Calcular media de sex (proportion de 1) para cada grupo
+popdata$meanextrav &lt;- with(popdata, tapply(extrav, class, mean))[popdata$class]
+#                    val observado  - Media_Grupo  
+popdata$extrav_gc &lt;- popdata$extrav - popdata$meanextrav</code></pre>
+<pre class="r"><code>m5a &lt;- lmer(popular ~ female +  extrav+texp + (1|class),data=popdata)
+m5b &lt;- lmer(popular ~ female +  extrav_gc*texp + (extrav_gc|class),data=popdata)</code></pre>
+<pre class="r"><code>screenreg(list(m5a,m5b))</code></pre>
+<pre><code>## 
+## ============================================================
+##                                   Model 1       Model 2     
+## ------------------------------------------------------------
+## (Intercept)                           0.81 ***      3.67 ***
+##                                      (0.17)        (0.15)   
+## female                                1.25 ***      1.25 ***
+##                                      (0.04)        (0.04)   
+## extrav                                0.45 ***              
+##                                      (0.02)                 
+## texp                                  0.09 ***      0.05 ***
+##                                      (0.01)        (0.01)   
+## extrav_gc                                           0.81 ***
+##                                                    (0.04)   
+## extrav_gc:texp                                     -0.03 ***
+##                                                    (0.00)   
+## ------------------------------------------------------------
+## AIC                                4897.02       4824.67    
+## BIC                                4930.63       4875.08    
+## Log Likelihood                    -2442.51      -2403.34    
+## Num. obs.                          2000          2000       
+## Num. groups: class                  100           100       
+## Var: class (Intercept)                0.30          0.39    
+## Var: Residual                         0.59          0.55    
+## Var: class extrav_gc                                0.01    
+## Cov: class (Intercept) extrav_gc                   -0.01    
+## ============================================================
+## *** p &lt; 0.001; ** p &lt; 0.01; * p &lt; 0.05</code></pre>
+</div>
+</div>
+</div>
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Sitio por <a href="https://github.com/jciturras/">Julio Iturra Sanhueza</a></p>
+<p style="text-align: center;"><span style="color: #808080;">julioiturrasanhueza@gmail.com</span></p>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<p style="text-align: center;">
+    <a href="https://twitter.com/jciturras" class="fa fa-twitter"></a>
+    <a href="https://www.linkedin.com/in/jciturras/" class="fa fa-linkedin"></a>
+    <a href="https://github.com/jciturras/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

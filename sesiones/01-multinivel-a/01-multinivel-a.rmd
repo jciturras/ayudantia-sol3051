@@ -97,7 +97,7 @@ popdata <- read_spss("https://jciturras.github.io/ayudantia-sol3051/data/popular
 **Seleccionar variables**
 
 ```{r, include=T}
-popdata<- popdata %>% select(pupil,class,popular,sex,extrav,texp)
+popdata<- popdata %>% dplyr::select(pupil,class,popular,sex,extrav,texp)
 ```
 
 
@@ -230,9 +230,24 @@ En el Modelo 1 es el modelo con intercepto aleatorio y pendendientes fijas. Es d
 ## Modelo con intercepto y pendiente aleatoria
 
 ```{r}
+popdata$class<- as.factor(popdata$class)
+
 m01.rirs<- lmer(popular ~ sex + extrav + texp + (1+ sex + extrav |class), popdata)
 screenreg(list(m01.ri,m01.rirs),custom.model.names = c("Modelo 1", "Modelo 2"))
 ```
+
+```{r eval=FALSE, include=FALSE}
+sjPlot::plot_model(m01.rirs,
+           type="pred",
+           terms=c("extrav","class[82,74,33]"),
+           pred.type="re")
+
+m <- ggeffects::ggpredict(m01.rirs, terms = c("extrav","class[82,74,33]"), type="random")
+plot(m,ci.style = "dot",ci = T)
+
+# https://strengejacke.github.io/ggeffects/articles/introduction_randomeffects.html
+```
+
 
 **Interpretación**
 
@@ -252,7 +267,6 @@ Para visualizarlo, usamos la función `lattice::qqmath()` sobre `lmer::ranef()`,
 ```{r,fig.width=12}
 qqmath(ranef(m01.rirs))
 ```
-
 
 ## Interacciones
 
