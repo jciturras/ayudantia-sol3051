@@ -8,7 +8,7 @@ rm(list=ls())
 
 
 ## ----include=FALSE--------------------------------------------------------
-pacman::p_load(dplyr, summarytools, sjlabelled,ggplot2,ggExtra,lme4,texreg,merTools)
+pacman::p_load(dplyr, summarytools,sjlabelled,ggplot2,ggExtra,lme4,texreg,merTools)
 
 ## ----eval=TRUE, include=TRUE----------------------------------------------
 popdata <- read_spss("https://jciturras.github.io/ayudantia-sol3051/data/popular2.sav")
@@ -55,7 +55,7 @@ m_agg <-lm(popularity_bar~female_bar)
 
 
 ## -------------------------------------------------------------------------
-m0 <- lmer(popular ~ female + extrav +(female|class), data=popdata)
+m0 <- lmer(popular ~ female + extrav +(1|class), data=popdata)
 
 
 ## -------------------------------------------------------------------------
